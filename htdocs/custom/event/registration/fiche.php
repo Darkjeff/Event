@@ -985,7 +985,7 @@ if ($user->rights->event->read)
 			/*
 			 * Linked object block
 			*/
-			$somethingshown=$object->showLinkedObjectBlock();
+			$somethingshown=$form->showLinkedObjectBlock($object);
 
 
 			$sql = "SELECT total_ht, price_day FROM ".MAIN_DB_PREFIX."event WHERE rowid = ".$object->id;
