@@ -194,7 +194,7 @@ class Event extends CommonObject
 	            /*
 	             *  Create event_day on the event
 	             */
-	            if($conf->global->DISABLE_CREATE_1ST_BAY_BY_DEFAULT=="0") {
+	            if($conf->global->DISABLE_CREATE_1ST_DAY_BY_DEFAULT=="0") {
 		            include_once(DOL_DOCUMENT_ROOT . "/core/lib/date.lib.php");
 		            if($this->date_end > 0)
 		            {
