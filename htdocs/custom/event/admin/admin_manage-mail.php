@@ -104,7 +104,7 @@ if ($action == 'setvar')
 	dolibarr_set_const($db, "EVENT_CANCELED_MESSAGE",dol_htmlcleanlastbr($event_canceled_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;	
 
-	// Sugnature
+	// Signature
 	$event_registration_sign_email=GETPOST('EVENT_REGISTRATION_SIGN_EMAIL');
 	dolibarr_set_const($db, "EVENT_REGISTRATION_SIGN_EMAIL",dol_htmlcleanlastbr($event_registration_sign_email),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
