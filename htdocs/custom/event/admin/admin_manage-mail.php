@@ -73,43 +73,43 @@ if ($action == 'setvar')
 	dolibarr_set_const($db, "EVENT_NOT_PARTICIPATE_SUJET",dol_htmlcleanlastbr($event_not_participate_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_RELANCE_WAITING_SUJET
+	// Event Relance Waining Sujet
 	$event_relance_waiting_sujet=GETPOST('EVENT_RELANCE_WAITING_SUJET');
 	dolibarr_set_const($db, "EVENT_RELANCE_WAITING_SUJET",dol_htmlcleanlastbr($event_relance_waiting_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_RELANCE_WAITING_MESSAGE
+	// Event Relance Wainting Message
 	$event_relance_waiting_message=GETPOST('EVENT_RELANCE_WAITING_MESSAGE');
 	dolibarr_set_const($db, "EVENT_RELANCE_WAITING_MESSAGE",dol_htmlcleanlastbr($event_relance_waiting_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_RELANCE_CONFIRM_SUJET
+	// Event Relance Confirm Sujet
 	$event_relance_confirm_sujet=GETPOST('EVENT_RELANCE_CONFIRM_SUJET');
 	dolibarr_set_const($db, "EVENT_RELANCE_CONFIRM_SUJET",dol_htmlcleanlastbr($event_relance_confirm_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_RELANCE_CONFIRM_MESSAGE
+	// Event Relance Confirm Message
 	$event_relance_confirm_message=GETPOST('EVENT_RELANCE_CONFIRM_MESSAGE');
 	dolibarr_set_const($db, "EVENT_RELANCE_CONFIRM_MESSAGE",dol_htmlcleanlastbr($event_relance_confirm_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 	
 	
-	//EVENT_CANCELED_SUJET
+	// Event Canceled Sujet
 	$event_canceled_sujet=GETPOST('EVENT_CANCELED_SUJET');
 	dolibarr_set_const($db, "EVENT_CANCELED_SUJET",dol_htmlcleanlastbr($event_canceled_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;	
 	
-	//EVENT_CANCELED_MESSAGE
+	// Event Canceled Message
 	$event_canceled_message=GETPOST('EVENT_CANCELED_MESSAGE');
 	dolibarr_set_const($db, "EVENT_CANCELED_MESSAGE",dol_htmlcleanlastbr($event_canceled_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;	
 
-	//SIGNATURE
+	// Sugnature
 	$event_registration_sign_email=GETPOST('EVENT_REGISTRATION_SIGN_EMAIL');
 	dolibarr_set_const($db, "EVENT_REGISTRATION_SIGN_EMAIL",dol_htmlcleanlastbr($event_registration_sign_email),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//TEST ERROR
+	// Test error
 	if (! $error)
 	{
 		$mesg = "<div class=\"ok\">".$langs->trans("SetupSaved")."</div>";
@@ -152,7 +152,7 @@ print load_fiche_titre($langs->trans('Admin_menu_manage_content_add'));
 print '<div class="div-table-responsive">';
 print "\n".'<table class="noborder" width=100%>';
 
-// MailParticipate
+// Mail Participate
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="4">'.$langs->trans("MailParticipate").'</td>';
 print '</tr>';
@@ -173,44 +173,44 @@ print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailNotParticipate").'</td>';
 print '</tr>';
 
-// NotParticipateSujet
+// Not Participate Sujet
 print '<tr><td width="35%">'.$langs->trans("NotParticipateSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_NOT_PARTICIPATE_SUJET" value="'.$conf->global->EVENT_NOT_PARTICIPATE_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// NotParticipateMessage
+// Not Participate Message
 print '<tr><td width="35%">'.$langs->trans("NotParticipateMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_NOT_PARTICIPATE_MESSAGE', (isset($conf->global->EVENT_NOT_PARTICIPATE_MESSAGE)?$conf->global->EVENT_NOT_PARTICIPATE_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// MailRelanceWaiting
+// Mail Relance Waiting
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailRelanceWaiting").'</td>';
 print '</tr>';
 
-//RelanceWaitingSujet
+// Relance Waiting Sujet
 print '<tr><td width="35%">'.$langs->trans("RelanceWaitingSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_RELANCE_WAITING_SUJET" value="'.$conf->global->EVENT_RELANCE_WAITING_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-//RelanceWaitingMessage
+// Relance Waiting Message
 print '<tr><td width="35%">'.$langs->trans("RelanceWaitingMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_RELANCE_WAITING_MESSAGE', (isset($conf->global->EVENT_RELANCE_WAITING_MESSAGE)?$conf->global->EVENT_RELANCE_WAITING_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// MailRelanceConfirmed
+// Mail Relance Confirmed
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailRelanceConfirmed").'</td>';
 print '</tr>';
 
-//RelanceConfirmedSujet
+// Relance Confirmed Sujet
 print '<tr><td width="35%">'.$langs->trans("RelanceConfirmedSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_RELANCE_CONFIRM_SUJET" value="'.$conf->global->EVENT_RELANCE_CONFIRM_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-//RelanceConfirmedMessage
+// Relance Confirmed Message
 print '<tr><td width="35%">'.$langs->trans("RelanceConfirmedMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_RELANCE_CONFIRM_MESSAGE', (isset($conf->global->EVENT_RELANCE_CONFIRM_MESSAGE)?$conf->global->EVENT_RELANCE_CONFIRM_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
@@ -219,17 +219,17 @@ print '</td></tr>'."\n";
 
 /// AJOUT LAURENT /////////////////////////////
 
-// MailCanceled
+// Mail Canceled
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailCanceled").'</td>';
 print '</tr>';
 
-//RelanceConfirmedSujet
+// Relance Confirmed Sujet
 print '<tr><td width="35%">'.$langs->trans("CanceledSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_CANCELED_SUJET" value="'.$conf->global->EVENT_CANCELED_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-//RelanceConfirmedMessage
+// Relance Confirmed Message
 print '<tr><td width="35%">'.$langs->trans("CanceledMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_CANCELED_MESSAGE', (isset($conf->global->EVENT_CANCELED_MESSAGE)?$conf->global->EVENT_CANCELED_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
