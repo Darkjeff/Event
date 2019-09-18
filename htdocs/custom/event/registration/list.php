@@ -66,7 +66,7 @@ if (!$sortorder) {
     $sortorder = 'ASC';
 }
 $limit = $conf->liste_limit;
-$page = GETPOST("page", 'int');
+$page = (int)GETPOST("page", 'int');
 if ($page == -1) {
     $page = 0;
 }

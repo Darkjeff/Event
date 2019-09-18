@@ -751,7 +751,7 @@ else if ($id || ! empty($ref))
 					print '<a class="butAction" href="fiche.php?action=clone&id='.$object->id.'">'.$langs->trans("Clone").'</a>'; 
 				// Mark event cancelled
 				print '<a class="butAction" href="fiche.php?id='.$object->id.'&action=close_event">'.$langs->trans("CloseEvent").'</a>';
-				// Add a registration
+				// Add a day
 				print '<br /><br /><br /><a class="butAction" href="day/fiche.php?eventid='.$object->id.'&action=create">'.$langs->trans("NewDay").'</a>';
 			}
 		}
