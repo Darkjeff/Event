@@ -1,0 +1,81 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		CSS file for formstyler module
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Apply style onto form with class "dol_form" */
+.dol_form {
+}
+
+.clear {
+  width: 0;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+/* Each field is wrapped by a div tag with class .edit_field */
+.dol_form .edit_field {
+  margin: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.dol_form fieldset .edit_field:last-child {
+  border: none;
+}
+
+/* Each label is wrapped by a div tag with class .edit_label */
+.dol_form .edit_field .edit_label {
+  display: inline-block;
+  width: 40%;
+  padding: 7px 0 6px 0px;
+  vertical-align: top;
+  text-indent: 10px;
+}
+
+/* Each value field is wrapped by a div tag with class .edit_value */
+.dol_form .edit_field .edit_value {
+  display: inline-block;
+  width: 50%;
+}
+
+/*
+ * Fieldset
+ */
+.dol_form > fieldset {
+  margin: 10px 0 15px;
+  padding-bottom: 15px;
+}
+
+/*
+ * Text input fields
+ */
+.dol_form input[type="text"] {
+  max-width: 220px;
+}
+
+/*
+ * Button radio list
+ */
+.dol_form .choice {
+  margin: 0 0 0 0%;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* List element */
+.dol_form .choice .choice_item {
+  display: inline-block;
+  min-width: 160px;
+  padding: 7px 0 6px 0px;
+}
+
+/* Checkbox */
+.dol_form .edit_field.checkbox .edit_label {
+  width: 85%;
+}
+
+.dol_form .edit_field.checkbox .edit_value {
+  width: 15%;
+  padding: 7px 0 6px 0px;
+}
