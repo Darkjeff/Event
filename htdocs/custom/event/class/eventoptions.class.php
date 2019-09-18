@@ -415,7 +415,7 @@ class Eventoptions  extends Day
 		}
 		else
 		{
-			$lien = '<a href="'.DOL_URL_ROOT.'/product/fiche.php?id='.$this->id.'">';
+			$lien = '<a href="'.DOL_URL_ROOT.'/product/card.php?id='.$this->id.'">';
 			$lienfin='</a>';
 		}
 		$newref=$this->ref;

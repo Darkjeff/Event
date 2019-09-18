@@ -165,8 +165,6 @@ class Event extends CommonObject
 		$sql.= " ".(! isset($this->note_public)?'NULL':"'".$this->db->escape($this->note_public)."'").",";
 		$sql.= " ".(! isset($this->registration_open)?'NULL':"'".$this->registration_open."'").",";
 		$sql.= " ".(! isset($this->registration_byday)?'NULL':"'".$this->registration_byday."'")."";
-
-
 		$sql.= ")";
 
 		$this->db->begin();
@@ -741,7 +739,7 @@ class Event extends CommonObject
 
 		$result='';
 
-		$lien = '<a href="'.dol_buildpath('/event/fiche.php', 1).'?id='.$this->id.'">';
+		$lien = '<a href="'.dol_buildpath('/event/card.php', 1).'?id='.$this->id.'">';
 		$lienfin='</a>';
 
 		$picto='event@event';

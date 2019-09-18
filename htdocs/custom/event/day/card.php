@@ -18,32 +18,18 @@
  */
 
 /**
- *   	\file       event/day/fiche.php
+ *   	\file       event/day/card.php
  * 		\ingroup    event
  * 		\brief      manage days of an event
  */
-//if (! defined('NOREQUIREUSER'))  define('NOREQUIREUSER','1');
-//if (! defined('NOREQUIREDB'))    define('NOREQUIREDB','1');
-//if (! defined('NOREQUIRESOC'))   define('NOREQUIRESOC','1');
-//if (! defined('NOREQUIRETRAN'))  define('NOREQUIRETRAN','1');
-//if (! defined('NOCSRFCHECK'))    define('NOCSRFCHECK','1');
-//if (! defined('NOTOKENRENEWAL')) define('NOTOKENRENEWAL','1');
-//if (! defined('NOREQUIREMENU'))  define('NOREQUIREMENU','1');	// If there is no menu to show
-//if (! defined('NOREQUIREHTML'))  define('NOREQUIREHTML','1');	// If we don't need to load the html.form.class.php
-//if (! defined('NOREQUIREAJAX'))  define('NOREQUIREAJAX','1');
-//if (! defined("NOLOGIN"))        define("NOLOGIN",'1');		// If this page is public (can be called outside logged session)
-// Change this following line to use the correct relative path (../, ../../, etc)
-$res = 0;
-if (!$res && file_exists("../../main.inc.php")) {
-    $res = include("../../main.inc.php");
-}
-if (!$res && file_exists("../../../main.inc.php")) {
-    $res = include("../../../main.inc.php");
-}// for curstom directory
 
-if (!$res) {
-     die("Include of main fails");
-}
+// Change this following line to use the correct relative path (../, ../../, etc)
+$res=0;
+
+if (! $res && file_exists("../../main.inc.php")) { $res=include("../../main.inc.php"); }
+if (! $res && file_exists("../../../main.inc.php")) { $res=include("../../../main.inc.php"); }// for curstom directory
+if (! $res) { die("Include of main fails"); }
+
 // Change this following line to use the correct relative path from htdocs (do not remove DOL_DOCUMENT_ROOT)
 require_once("../class/event.class.php");
 require_once("../class/day.class.php");
@@ -300,39 +286,38 @@ else if ($action == 'confirm_clone_day' && $confirm == "yes")
                 $result3 = $Eventlevel_to_clone->DefLevelForDay($el2,$ret);
                 }
             }
-        header("Location: ".DOL_URL_ROOT."/custom/event/day/fiche.php?id=".$ret);
+        header("Location: ".DOL_URL_ROOT."/custom/event/day/card.php?id=".$ret);
         $mesg = '<div class="ok">' . $langs->trans('CloneDayOK') . '</div>';
         }
     }
 
 /* * *************************************************
- * VIEW
- *
- * Put here all code to build page
+ * View
  * ************************************************** */
-
-
 $form = new Form($db);
-
 $userstatic = new User($db);
 
-
-if ($action == 'create' && $user->rights->event->write) {
+if ($action == 'create' && $user->rights->event->write)
+{
     llxHeader('', $langs->trans("NewEventDay"), '');
 
-    print_fiche_titre($langs->trans("NewEventDay"));
+    print load_fiche_titre($langs->trans("NewEventDay"));
 
     $event = new Event($db);
     $event->fetch($eventid);
 
     print '<form action="' . $_SERVER["PHP_SELF"] . '" method="POST" enctype="multipart/form-data">';
     print '<input type="hidden" name="token" value="' . $_SESSION['newtoken'] . '" />';
-    print '<table class="border" width="100%">';
     print '<input type="hidden" name="action" value="add" />';
     print '<input type="hidden" name="eventid" value="' . $eventid . '" />';
 
+    dol_fiche_head('');
+
+    print '<table class="border" width="100%">';
+    print '<tbody>';
+
     // Ref event
-    print '<tr><td><label for="ref">' . $langs->trans("RefEvent") . '</label></td><td>' . $event->getNomUrl(1) . '</td></tr>';
+    print '<tr><td class="titlefieldcreate><label for="ref">' . $langs->trans("RefEvent") . '</label></td><td>' . $event->getNomUrl(1) . '</td></tr>';
 
     $defaultref = '';
     $obj = empty($conf->global->EVENTDAY_ADDON) ? 'mod_eventday_simple' : $conf->global->EVENTDAY_ADDON;
@@ -404,14 +389,18 @@ if ($action == 'create' && $user->rights->event->write) {
     print $form->load_tva("tva_tx", GETPOST("tva_tx"), $mysoc);
     print '</td></tr>';
 
-    print '<tr><td colspan="2" align="center">';
-    print '<input type="submit" class="button" name="add" value="' . $langs->trans("Add") . '">';
-    print ' &nbsp; &nbsp; ';
-    print '<input type="button" class="button" value="'.$langs->trans("Cancel").'" onclick="location.href=\''.DOL_URL_ROOT.'/custom/event/fiche.php?id='.$eventid.'\'" >';
-    print '</td></tr>';
+    print '<tbody>';
+    print "</table>\n";
 
-    print '</table>';
-    print '</form>';
+    dol_fiche_end();
+
+    print '<div class="center">';
+    print '<input type="submit" name="button" class="button" value="'.$langs->trans("Add").'">';
+    print '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    print '<input type="submit" name="cancel" class="button" value="'.$langs->trans("Cancel").'" onclick="history.go(-1)" />';
+    print '</div>';
+
+    print "</form>\n";
 
 } // action create
 else if ($id || !empty($ref)) {
@@ -423,8 +412,8 @@ else if ($id || !empty($ref)) {
     dol_htmloutput_mesg($mesg,$mesgs,'error');
 
     $object = new Day($db);
-	
-	 
+
+
 
     $ret = $object->fetch($id, $ref);
 
@@ -617,11 +606,11 @@ else if ($id || !empty($ref)) {
 						</li>-->
 						<?php 
 						if($jp!='')
-							echo '<li class="pagination"><a accesskey="p" href="'.DOL_URL_ROOT.'/custom/event/day/fiche.php?id='.$jp.'"><i class="fa fa-chevron-left"></i></a></li>';
+							echo '<li class="pagination"><a accesskey="p" href="'.DOL_URL_ROOT.'/custom/event/day/card.php?id='.$jp.'"><i class="fa fa-chevron-left"></i></a></li>';
 						else
 							echo '<li class="pagination"><span class="inactive"><i class="fa fa-chevron-left opacitymedium"></i></span></li>';
 						if($js!='')
-							echo '<li class="pagination"><a accesskey="p" href="'.DOL_URL_ROOT.'/custom/event/day/fiche.php?id='.$js.'"><i class="fa fa-chevron-right"></i></a></li>';
+							echo '<li class="pagination"><a accesskey="p" href="'.DOL_URL_ROOT.'/custom/event/day/card.php?id='.$js.'"><i class="fa fa-chevron-right"></i></a></li>';
 						else
 							echo '<li class="pagination"><span class="inactive"><i class="fa fa-chevron-right opacitymedium"></i></span></li>';
 						?>

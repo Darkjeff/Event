@@ -17,7 +17,7 @@
  */
 
 /**
- *   	\file       event/fiche.php
+ *   	\file       event/card.php
  *		\ingroup    event
  *		\brief      Index page of module event
  */
@@ -310,8 +310,8 @@ else if ($action == 'confirm_close_event' && $user->rights->event->write)
 else if ($action == 'confirm_clone' && $user->rights->event->write && $confirm == "yes")
 {
 	$result=$object->createFromClone($id);
-	dol_syslog('Fiche.php :: createFromClone :'.$object->get_days($id),LOG_DEBUG);
-	dol_syslog('Fiche.php :: valid_group :'.GETPOST('valid_group'),LOG_DEBUG);
+	dol_syslog('card.php :: createFromClone :'.$object->get_days($id),LOG_DEBUG);
+	dol_syslog('card.php :: valid_group :'.GETPOST('valid_group'),LOG_DEBUG);
 
 	
 	if(GETPOST('valid_days')=='on')
@@ -321,7 +321,7 @@ else if ($action == 'confirm_clone' && $user->rights->event->write && $confirm =
 			$day_to_clone = new day($db);
 			$result2 = $day_to_clone->createFromClone($el,$result);
 
-			dol_syslog('Fiche.php::createFromClone '.$day_to_clone->LoadLevelForDay($el,1),LOG_DEBUG);
+			dol_syslog('card.php::createFromClone '.$day_to_clone->LoadLevelForDay($el,1),LOG_DEBUG);
 
 			if(GETPOST('valid_group')=='on')
 				{
@@ -343,29 +343,27 @@ else if ($action == 'confirm_clone' && $user->rights->event->write && $confirm =
 }
 
 /***************************************************
-* VIEW
-*
-* Put here all code to build page
+* View
 ****************************************************/
-
-
 $form=new Form($db);
-
 $userstatic=new User($db);
 
 if ($action == 'create' && $user->rights->event->write)
 {
 	llxHeader('',$langs->trans("NewEvent"),'');
 
-	print_fiche_titre($langs->trans("NewEvent"));
+    print load_fiche_titre($langs->trans("NewEvent"));
 
 	dol_htmloutput_mesg($mesg,$mesgs,'error');
 
-
 	print '<form action="'.$_SERVER["PHP_SELF"].'" method="POST">';
 	print '<input type="hidden" name="token" value="'.$_SESSION['newtoken'].'">';
-	print '<table class="border" width="100%">';
 	print '<input type="hidden" name="action" value="add">';
+
+    dol_fiche_head('');
+
+    print '<table class="border" width="100%">';
+    print '<tbody>';
 
 	$defaultref='';
 	$obj = empty($conf->global->EVENT_ADDON)?'mod_event_simple':$conf->global->EVENT_ADDON;
@@ -381,7 +379,7 @@ if ($action == 'create' && $user->rights->event->write)
 	print '<input type="hidden" name="ref" value="'.(GETPOST("ref")?GETPOST("ref"):$defaultref).'">';
 
 	// Label
-	print '<tr><td><label for="label"><span class="fieldrequired">'.$langs->trans("Label").'</span></label></td><td><input size="30" type="text" name="label" id="label" value="'.GETPOST("label").'"></td></tr>';
+	print '<tr><td class="titlefieldcreate fieldrequired"><label for="label">'.$langs->trans("Label").'</label></td><td><input size="30" type="text" name="label" id="label" value="'.GETPOST("label").'"></td></tr>';
 
 	// Customer
 	print '<tr><td><label for="socid">'.$langs->trans("EventSponsor").'</label></td><td>';
@@ -394,7 +392,7 @@ if ($action == 'create' && $user->rights->event->write)
 	print '</td></tr>';
 
 	// Date start
-	print '<tr><td><label for="date_start"><span class="fieldrequired">'.$langs->trans("DateStart").'</span></label></td><td>';
+	print '<tr><td class="fieldrequired"><label for="date_start">'.$langs->trans("DateStart").'</label></td><td>';
 	print $form->select_date('','date_start');
 	print '</td></tr>';
 
@@ -439,14 +437,18 @@ if ($action == 'create' && $user->rights->event->write)
 	print $form->load_tva("tva_tx",GETPOST("tva_tx"),$mysoc);
 	print '</td></tr>';
 
-	print '<tr><td colspan="2" align="center">';
-	print '<input type="submit" class="button" name="add" value="'.$langs->trans("Add").'">';
-	print ' &nbsp; &nbsp; ';
-	print '<input type="button" class="button" value="'.$langs->trans("Cancel").'" onclick="location.href=\''.DOL_URL_ROOT.'/custom/event/index.php\'" >';
-	print '</td></tr>';
+    print '<tbody>';
+    print "</table>\n";
 
-	print '</table>';
-	print '</form>';
+    dol_fiche_end();
+
+    print '<div class="center">';
+    print '<input type="submit" name="button" class="button" value="'.$langs->trans("Add").'">';
+    print '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    print '<input type="submit" name="cancel" class="button" value="'.$langs->trans("Cancel").'" onclick="history.go(-1)" />';
+    print '</div>';
+
+    print "</form>\n";
 
 } // action create
 
@@ -538,7 +540,7 @@ else if ($id || ! empty($ref))
 			print '<table class="border" width="100%">';
 
 			// Label
-			print '<tr><td><span class="fieldrequired">'.$langs->trans("Label").'</span></td>';
+			print '<tr><td class="titlefield fieldrequired">'.$langs->trans("Label").'</td>';
 			print '<td><input size="30" name="label" value="'.(GETPOST('label') ? GETPOST('label') : $object->label).'"></td></tr>';
 
 			// Customer
@@ -547,7 +549,7 @@ else if ($id || ! empty($ref))
 			print '</td></tr>';
 
 			// Date start
-			print '<tr><td><span class="fieldrequired">'.$langs->trans("DateStart").'</span></td><td>';
+			print '<tr><td class="fieldrequired">'.$langs->trans("DateStart").'</></td><td>';
 			print $form->select_date($object->date_start,'date_start');
 			print '</td></tr>';
 
@@ -598,19 +600,22 @@ else if ($id || ! empty($ref))
 				print '<tr><td valign="top">'.$langs->trans("NotePrivate").'</td>';
 				print '<td>';
 				print '<textarea name="note" cols="60" rows="' . ROWS_3 . '">' . (GETPOST('note') ? GETPOST('note') : $object->note) . "</textarea><br>";
-				print "</td></tr>";
+				print "</table></td></tr>";
 			}
 
-			print '<tr><td align="center" colspan="2">';
-			print '<input name="update" class="button" type="submit" value="'.$langs->trans("Modify").'"> &nbsp; ';
-			print '<input type="submit" class="button" name="cancel" Value="'.$langs->trans("Cancel").'"></td></tr>';
-			print '</table>';
-			print '</form>';
+            dol_fiche_end();
+
+            print '<div class="center">';
+            print '<input type="submit" class="button" value="'.$langs->trans("Save").'">';
+            print '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+            print '<input type="submit" name="cancel" class="button" value="'.$langs->trans("Cancel").'">';
+            print '</div>';
+
+            print "</form>";
 
 		}
 		else
 		{
-
 			/*
 			 * View of event
 			 */
@@ -748,11 +753,11 @@ else if ($id || ! empty($ref))
 			{
 				// Clone Event
 				if($conf->global->EVENT_ACTIVE_CLONE_FUNC=="1")
-					print '<a class="butAction" href="fiche.php?action=clone&id='.$object->id.'">'.$langs->trans("Clone").'</a>'; 
+					print '<a class="butAction" href="card.php?action=clone&id='.$object->id.'">'.$langs->trans("Clone").'</a>';
 				// Mark event cancelled
-				print '<a class="butAction" href="fiche.php?id='.$object->id.'&action=close_event">'.$langs->trans("CloseEvent").'</a>';
+				print '<a class="butAction" href="card.php?id='.$object->id.'&action=close_event">'.$langs->trans("CloseEvent").'</a>';
 				// Add a registration
-				print '<br /><br /><br /><a class="butAction" href="day/fiche.php?eventid='.$object->id.'&action=create">'.$langs->trans("NewDay").'</a>';
+				print '<br /><br /><br /><a class="butAction" href="day/card.php?eventid='.$object->id.'&action=create">'.$langs->trans("NewDay").'</a>';
 			}
 		}
 
@@ -801,7 +806,7 @@ else if ($id || ! empty($ref))
 				if ($num)
 				{
 
-					print_barre_liste($langs->trans('ListOfEventDay'), $page, 'fiche.php', $param, $sortfield, $sortorder, '', $num, $nbtotalofrecords, 'img/day_32.png', 1);
+					print_barre_liste($langs->trans('ListOfEventDay'), $page, 'card.php', $param, $sortfield, $sortorder, '', $num, $nbtotalofrecords, 'img/day_32.png', 1);
 
 					print '<table width="100%" class="noborder">';
 					print '<tr class="liste_titre" >';
@@ -866,7 +871,7 @@ else if ($id || ! empty($ref))
 						// Actions
 						print '<td>';
 						if($user->rights->event->day->delete)
-							print '<a href="day/fiche.php?action=edit&amp;id='.$obj->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
+							print '<a href="day/card.php?action=edit&amp;id='.$obj->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
 						if($conf->global->EVENT_HIDE_GROUP=="-1") print '<a href="day/level.php?dayid='.$obj->id.'">'.img_picto('','object_group.png').' '.$langs->trans('EventLevels').'</a> ';
 						print '<a href="registration/list.php?dayid='.$obj->id.'">'.img_picto('','object_event_registration.png@event').' '.$langs->trans('RegistrationList').'</a>';
 						print '</td>';

@@ -200,7 +200,7 @@ if(count($object->line)>0)
 		// Actions
 		print '<td>';
 		if($user->rights->event->day->delete)
-			print '<a href="fiche.php?action=edit&amp;id='.$daystat->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
+			print '<a href="card.php?action=edit&amp;id='.$daystat->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
 		if($conf->global->EVENT_HIDE_GROUP=='-1') print '<a href="level.php?dayid='.$daystat->id.'">'.img_picto('','object_group.png').' '.$langs->trans('EventLevels').'</a> ';
 		print '<a href="../registration/list.php?dayid='.$daystat->id.'">'.img_picto('','object_event_registration.png@event').' '.$langs->trans('RegistrationList').'</a>';
 		print '</td>';

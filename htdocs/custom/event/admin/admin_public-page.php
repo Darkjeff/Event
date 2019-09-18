@@ -38,12 +38,8 @@ require_once("../class/eventlevel.class.php");
 require_once("../class/day.class.php");
 require_once("../lib/event.lib.php");
 
-// Load traductions files requiredby by page
-$langs->load("admin");
-$langs->load("companies");
-$langs->load("other");
-$langs->load("event@event");
-$langs->load("cron");
+// Load traductions files required by page
+$langs->loadLangs(array("admin","companies","other","event@event","cron"));
 
 // Get parameters
 $id			= GETPOST('id','int');
@@ -178,9 +174,7 @@ if ($action == 'setvar')
 
 
 /***************************************************
- * VIEW
-*
-* Put here all code to build page
+ * View
 ****************************************************/
 
 llxHeader('',$langs->trans("EventSetupPagePublicTitle"),'');
@@ -202,14 +196,14 @@ $linkback='<a href="'.DOL_URL_ROOT.'/admin/modules.php">'.$langs->trans("BackToM
 
 print load_fiche_titre($langs->trans('css_file'));
 
-print '<table class="border" width="100%">';
+print '<table class="noborder" width="100%">';
 
 // SEPARATOR
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("css_menu").'</td>';
 print "</tr>";
 
-//CSS CONFIG
+// CSS CONFIG
 $url = DOL_URL_ROOT.'/custom/event/admin/admin_public-page.php';
 $file = '../public/public.css';
 
@@ -240,8 +234,8 @@ print '<form method="post" action="'.$_SERVER['PHP_SELF'].'">';
 print '<input type="hidden" name="token" value="'.$_SESSION['newtoken'].'">';
 print '<input type="hidden" name="action" value="setvar">';
 
-print '<table class="border" width="100%">';
-print '<tr class="liste_titre">';
+print '<table class="noborder" width="100%">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("AdminEventBehaviour").'</td>';
 print "</tr>";
 
@@ -335,17 +329,14 @@ print '<input type="text" name="EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE" value="'
 print '</td>';
 print '</tr>';
 
-// SAVE BUTTON
-print '<tr><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
-
 // SEPARATOR
 print '</table>';
 print '<br />';
 print load_fiche_titre($langs->trans('SetupPagePublicTexte'));
-print '<table class="border" width="100%">';
+print '<table class="noborder" width="100%">';
 
 // INFO TITRE
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("SetupPagePublicTexte").'</td>';
 print "</tr>";
 
@@ -375,17 +366,14 @@ print '<tr><td width="35%">'.$langs->trans("event_public_website").'</td><td col
 print '<input type="text" name="EVENT_PUBLIC_WEBSITE" value="'.$conf->global->EVENT_PUBLIC_WEBSITE.'" size="40"/>';
 print '</td></tr>'."\n";
 
-// SAVE BUTTON
-print '<tr><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
-
 // SEPARATOR
 print '</table>';
 print '<br/>';
 print load_fiche_titre($langs->trans('EVENT_MANAGE_ECOMMERCE'));
-print '<table class="border" width="100%">';
+print '<table class="noborder" width="100%">';
 
 // INFO TITRE
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_ECOMMERCE").'</td>';
 print "</tr>";
 
@@ -441,10 +429,10 @@ print '</td></tr>'."\n";
 print '</table>';
 print '<br/>';
 print load_fiche_titre($langs->trans('EVENT_MANAGE_MAIL'));
-print '<table class="border" width="100%">';
+print '<table class="noborder" width="100%">';
 
 // INFO ITIRE
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_MAIL").'</td>';
 print "</tr>";
 
@@ -458,16 +446,15 @@ print '<tr><td width="35%">'.$langs->trans("EVENT_MAIL_CONTENT").'</td><td colsp
 $doleditor = new DolEditor('EVENT_MAIL_CONTENT', (isset($conf->global->EVENT_MAIL_CONTENT)?$conf->global->EVENT_MAIL_CONTENT:''), '', 142, 'EVENT_MAIL_CONTENT', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
-print '<tr><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
-
 // SEPARATOR
 print '</table>';
 print '<br/>';
-print load_fiche_titre($langs->trans('EVENT_MANAGE_PUBLIC_REGITRASTION'));
-print '<table class="border" width="100%">';
+
+print load_fiche_titre($langs->trans('EVENT_MANAGE_PUBLIC_REGISTRATION'));
+print '<table class="noborder" width="100%">';
 
 // INFO TITRE
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_PUBLIC_REGITRASTION").'</td>';
 print "</tr>";
 
@@ -520,13 +507,15 @@ $doleditor = new DolEditor('EVENT_PUBLIC_DESCRIPTION_3', (isset($conf->global->E
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-print '<tr><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
-print '</tr>';
+print '</table>';
+dol_fiche_end();
 
-print '</table><br>';
-print '</form>';
+print '<div class="center">';
+print '<input type="submit" class="button hideifnotset" value="'.$langs->trans("Save").'">';
+print '</div>';
 
-
+print "</form>\n";
+print '<br />';
 
 // End of page
 llxFooter();

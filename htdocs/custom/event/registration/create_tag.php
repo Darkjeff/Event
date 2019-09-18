@@ -378,13 +378,13 @@ if ( $action == 'add' && $user->rights->event->write )
 		{
 			$errmsgs = 'EventRegSuccesswithMail';
 			$action = '';
-			header("Location: ".DOL_URL_ROOT."/custom/event/day/fiche.php?id=".$dayid."&message_alert=".$errmsgs);
+			header("Location: ".DOL_URL_ROOT."/custom/event/day/card.php?id=".$dayid."&message_alert=".$errmsgs);
 		}
 		else
 			{
 			$errmsgs = 'EventRegSuccesswitouthMail';
 			$action = '';
-			header("Location: ".DOL_URL_ROOT."/custom/event/day/fiche.php?id=".$dayid."&message_alert=".$errmsgs);
+			header("Location: ".DOL_URL_ROOT."/custom/event/day/card.php?id=".$dayid."&message_alert=".$errmsgs);
 		}
 	}
 	else if ($enter_registration_check) // check if all users of tag are register

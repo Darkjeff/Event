@@ -17,7 +17,7 @@
  */
 
 /**
- *   	\file       event/registration/fiche.php
+ *   	\file       event/registration/card.php
  *		\ingroup    event
  *		\brief      Index page of module event for registration
  */
@@ -1047,7 +1047,7 @@ if ($user->rights->event->read)
 									print "<tr $bc[$var]>";
 									print "<td nowrap>";
 									print "<a href=\"../compta/facture.php?facid=".$objp->factureid."\">".img_object($langs->trans("ShowBills"),"bill")." ".$objp->facnumber."</a></td>\n";
-									print "<td><a href=\"../comm/fiche.php?socid=".$objp->socid."\">".dol_trunc($objp->nom,18)."</a></td>\n";
+									print "<td><a href=\"../comm/card.php?socid=".$objp->socid."\">".dol_trunc($objp->nom,18)."</a></td>\n";
 									print "<td nowrap=\"nowrap\">".dol_print_date($db->jdate($objp->df),"%d %b")."</td>\n";
 									print '<td><input type="hidden" name="factureid" value="'.$objp->factureid.'">';
 									print '<input type="text" class="flat" name="qty" size="1" value="1"></td><td nowrap>'.$langs->trans("ReductionShort");
@@ -1112,7 +1112,7 @@ if ($user->rights->event->read)
 										print '<input type="hidden" name="action" value="addinfacture">';
 										print "<tr ".$bc[$var].">";
 										print "<td><a href=\"../compta/facture.php?facid=".$objp->factureid."\">$objp->facnumber</a></td>\n";
-										print "<td><a href=\"../comm/fiche.php?socid=".$objp->socid."\">".dol_trunc($objp->nom,24)."</a></td>\n";
+										print "<td><a href=\"../comm/card.php?socid=".$objp->socid."\">".dol_trunc($objp->nom,24)."</a></td>\n";
 										print "<td colspan=\"2\">".$langs->trans("Qty");
 										print "</td>";
 										print '<td><input type="hidden" name="factureid" value="'.$objp->factureid.'">';

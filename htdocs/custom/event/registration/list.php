@@ -890,7 +890,7 @@ if ($user->rights->event->read) {
 							if ($registration->fk_statut != '5') print ' <a href="'.$_SERVER['PHP_SELF'].'?dayid='.$event->id.'&amp;action=registration_cancel&id='.$registration->id.'">'.img_picto('Cancel','stcomm-1').'</a>&nbsp;';
 
 							// Visu
-							print '<a href="fiche.php?id='.$registration->id.'">'.img_picto('View','detail').'</a>';
+							print '<a href="card.php?id='.$registration->id.'">'.img_picto('View','detail').'</a>';
 
 							// Delete
 							print ' <a href="'.$_SERVER["PHP_SELF"].'?dayid='.$event->id.'&amp;id='.$registration->id.'&action=delete">'.img_picto($langs->trans("Delete"),'delete').'</a>';
@@ -1057,7 +1057,7 @@ if ($user->rights->event->read) {
 									if ($registration->fk_statut != '5') print ' <a href="'.$_SERVER['PHP_SELF'].'?dayid='.$event->id.'&amp;action=registration_cancel&id='.$registration->id.'">'.img_picto('Cancel','tick').'</a>';
 									
 									// Visu
-									print '<a href="fiche.php?id='.$registration->id.'">'.img_picto('View','detail').'</a>';
+									print '<a href="card.php?id='.$registration->id.'">'.img_picto('View','detail').'</a>';
 
 									// Delete
 									print '<a href="'.$_SERVER["PHP_SELF"].'?dayid='.$event->id.'&amp;id='.$registration->id.'&action=delete">'.img_picto($langs->trans("Delete"),'delete').'</a>';
