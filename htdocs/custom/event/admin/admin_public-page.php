@@ -98,7 +98,7 @@ if ($action == 'setvar')
 	$res = dolibarr_set_const($db, 'EVENT_MAIL_CONTENT', dol_htmlcleanlastbr($event_mail_content),'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Descriptions
+	// Descriptions
 	$event_public_description_1=GETPOST('EVENT_PUBLIC_DESCRIPTION_1');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_DESCRIPTION_1', dol_htmlcleanlastbr($event_public_description_1),'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
@@ -119,19 +119,19 @@ if ($action == 'setvar')
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_WEBSITE', $event_public_website,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// EVENT_PUBLIC_UNIT_NAME
+	// Event Public Unit Name
 	$event_public_unit_name=GETPOST('EVENT_PUBLIC_UNIT_NAME','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_UNIT_NAME', $event_public_unit_name,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Nombre d'unité / nombre de place
+	// Number of units / number of places
 
-	//event_place_available
+	// Event Place Available
 	$event_place_available=GETPOST('EVENT_PLACE_AVAILABLE','int');
 	$res = dolibarr_set_const($db,'EVENT_PLACE_AVAILABLE',$event_place_available,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Permettre les inscriptions / interdire
+	// Allow Registrations / Ban
 	$event_switch_register=GETPOST('EVENT_SWITCH_REGISTER','int');
 	$res = dolibarr_set_const($db,'EVENT_SWITCH_REGISTER',$event_switch_register,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
@@ -140,28 +140,28 @@ if ($action == 'setvar')
 	$res = dolibarr_set_const($db,'EVENT_SWITCH_UNIT',$event_switch_unit,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Afficher la navbar
+	// View The Navbar
 	$event_switch_navbar=GETPOST('EVENT_SWITCH_NAVBAR','int');
 	$res = dolibarr_set_const($db,'EVENT_SWITCH_NAVBAR',$event_switch_navbar,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//SWITCH BOUTIQUE
+	// Switch Boutique
 	$event_switch_boutique=GETPOST('EVENT_SWITCH_BOUTIQUE','int');
 	$res = dolibarr_set_const($db,'EVENT_SWITCH_BOUTIQUE',$event_switch_boutique,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PUBLIC_REGISTRATION_LIMIT_DATE
+	// Event Public Registration Limit Date
 	$event_public_registration_limit_date=GETPOST('EVENT_PUBLIC_REGISTRATION_LIMIT_DATE','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_REGISTRATION_LIMIT_DATE', $event_public_registration_limit_date,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE
+	// Event Public Unregistration Limit Day
 	$event_public_unregistration_limit_date=GETPOST('EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE', $event_public_unregistration_limit_date,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
 
-	//TEST ERROR
+	// Test error
 	if (! $error)
 	{
 		$mesg = "<div class=\"ok\">".$langs->trans("SetupSaved")."</div>";
@@ -181,7 +181,7 @@ llxHeader('',$langs->trans("EventSetupPagePublicTitle"),'');
 
 print_fiche_titre($langs->trans("EventSetupPagePublicTitle"),$linkback,'setup');
 
-// Configuration header
+// Configuration Header
 $head = event_admin_prepare_head();
 dol_fiche_head($head, 'EventSetupPagePublic', $langs->trans("Module1680Name"), 0, 'event@event');
 
@@ -198,23 +198,23 @@ print load_fiche_titre($langs->trans('css_file'));
 
 print '<table class="noborder" width="100%">';
 
-// SEPARATOR
+// Separtor
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("css_menu").'</td>';
 print "</tr>";
 
-// CSS CONFIG
+// CSS Confi
 $url = DOL_URL_ROOT.'/custom/event/admin/admin_public-page.php';
 $file = '../public/public.css';
 
 // check if form has been submitted
 if (isset($_POST['text']))
 {
-    // save the text contents
+    // Save The Text Contents
     file_put_contents($file, $_POST['text']);
 	}
 
-// read the textfile
+// Read The Textfile
 $text = file_get_contents($file);
 
 print '<form action="" method="post">';
@@ -227,7 +227,7 @@ print '</form>';
 
 print '</td></tr></table>'."\n";
 
-// SEPARATOR
+// Separator
 print '<br />'.load_fiche_titre($langs->trans('AdminEventBehaviour'));
 
 print '<form method="post" action="'.$_SERVER['PHP_SELF'].'">';
@@ -239,7 +239,7 @@ print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("AdminEventBehaviour").'</td>';
 print "</tr>";
 
-// EVENT_PUBLIC_ACTIVE
+// Event Public Active
 print '<tr>';
 print '<td width="35%">'.$langs->trans("event_public_active").'</td>';
 print '<td>';
@@ -248,7 +248,7 @@ print $form->selectarray("EVENT_PUBLIC_ACTIVE",$arrval,$conf->global->EVENT_PUBL
 print '</td>';
 print '</tr>';
 
-//SWITCH navbar
+// Switch Navbar
 if (isset($conf->global->EVENT_SWITCH_NAVBAR))
 {
 	if ($conf->global->EVENT_SWITCH_NAVBAR > 0) {
@@ -315,69 +315,69 @@ print '<input type="radio" id="EVENT_PLACE_AVAILABLE_cancel" name="EVENT_PLACE_A
 print '</td>';
 print '</tr>';
 
-//PUBLIC - Delaybeforeblockregistration
+// PUBLIC - Delay Before Block Registration
 print '<tr><td>'.$langs->trans("EventPublicRegistrationLimitDate").'</td>';
 print '<td>';
 print '<input type="text" name="EVENT_PUBLIC_REGISTRATION_LIMIT_DATE" value="'.$conf->global->EVENT_PUBLIC_REGISTRATION_LIMIT_DATE.'" size="3"/>'.' '.$langs->trans('Hours');
 print '</td>';
 print '</tr>';
 
-//PUBLIC - Delaybeforeblockunregistration
+// PUBLIC - Delay Before Block Unregistration
 print '<tr><td>'.$langs->trans("EventPublicUnregistrationLimitDate").'</td>';
 print '<td>';
 print '<input type="text" name="EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE" value="'.$conf->global->EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE.'" size="3"/>'.' '.$langs->trans('Hours');
 print '</td>';
 print '</tr>';
 
-// SEPARATOR
+// Separator
 print '</table>';
 print '<br />';
 print load_fiche_titre($langs->trans('SetupPagePublicTexte'));
 print '<table class="noborder" width="100%">';
 
-// INFO TITRE
+// Info Title
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("SetupPagePublicTexte").'</td>';
 print "</tr>";
 
-// EVENT_PUBLIC_HEADER
+// Event Public Header
 print '<tr><td width="35%">'.$langs->trans("event_public_header").'</td><td colspan="2">';
 print '<textarea name="EVENT_PUBLIC_HEADER" cols="90" rows="10">'.$conf->global->EVENT_PUBLIC_HEADER.'</textarea>';
 print '</td></tr>'."\n";
 
-// EVENT_PUBLIC_NAVBAR
+// Event Public Navbar
 print '<tr><td width="35%">'.$langs->trans("event_public_navbar").'</td><td colspan="2">';
 print '<textarea name="EVENT_PUBLIC_NAVBAR" cols="90" rows="10">'.$conf->global->EVENT_PUBLIC_NAVBAR.'</textarea>';
 print '</td></tr>'."\n";
 
-// EVENT_PUBLIC_CONTENT
+// Event Public Content
 print '<tr><td width="35%">'.$langs->trans("event_public_content").'</td><td colspan="2" cols="90" rows="10">';
 $doleditor = new DolEditor('EVENT_PUBLIC_CONTENT', (isset($conf->global->EVENT_PUBLIC_CONTENT)?$conf->global->EVENT_PUBLIC_CONTENT:''), '', 142, 'event_public_content', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// EVENT_PUBLIC_FOOTER
+// Event Public Footer
 print '<tr><td width="35%">'.$langs->trans("event_public_footer").'</td><td colspan="2">';
 print '<textarea name="EVENT_PUBLIC_FOOTER" cols="90" rows="10">'.$conf->global->EVENT_PUBLIC_FOOTER.'</textarea>';
 print '</td></tr>'."\n";
 
-// WEBSITE
+// Website
 print '<tr><td width="35%">'.$langs->trans("event_public_website").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_PUBLIC_WEBSITE" value="'.$conf->global->EVENT_PUBLIC_WEBSITE.'" size="40"/>';
 print '</td></tr>'."\n";
 
-// SEPARATOR
+// Separator
 print '</table>';
 print '<br/>';
 print load_fiche_titre($langs->trans('EVENT_MANAGE_ECOMMERCE'));
 print '<table class="noborder" width="100%">';
 
-// INFO TITRE
+// Info Title
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_ECOMMERCE").'</td>';
 print "</tr>";
 
-//SWITCH E-COMMERCE
+// Switch E-Commerce
 if (isset($conf->global->EVENT_SWITCH_BOUTIQUE))
 {
 	if ($conf->global->EVENT_SWITCH_BOUTIQUE > 0) {
@@ -425,40 +425,41 @@ print '<tr><td width="35%">'.$langs->trans("EVENT_BOUTIQUE_CGU").'</td><td colsp
 print '<textarea name="EVENT_BOUTIQUE_CGU" cols="90" rows="1">'.$conf->global->EVENT_BOUTIQUE_CGU.'</textarea>';
 print '</td></tr>'."\n";
 
-// SEPARATOR
+// Separator
 print '</table>';
 print '<br/>';
 print load_fiche_titre($langs->trans('EVENT_MANAGE_MAIL'));
 print '<table class="noborder" width="100%">';
 
-// INFO ITIRE
+// Info Title
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_MAIL").'</td>';
 print "</tr>";
 
-// MAIL SUBJECT
+// Mail Subject
 print '<tr><td width="35%">'.$langs->trans("EVENT_MAIL_SUBJECT").'</td><td colspan="2">';
 print '<textarea name="EVENT_MAIL_SUBJECT" cols="90" rows="10" style="height: 30px;">'.$conf->global->EVENT_MAIL_SUBJECT.'</textarea>';
 print '</td></tr>'."\n";
 
-// MAIL CONTENT
+// Mail Content
 print '<tr><td width="35%">'.$langs->trans("EVENT_MAIL_CONTENT").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_MAIL_CONTENT', (isset($conf->global->EVENT_MAIL_CONTENT)?$conf->global->EVENT_MAIL_CONTENT:''), '', 142, 'EVENT_MAIL_CONTENT', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
-// SEPARATOR
+
+// Separator
 print '</table>';
 print '<br/>';
 
 print load_fiche_titre($langs->trans('EVENT_MANAGE_PUBLIC_REGISTRATION'));
 print '<table class="noborder" width="100%">';
 
-// INFO TITRE
+// Info Title
 print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("EVENT_MANAGE_PUBLIC_REGITRASTION").'</td>';
 print "</tr>";
 
-// PUBLIC REGISTRATION
+// Public Registration
 if (isset($conf->global->EVENT_SWITCH_REGISTER))
 {
 	if ($conf->global->EVENT_SWITCH_REGISTER > 0) {
@@ -489,19 +490,19 @@ print '<input type="radio" id="EVENT_SWITCH_REGISTER_cancel" name="EVENT_SWITCH_
 print '</td>';
 print '</tr>';
 
-//descriptions
+// Descriptions
 print '<tr><td width="35%">'.$langs->trans("EVENT_PUBLIC_DESCRIPTION_1").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_PUBLIC_DESCRIPTION_1', (isset($conf->global->EVENT_PUBLIC_DESCRIPTION_1)?$conf->global->EVENT_PUBLIC_DESCRIPTION_1:''), '', 142, 'EVENT_PUBLIC_DESCRIPTION_1', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-//descriptions
+// Descriptions
 print '<tr><td width="35%">'.$langs->trans("EVENT_PUBLIC_DESCRIPTION_2").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_PUBLIC_DESCRIPTION_2', (isset($conf->global->EVENT_PUBLIC_DESCRIPTION_2)?$conf->global->EVENT_PUBLIC_DESCRIPTION_2:''), '', 142, 'EVENT_PUBLIC_DESCRIPTION_2', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-//description 3 :
+// Description 3 :
 print '<tr><td width="35%">'.$langs->trans("EVENT_PUBLIC_DESCRIPTION_3").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_PUBLIC_DESCRIPTION_3', (isset($conf->global->EVENT_PUBLIC_DESCRIPTION_3)?$conf->global->EVENT_PUBLIC_DESCRIPTION_3:''), '', 142, 'EVENT_PUBLIC_DESCRIPTION_3', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
