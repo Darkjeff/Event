@@ -5,7 +5,7 @@ Configuration
 - la TVA doit être définis
 
 Module pré-requis à activer 
-- modFormStyler -> https://bitbucket.org/code42_fr/formstyler/src
+- modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
 - Tiers
 - Factures et avoirs
 - Produits
