@@ -1,0 +1,1000 @@
+body {
+	/*background: url("texture.jpg");*/
+	background-color: #f6f8fa;
+	--color-background: #f6f8fa;
+	--article-color: white;
+	--main-color: #1f51d3;
+	--second-color: #0f41c3;
+	--shadow-color: #0f21a3;
+	--light-color: #afe1ff;
+	--strong-text: 500;
+	--button-text: 500;
+	--normal-text: 200;
+	--max-width: 900px;
+	--size-big-title: 72px;
+	--color-text: black;
+	font-family: 'Source Sans Pro',sans-serif
+	/*font-family:arial,helvetica,sans-serif;*/
+	background-repeat: repeat-x repeat-y;
+	margin: 0;
+	font-weight: var(--normal-text);
+	}
+
+	.btn span.glyphicon {
+		opacity: 0;
+	}
+	.btn.active span.glyphicon {
+		opacity: 1;
+	}
+
+
+.header{
+	font-weight: var(--strong-text);
+	color: var(--color-text);
+	width: 100%;
+	text-align: center;
+}
+.header > h1{
+font-size: 3em;
+text-align: center;
+width: 100%;
+}
+
+.btn[disabled]{
+	pointer-events: none !important;
+}
+
+.validtitre{
+	display: none;
+}
+
+b{
+	font-weight: var(--strong-text);
+	color: var(--color-text);
+	}
+
+
+#confirm{
+	display: none;
+}
+
+#login		{transform: translateX(30px);}
+#password	{transform: translate(30px);}
+
+.footer_content{
+	margin: 0 auto !important;
+}
+
+	a:hover{
+		text-decoration: none;
+	}
+
+.content_cours{
+	margin-right: 10px;
+}
+
+.content{
+	margin-top: 60px;
+	margin-top: 60px;
+}
+
+.desinscrire {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    color: var(--article-color);
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: var(--strong-text);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+	.btn span.glyphicon{
+		opacity: 0 !important;
+	}
+	.btn.active span.glyphicon{
+		opacity: 1 !important;
+	}
+
+.btn-group.hvr-push{
+	transform: scale(0.6) translate(0, -5px);
+	transform-origin: center left;
+}
+
+.col-lg-2.picto{
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+.account{
+	text-decoration: none;
+	color: var(--color-text);
+	padding: 2px;
+}
+
+.account:hover{
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+select#civility_id {
+    background-color: var(--article-color);
+    border: none;
+    width: 100%;
+    max-width: 15.6em;
+    height: 100%;
+    max-height: 1.4em;
+    border-radius: 3px;
+}
+
+.level_cours{
+	display: inline-block;
+	color: var(--main-color);;
+	margin-right: 5px;
+	font-weight: var(--strong-text);
+	text-align: left
+}
+
+input:required:valid{
+	border-bottom: solid green 2px !important;
+}
+
+.hideonsmartphone{
+	display: none;
+}
+
+input:invalid{
+	border-bottom: solid var(--second-color); 2px;
+}
+
+input {
+    box-shadow: none;
+    border: none;
+    border-bottom: solid transparent 2px;
+    border-radius: 3px;
+}
+
+
+.quota_unit {
+    color: var(--shadow-color) !important;
+}
+
+.hvr-fade:hover{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.contact_header{
+	text-align: left;
+	font-family: "Roboto",sans-serif;
+line-height: 1.18182em;
+text-align: justify;
+font-weight: var(--strong-text);
+font-size: 16px;
+color: var(--color-text);
+}
+
+	.text{
+		margin-bottom: 15px;
+	}
+
+	.button:hover{
+		background-color: var(--shadow-color);
+		cursor: pointer;
+		transform: translate3d(0, 4px, 0);
+	}
+
+	.btn.btn-default {
+    transform-origin: center left;
+}
+
+.col{
+	display: unset;
+}
+
+.elem_contact{
+	margin-top: 10px;
+}
+
+.foot{
+	text-align: right;
+	max-width: 200px;
+	float: right;
+	color: var(--article-color);
+}
+
+.foot_pic{
+	max-width: 60px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+	.login{
+width: 540;
+margin-left: auto;
+margin-right: auto;
+	}
+
+.button > a:hover{
+	text-decoration: none;
+}
+
+.col-md-2.picto.hidden-xs.hidden-sm { /*Aligne les pictos header*/
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+}
+
+.col-md-2.picto.hidden-xs.hidden-sm.foot.foot_pic { /*Aligne les picto footer*/
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.picto{
+	max-width: 22px;
+}
+
+.row{
+	margin-bottom: 2px;
+}
+
+.col-md-12.contact_header {
+    text-align: left;
+    margin: 0;
+        margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+
+	.button {
+			border: none;
+	    background-color: var(--second-color);;
+	    font-family: "Roboto", sans-serif;
+	    font-weight: var(--button-text);
+	    position: relative;
+	    width: 250px;
+	    height: auto;
+	    padding: 10px 20px;
+	    background-color: var(--second-color);
+	    color: var(--article-color);
+	    font-size: 16px;
+	    font-weight: var(--button-text);
+	    text-align: center;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	    -webkit-border-radius: 2px;
+	    -o-border-radius: 2px;
+	    border-radius: 2px;
+	    -webkit-transition: all,0.3s,ease-in-out;
+	    transition: all,0.3s,ease-in-out;
+	    margin: 10px 10px 10px 10px;
+	}
+
+.labelmdp{
+	width: 100%;
+	display: block;
+	padding: 3px;
+}
+
+.navbar.navbar-default {
+    z-index: 99999;
+}
+
+.account:focus{
+	text-decoration: none !important;
+	color: inherit !important;
+	broder: none !important;
+}
+
+#formpass{
+	border-top: solid 2px #e5e3e3;
+}
+
+.submit_login{
+	margin-right: 34px !important;
+}
+
+.place_dispo:hover{
+ 	color: var(--light-color);
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.navbar.navbar-default {
+    background-color: rgba(121,20,24,0.8);
+    border: none;
+}
+
+.navbar{
+	border-radius: unset;
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+
+.petit_titre{
+	font-size: 1.2em;
+line-height: 1.9697em;
+color: var(--color-text);
+text-align: left;
+line-height: 16.2px;
+text-transform: uppercase;
+font-weight: var(--strong-text);
+}
+
+.grand_titre{
+	font-size: 1.8em;
+line-height: 1.31313em;
+margin-top: 0.65657em;
+margin-bottom: 0.65657em;
+color: #3c3c3c;
+text-align: left;
+line-height: 22.8px;
+font-weight: var(--strong-text);
+text-transform: uppercase;
+}
+
+p{
+	margin: 1.18182em 0;
+}
+
+.article{
+	color: var(--color-text);
+	max-width: var(--max-width);
+	width: 100%;
+	text-align: left;
+	font-family: "Roboto",sans-serif;
+font-size: 91.66667%;
+-webkit-text-size-adjust: 100%;
+line-height: 1.18182em;
+text-align: justify;
+font-weight: var(--normal-text);
+}
+
+	.nav.navbar-nav{
+	    display: inline-block;
+	    float: none;
+			height: 35px;
+	}
+
+.website
+{
+  transform: translate(0, -20px);
+	margin: 0;
+	top: 0;
+	padding: 0;
+}
+
+.website > a{
+	color: var(--article-color);
+}
+
+	.navbar-default .navbar-nav > li > a {
+	    color: var(--article-color) !important;
+	}
+
+	.caret {
+	    display: none !important;
+	}
+
+	.navbar-nav > li > .active-menu {
+	    margin-top: 4px !important;
+			border: none !important;
+			border-radius: unset !important;
+			box-shadow: unset !important;
+			color: var(--second-color) !important;
+	}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+	background-color: unset !important;
+}
+
+.active:hover{
+	background-color: var(--article-color) !important;
+}
+
+.navbar-default .navbar-nav > li > a{
+	font-weight: var(--normal-text) !important;
+	text-align: center !important;
+	font-family: "Roboto",sans-serif !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+	color: var(--second-color) !important;
+}
+
+
+	.divider{
+		display: none;
+	}
+
+  .footer_contact_title::after{
+		content:"39 Allée des Tricheries 31840 SEILH";
+	}
+	.footer_contact::before{
+		content:"Le Couturier du Mobilier";
+	}
+
+	.footer_phone::before{
+		content:"06 711 311 05";
+	}
+
+
+	.footer_contact::after {
+	    content: url('ft-adresse.png');
+	    position: absolute;
+	    transform: translate(0px, -31px);
+	}
+
+	.footer_contact{
+		color: var(--article-color);
+		font-weight: var(--strong-text);
+	}
+	.footer_contact_title{
+		color: var(--article-color);
+		font-weight: var(--normal-text);
+	}
+
+	.footer_phone::after {
+			content: url('ft-telephone.png');
+			position: absolute;
+	}
+
+
+	.footer_contact {
+    width: 400px;
+    height: 50px;
+    float: right;
+		color: var(--article-color);
+
+		text-align: right;
+}
+
+.footer_phone {
+    width: 400px;
+    height: 50px;
+    float: right;
+    color: var(--article-color);
+    text-align: right;
+    clear: both;
+    font-size: 1.5em;
+}
+
+.day_date {
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+		margin-left: 10px;
+    display: block;
+    width: 100px;
+		font-weight: var(--strong-text);
+		line-height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+}
+
+/*MARK CC*/
+.header_contact_title::after{
+	content:"39 Allée des Tricheries 31840 SEILH";
+}
+.header_contact::after{
+	content:"Le Couturier du Mobilier";
+
+}
+
+.header_content{
+	margin-left: 62px;
+}
+
+.header_contact_title{
+}
+
+.header_phone::after{
+	content:"06 711 311 05";
+}
+
+
+.header_contact_title::before {
+		content: url('bg-adresse.png');
+		position: absolute;
+		transform: translate(-25px, 0px);
+}
+
+.header_phone::before {
+		content: url('bg-tel.png');
+		position: absolute;
+		transform: translate(-25px, 5px);
+
+}
+
+
+.header_contact {
+	width: 100%;
+	height: 50px;
+	float: right;
+	color: var(--color-text);
+	text-align: left;
+	font-size: 18px;
+	margin-right: 29px;
+}
+
+.header_phone {
+	width: 100%;
+	height: 50px;
+	color: var(--color-text);
+	text-align: left;
+	clear: both;
+	font-size: 18px;
+	margin-right: 29px;
+	font-weight: var(--strong-text);
+}
+
+.header_fix {
+	width: 100%;
+	height: 20px;
+	color: var(--color-text);
+	text-align: left;
+	clear: both;
+	font-size: 18px;
+	margin-right: 29px;
+	font-weight: var(--normal-text);
+	transform: translate(0px, -30px);
+}
+.header_fix::after{
+	content:"05 67 06 52 09";
+}
+
+
+
+.header_contact_title {
+		color: var(--color-text);
+}
+
+
+    div.debug {
+    color: var(--article-color);
+	font-size: 12px;
+    width: 60%;
+		}
+
+	div.debug.h1{
+		font-size: 8px;
+	}
+
+	.day_cours {
+	    text-align: center;
+	    float: left;
+	    margin-right: 15px;
+	    display: block;
+	    width: 20px;
+	    font-size: 20px;
+	    position: absolute;
+	    top: 50%;
+			transform: translateY(50%) rotate(270deg)
+	}
+
+		div#send_error{
+			color: var(--article-color);
+			background-color: var(--shadow-color);
+			max-width: 525px;
+			border-radius: 7px;
+
+}
+
+
+	.date_important {
+	    color: var(--main-color);;
+	    font-size: 1.5em;
+	    font-weight: var(--strong-text);
+	}
+
+.group:hover{
+	background-color: var(--light-color);
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.content_cours{
+	cursor: pointer;
+}
+
+.group{
+	padding: 5px 10px 5px 10px;
+	margin: 1px 0px 1px 0px;
+	cursor: pointer;
+}
+
+.day_title{
+	display:block;
+	font-size: 2em;
+margin-top: 0.65657em;
+margin-bottom: 0.65657em;
+color: #3c3c3c;
+
+text-align: center;
+line-height: 33px;
+font-weight: var(--strong-text);
+text-transform: uppercase;
+margin: 2px;
+margin-bottom: 5px;
+}
+
+
+.day_description {
+    line-height: 1.18182em;
+    text-align: center;
+    font-weight: var(--normal-text);
+    display: block;
+    margin: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-style: oblique;
+    margin-left: 125px;
+		margin-right: 125px;
+}
+
+
+.day_month{
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+    div.day, .article {
+		box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.05);
+		color: var(--color-text);
+		font-size: 15px;
+		width: 100%;
+		max-width: var(--max-width);
+        background-color: /*#781418*/var(--article-color);
+		padding: 3px;
+		margin: 15px;
+		overflow: hidden;
+	 position: relative;
+	 padding: 10px;
+	 border-radius: 6px;
+    }
+
+		@keyframes animday {
+		    from {
+				}
+		    to {
+					}
+		}
+
+    div.day:hover
+	{
+		animation-name: animday;
+    animation-duration: 0.25s;
+        color: black;
+  /*      -moz-box-shadow: 0 0 10px #ccc;
+		-webkit-box-shadow: 0 0 10px #ccc;
+		box-shadow: 0 0 10px #ccc;*/
+	}
+
+    img.logo_header {
+        width: 40%;
+		display: block;
+		margin-left: auto;
+	    margin-right: auto;
+	}
+
+   	img.logo_footer {
+    	width: 20%;
+        display: block;
+        margin-left: auto;
+		margin-right: auto;
+    }
+
+    div.header {
+		display: flex;
+		margin-left: auto;
+	    margin-right: auto;
+    }
+
+		div.footer {
+		    display: block;
+/*		    background: url("bottom.png");*/
+		    overflow: hidden;
+				position: absolute;
+				width: 100%;
+				left: 0;
+		}
+
+
+
+		.footer_content {
+    height: 270px;
+    background: url("footer.jpg");
+        background-repeat: repeat-x;
+        background-position-x: 0%;
+        background-position-y: 0%;
+    background-repeat: no-repeat;
+    padding: 70px 0px 0px;
+    background-position: bottom left;
+    width: 1080px;
+
+}
+
+#nb_unit{
+	color: var(--main-color);
+}
+
+input::-webkit-inner-spin-button {
+     display: none;
+    -webkit-appearance: none;
+	display: hidden;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.login {
+    text-align: center;
+    font-size: 14px;
+}
+
+.logo {
+    width: 70%;
+    background-size: 100%;
+}
+.pic_logo{
+	border: 0;
+max-width: 95%;
+	height: auto;
+width: auto;
+}
+
+.header{
+	display: flex;
+	width: 100%;
+	max-width: var(--max-width);
+}
+@media only screen and (min-width: 1200px) {
+	.navbar-default .navbar-nav > li > a {
+    font-weight: 300;
+    text-align: center;
+    font-size: unset;
+		font-size: 19px;
+}
+}
+
+
+.event_label{
+text-align: right !important;
+padding-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    div.logo {
+        width: 100%;
+    }
+
+	.container{
+		margin: 0;
+		padding: 0;
+	}
+
+		.picto{
+			display: none;
+		}
+
+		.foot{
+			float: none;
+		}
+
+.col-md-12.contact_header {
+		width: 100%;
+		text-align: center;
+}
+
+.event_label{
+text-align: center !important;
+padding: 0;
+margin: 0;
+}
+.col{
+text-align: center !important;
+}
+
+.account{
+	width: 100%;
+	text-align: center;
+}
+
+		.contact_header{
+width: 100%;
+text-align: center;
+		}
+
+		.header{
+			margin: 0 !important;
+			padding: 0 !important;
+			display: block;
+		}
+
+		.footer_contact{
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+
+		.footer_phone{
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+
+		.footer_contact::after{display: none;}
+		.footer_phone::after{display: none;}
+
+		div.header{
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			display: block;
+		}
+
+		.code42_bouton{
+			background-color: var(--second-color);
+		}
+
+
+		.day_date > br{
+			display: none;
+		}
+
+		.day_date {
+		    width: 100%;
+		    font-weight: var(--normal-text);
+		    line-height: 30px;
+		    font-size: 24px;
+		    text-align: center;
+		    margin-right: 20px;
+				margin-left: 0;
+		    margin-top: 7px;
+				position: unset;
+				transform: none;
+				top: auto;
+		}
+
+		.day{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.day_description{
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+
+		.day_cours{
+			display: none;
+		}
+
+		.day_month{
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.header_content{
+			margin-left: 0;
+		}
+
+		.header_contact{
+			margin: 0;
+			margin-right: 29px;
+			font-size: 18px;
+			float: none;
+			text-align: center
+		}
+		.header_phone::before{
+			display: none;
+		}
+
+		.header_contact_title::before{
+			display: none;
+		}
+
+		.header_phone{
+			font-size: 10px;
+			text-align: center;
+			font-size: 18px;
+			width: 100%;
+			height: 20px;
+		}
+
+		.header_contact{
+			margin: 0;
+			margin-right: 29px;
+			font-size: 18px;
+			float: none;
+			text-align: center
+		}
+
+		.header_fix{
+			font-size: 10px;
+			text-align: center;
+			font-size: 18px;
+			width: 100%;
+			height: 20px;
+			transform: none;
+		}
+
+
+		div.footer{
+			background-image: none;
+			height: 150px;
+		}
+
+		.footer_content {
+		    height: 150px;
+				padding-top: 10px;
+		    width: 200px;
+			margin: 0 auto;
+				background-image: none;
+		}
+		.footer_content > .row{
+			width: 200px;
+		}
+
+		.website{
+
+		}
+
+    div.day {
+        color: /*var(--article-color)*/var(--color-text);
+        font-size: 20px;
+        width: 99%;
+				margin: 0;
+				margin-bottom: 15px;
+    }
+
+		.login{
+			width: 100%;
+			max-width: var(--max-width);
+		}
+
+    body, p.warning, .button {
+        font-size: 16px;
+    }
+
+    fieldset {
+        border: 3px solid #8CC3BE;
+    }
+
+    p.warning {
+        width: 100%;
+    }
+
+    div.logo_footer_phone {
+        display: none;
+    }
+}
+
+.button{
+}
+
+.log {
+    max-width: 524px !important;
+    border-radius: 5px 5px 5px 5px;
+    line-height: 1.42;
+    font-size: 18px !important;
+}
+
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
