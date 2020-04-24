@@ -218,7 +218,7 @@ class mailing_registrationbyday extends MailingTargets
      */
     function url($id)
     {
-        return '<a href="'.dol_buildpath('/event/registration/fiche.php',1).'?id='.$id.'">'.img_object('',"event_registration@event").'</a>';
+        return '<a href="'.dol_buildpath('/event/registration/card.php',1).'?id='.$id.'">'.img_object('',"event_registration@event").'</a>';
     }
 
 }

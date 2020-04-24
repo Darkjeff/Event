@@ -943,7 +943,7 @@ if($action != 'addd') {
 /*
  * Event list
  */
-if ( $action == "" && $user->rights->event->registration->creer )
+if ( $action == "")// && $user->rights->event->registration->creer 
 {
 	// On veut s'inscrire soit pour un évènement soit pout une journée
 		$errors='';

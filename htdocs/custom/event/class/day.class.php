@@ -641,7 +641,7 @@ class Day extends Event
 
 		$result='';
 
-		$lien = '<a href="'.dol_buildpath('/event/day/fiche.php', 1).'?id='.$this->id.'">';
+		$lien = '<a href="'.dol_buildpath('/event/day/card.php', 1).'?id='.$this->id.'">';
 		$lienfin='</a>';
 
 		$picto='day@event';

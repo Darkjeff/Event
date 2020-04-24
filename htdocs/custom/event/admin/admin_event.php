@@ -36,12 +36,8 @@ require_once("../class/eventlevel.class.php");
 require_once("../class/day.class.php");
 require_once("../lib/event.lib.php");
 
-// Load traductions files requiredby by page
-$langs->load("admin");
-$langs->load("companies");
-$langs->load("other");
-$langs->load("event@event");
-$langs->load("cron");
+// Load traductions files required by page
+$langs->loadLangs(array("admin","companies","other","event@event","cron"));
 
 // Get parameters
 $id			= GETPOST('id','int');
@@ -120,97 +116,97 @@ if ($action == 'setvar')
 	$res = dolibarr_set_const($db, 'EVENT_INSCRIPTION_STATEMENT', $event_inscription_statement,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_BLOCK_RELANCE_VALID
+	// Event block Relance Valid
 	$event_block_relance_valid=GETPOST('event_block_relance_valid','int');
 	$res = dolibarr_set_const($db, 'EVENT_BLOCK_RELANCE_VALID', $event_block_relance_valid,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_BLOCK_RELANCE_WAITING
+	// Event Block Relance Wainting
 	$event_block_relance_waiting=GETPOST('event_block_relance_waiting','int');
 	$res = dolibarr_set_const($db, 'EVENT_BLOCK_RELANCE_WAITING', $event_block_relance_waiting,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_BLOCK_REGISTRATION_TAG
+	// Event Block Registration Tag
 	$event_block_registration_tag=GETPOST('event_block_registration_tag','int');
 	$res = dolibarr_set_const($db, 'EVENT_BLOCK_REGISTRATION_TAG', $event_block_registration_tag,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PUBLIC_REGISTRATION_LIMIT_DATE
+	// Event Public Registration Limit Date
 	$event_public_registration_limit_date=GETPOST('EVENT_PUBLIC_REGISTRATION_LIMIT_DATE','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_REGISTRATION_LIMIT_DATE', $event_public_registration_limit_date,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE
+	// Event Public Unrehistration Limit Date
 	$event_public_unregistration_limit_date=GETPOST('EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_UNREGISTRATION_LIMIT_DATE', $event_public_unregistration_limit_date,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PUBLIC_UNIT_NAME
+	// Event Public Unit Name
 	$event_public_unit_name=GETPOST('EVENT_PUBLIC_UNIT_NAME','alpha');
 	$res = dolibarr_set_const($db, 'EVENT_PUBLIC_UNIT_NAME', $event_public_unit_name,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EVENT_PLACE_AVAILABLE
+	// Event Place Available
 	$event_place_available=GETPOST('EVENT_PLACE_AVAILABLE','int');
 	$res = dolibarr_set_const($db,'EVENT_PLACE_AVAILABLE',$event_place_available,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Permettre les inscriptions / interdire
+	// Permettre les inscriptions / interdire
 	$event_switch_register=GETPOST('EVENT_SWITCH_REGISTER','int');
 	$res = dolibarr_set_const($db,'EVENT_SWITCH_REGISTER',$event_switch_register,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//event_PrefixNameEventDay
+	// Event Prefix Name Event Day
 	$event_PrefixNameEventDay=GETPOST('event_PrefixNameEventDay','alpha');
 	$res = dolibarr_set_const($db, 'PREFIX_NAME_EVENTDAY',$event_PrefixNameEventDay,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//event_EventActiveByDefault
+	// Event Active By Default
 	$event_EventActiveByDefault=GETPOST('event_EventActiveByDefault','int');
 	$res = dolibarr_set_const($db, 'EVENT_ACTIVE_BY_DEFAULT',$event_EventActiveByDefault,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//event_DayActiveByDefault
+	// Event Day Active By Default
 	$event_DayActiveByDefault=GETPOST('event_DayActiveByDefault','int');
 	$res = dolibarr_set_const($db, 'DAY_ACTIVE_BY_DEFAULT',$event_DayActiveByDefault,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//event_DisableCreate1stDayByDefaut
+	// Event Disable Create1s tDay By Defaut
 	$event_DisableCreate1stDayByDefaut=GETPOST('event_DisableCreate1stDayByDefaut','int');
 	$res = dolibarr_set_const($db,'DISABLE_CREATE_1ST_DAY_BY_DEFAULT',$event_DisableCreate1stDayByDefaut,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//event_ActiveCloneFunc
+	// Event Active Clone Func
 	$event_ActiveCloneFunc=GETPOST('event_ActiveCloneFunc','int');
 	$res = dolibarr_set_const($db, 'EVENT_ACTIVE_CLONE_FUNC',$event_ActiveCloneFunc,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//eventday_ActiveCloneFunc
+	// Event day Active Clone Function
 	$eventday_ActiveCloneFunc=GETPOST('eventday_ActiveCloneFunc','int');
 	$res = dolibarr_set_const($db, 'EVENTDAY_ACTIVE_CLONE_FUNC',$eventday_ActiveCloneFunc,'yesno',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Delay before relaunch Confirmed registration
+	// Delay Before Relaunch Confirmed Registration
 	$event_Delaybeforlaunchconfirmed=GETPOST('EVENT_DELAY_BEFORE_RELAUNCH_CONFIRMED','int');
 	$res = dolibarr_set_const($db, 'EVENT_DELAY_BEFORE_RELAUNCH_CONFIRMED',$event_Delaybeforlaunchconfirmed,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//Delay before relaunch Renew registration
+	// Delay Before Relaunch Renew Registration
 	$event_Delaybeforlaunchwaiting=GETPOST('EVENT_DELAY_BEFORE_RELAUNCH_WAITING','int');
 	$res = dolibarr_set_const($db, 'EVENT_DELAY_BEFORE_RELAUNCH_WAITING',$event_Delaybeforlaunchwaiting,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//ValidRegistrationAfterCreation
+	// Valid Registration After Creation
 	$registration_valid_after_create=GETPOST('registration_valid_after_create','alpha');
 	$res = dolibarr_set_const($db,'REGISTRATION_VALID_AFTER_CREATE',$registration_valid_after_create,'',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	//EventDefaultMail
+	// Event Default Mail
 	$EventDefaultMail=GETPOST('EventDefaultMail','alpha');
 	$res= dolibarr_set_const($db,'EVENTDEFAULTMAIL',$EventDefaultMail,'',0,'',$conf->entity);
 	if (!res > 0) $error++;
 
-	//TEST ERROR
+	// Test error
 	if (! $error) {
 		$mesg = "<div class=\"ok\">".$langs->trans("SetupSaved")."</div>";
 	}
@@ -361,9 +357,7 @@ if ($action == 'setdoc')
 }
 
 /***************************************************
- * VIEW
-*
-* Put here all code to build page
+ * View
 ****************************************************/
 
 llxHeader('',$langs->trans("EventSetupBackOfficeTitle"),'');
@@ -388,13 +382,13 @@ print '<input type="hidden" name="action" value="setvar">';
 
 print load_fiche_titre($langs->trans('AdminEventBehaviour'));
 
-print '<table class="border" width="100%">';
+print '<table class="noborder" width="100%">';
 
-print '<tr class="liste_titre">';
+print '<tr class="liste_titre oddeven">';
 print '<td colspan="2">'.$langs->trans("AdminManageRuleInvitation").'</td>';
 print "</tr>";
 
-// Masquage group
+// Masking Group
 if (isset($conf->global->EVENT_HIDE_GROUP))
 {
 	if ($conf->global->EVENT_HIDE_GROUP > 0) {
@@ -416,17 +410,17 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('Valid_hide_group');
+print '<tr><td>'.$langs->trans('Valid_hide_group');
 print '</td>';
-print '<td>';
+print '<td width="30%">';
 print '<input type="radio" id="event_hide_group_confirm" name="event_hide_group" value="1" '.$checkedYes.'/> <label for="event_hide_group_confirm">'.$langs->trans('Yes').'</label>';
 print '<br/>';
 print '<input type="radio" id="event_hide_group_cancel" name="event_hide_group" '.$checkedNo.' value="-1"/> <label for="event_hide_group_cancel">'.$langs->trans('No').'</label>';
 print '</td>';
 print '</tr>';
 
-// Rendre obligatoire les groupes pour les inscriptions
-print '<tr class="impair">';
+// Make Groups For Registration Mandatory
+print '<tr>';
 print '<td>'.$langs->trans("EventMakeLevelRequired").'</td>';
 print '<td>';
 $arrval=array('0'=>$langs->trans("No"),	'1'=>$langs->trans("Yes"));
@@ -434,8 +428,8 @@ print $form->selectarray("EVENT_LEVEL_REQUIRED",$arrval,$conf->global->EVENT_LEV
 print '</td>';
 print '</tr>';
 
-// Rendre obligatoire le mail pour les inscriptions
-print '<tr class="pair">';
+// Make The Email Mandatory For Registrations
+print '<tr>';
 print '<td>'.$langs->trans("EventRegistrationMakeEmailRequired").'</td>';
 print '<td>';
 $arrval=array('0'=>$langs->trans("No"),	'1'=>$langs->trans("Yes"));
@@ -443,7 +437,7 @@ print $form->selectarray("EVENT_REGISTRATION_MAIL_REQUIRED",$arrval,$conf->globa
 print '</td>';
 print '</tr>';
 
-// ValidRegistrationAfterCreation
+// Valid Registration After Creation
 if ($conf->global->REGISTRATION_VALID_AFTER_CREATE=='1') {
 		$checked2='';
 		$checked1='checked="checked"';
@@ -458,7 +452,7 @@ if ($conf->global->REGISTRATION_VALID_AFTER_CREATE=='1') {
 		$checked0='';
 	}
 
-print '<tr class="pair"><td>'.$langs->trans('AdminValidRegistrationAfterCreationDefault');
+print '<tr><td>'.$langs->trans('AdminValidRegistrationAfterCreationDefault');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="registration_valid_after_create_confirm" name="registration_valid_after_create" value="2" '.$checked2.'/> <label for="registration_valid_after_create">'.$langs->trans('ValidParticipationAfterCreation').'</label>';
@@ -469,7 +463,7 @@ print '<input type="radio" id="registration_valid_after_create_confirm" name="re
 print '</td>';
 print '</tr>';
 
-// Envoyer un Email d'invitation
+// Send Invitation Email
 if (isset($conf->global->EVENT_SEND_EMAIL))
 {
 	if ($conf->global->EVENT_SEND_EMAIL > 0) {
@@ -490,7 +484,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr class="impair"><td>'.$langs->trans('ValidSendEmail');
+print '<tr><td>'.$langs->trans('ValidSendEmail');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="send_email_confirm" name="event_send_email" value="1" '.$checkedYes.'/> <label for="send_email_confirm">'.$langs->trans('Yes').'</label>';
@@ -499,7 +493,7 @@ print '<input type="radio" id="send_email_cancel" name="event_send_email" '.$che
 print '</td>';
 print '</tr>';
 
-// Envoyer un PDF en pièce jointe de l'invitation
+// Send A PDF As An Attachment To The Invitation
 if (isset($conf->global->EVENT_SEND_PDF))
 {
 	if ($conf->global->EVENT_SEND_PDF > 0) {
@@ -521,7 +515,7 @@ else
 	}
 }
 
-print '<tr class="pair"><td>'.$langs->trans('ValidSendPDF');
+print '<tr><td>'.$langs->trans('ValidSendPDF');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="send_pdf_confirm" name="event_send_pdf" value="1" '.$checkedYes.'/> <label for="send_pdf_confirm">'.$langs->trans('Yes').'</label>';
@@ -530,7 +524,7 @@ print '<input type="radio" id="send_pdf_cancel" name="event_send_pdf" '.$checked
 print '</td>';
 print '</tr>';
 
-// EVENT_MANAGE_ICS
+// Event Manage ICS
 if (isset($conf->global->EVENT_MANAGE_ICS))
 {
 	if ($conf->global->EVENT_MANAGE_ICS > 0) {
@@ -552,7 +546,7 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('registration_event_manage_ics');
+print '<tr><td>'.$langs->trans('registration_event_manage_ics');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_manage_ics_confirm" name="event_manage_ics" value="1" '.$checkedYes.'/> <label for="event_manage_ics_confirm">'.$langs->trans('Yes').'</label>';
@@ -561,23 +555,23 @@ print '<input type="radio" id="event_manage_ics_cancel" name="event_manage_ics" 
 print '</td>';
 print '</tr>';
 
-// Url publique pour la validation des invitations
-print '<tr class="pair">';
+// Public urlURL For Validation Of Invitations
+print '<tr>';
 print '<td>'.$langs->trans("MainUrlRegistration").'</td>';
 print '<td>';
 print '<input type="text" name="event_main_url_registration" value="'.$conf->global->EVENT_MAIN_URL_REGISTRATION.'"  size="40"/>';
 print '</td>';
 print '</tr>';
 
-// EventDefaultMail
-print '<tr class="pair">';
+// Event Default Mail
+print '<tr>';
 print '<td>'.$langs->trans("EventDefaultMail").'</td>';
 print '<td>';
 print '<input type="text" name="EventDefaultMail" value="'.$conf->global->EVENTDEFAULTMAIL.'"  size="40"/>';
 print '</td>';
 print '</tr>';
 
-// event_block_registration_tag
+// event Block Registration TAG
 if (isset($conf->global->EVENT_BLOCK_REGISTRATION_TAG))
 {
 	if ($conf->global->EVENT_BLOCK_REGISTRATION_TAG > 0) {
@@ -598,7 +592,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr><td colspan="">'.$langs->trans('Event_block_registration_tag');
+print '<tr><td>'.$langs->trans('Event_block_registration_tag');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_block_registration_tag_confirm" name="event_block_registration_tag" value="1" '.$checkedYes.'/> <label for="event_block_registration_tag_confirm">'.$langs->trans('Yes').'</label>';
@@ -611,31 +605,31 @@ print '<tr class="liste_titre">';
 print '<td colspan="2">'.$langs->trans("AdminManageRuleReminder").'</td>';
 print "</tr>";
 
-// Délai d'expiration des inscriptions
-print '<tr class="impair">';
+// Registration Deadline
+print '<tr>';
 print '<td>'.$langs->trans("EventRegistrationLimitToExpire").'</td>';
 print '<td>';
 print '<input type="text" name="EVENT_REGISTRATION_LIMIT_EXPIRE" value="'.$conf->global->EVENT_REGISTRATION_LIMIT_EXPIRE.'" size="3"/>'.' '.$langs->trans('Days');
 print '</td>';
 print '</tr>';
 
-// Nombre de place disponible par défaut pour les groupe(s) (0=Places illimité)
-print '<tr class="pair">';
+// Number Of Places Available By Default For Group (s) (0 = unlimited places)
+print '<tr>';
 print '<td>'.$langs->trans("EventRegistrationLevelDefaultNumber").'</td>';
 print '<td>';
 print '<input type="text" name="EVENT_LEVEL_DEFAULT_LEVEL_DISPO" value="'.$conf->global->EVENT_LEVEL_DEFAULT_LEVEL_DISPO.'" size="3"/>'.$langs->trans('Place');
 print '</td>';
 print '</tr>';
 
-// Seuil pour le calcul de disponibilité des places
-print '<tr class="impair">';
+// Threshold For Calculating Seat Availability
+print '<tr>';
 print '<td>'.$langs->trans("EventRegistrationLevelDefaultLimit").'</td>';
 print '<td>';
 print '<input type="text" name="EVENT_LIMIT_LEVEL_PLACE" value="'.$conf->global->EVENT_LIMIT_LEVEL_PLACE.'"  size="3"/>'.$langs->trans('Place');
 print '</td>';
 print '</tr>';
 
-// event_block_relance_valid
+// Event Block Relance Valid
 if (isset($conf->global->EVENT_BLOCK_RELANCE_VALID))
 {
 	if ($conf->global->EVENT_BLOCK_RELANCE_VALID > 0) {
@@ -656,7 +650,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr><td colspan="">'.$langs->trans('Event_block_relance_valid');
+print '<tr><td>'.$langs->trans('Event_block_relance_valid');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_block_relance_valid_confirm" name="event_block_relance_valid" value="1" '.$checkedYes.'/> <label for="event_block_relance_valid_confirm">'.$langs->trans('Yes').'</label>';
@@ -665,7 +659,7 @@ print '<input type="radio" id="event_block_relance_valid_cancel" name="event_blo
 print '</td>';
 print '</tr>';
 
-// event_block_relance_waiting
+// Event Block Relance Waiting
 if (isset($conf->global->EVENT_BLOCK_RELANCE_WAITING))
 {
 	if ($conf->global->EVENT_BLOCK_RELANCE_WAITING > 0) {
@@ -686,7 +680,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr><td colspan="">'.$langs->trans('Event_block_relance_waiting');
+print '<tr><td>'.$langs->trans('Event_block_relance_waiting');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_block_relance_waiting_confirm" name="event_block_relance_waiting" value="1" '.$checkedYes.'/> <label for="event_block_relance_waiting_confirm">'.$langs->trans('Yes').'</label>';
@@ -695,16 +689,16 @@ print '<input type="radio" id="event_block_relance_waiting_cancel" name="event_b
 print '</td>';
 print '</tr>';
 
-//Delaybeforlaunchwaiting
-print '<tr class="pair">';
+// Delay Befor Launch Waiting
+print '<tr>';
 print '<td>'.$langs->trans("Delaybeforlaunchwaiting").' - <a href="'.DOL_URL_ROOT.'/cron/list.php" target="_blank">'.$langs->trans('Setup').' '.$langs->trans('CronList').'</a></td>';
 print '<td>';
 print '<input type="text" name="EVENT_DELAY_BEFORE_RELAUNCH_WAITING" value="'.$conf->global->EVENT_DELAY_BEFORE_RELAUNCH_WAITING.'" size="3"/>'.' '.$langs->trans('Hours');
 print '</td>';
 print '</tr>';
 
-//Delaybeforlaunchconfirmed
-print '<tr class="impair">';
+// Delay Befor Launch Confirmed
+print '<tr>';
 print '<td>'.$langs->trans("Delaybeforlaunchconfirmed").' - <a href="'.DOL_URL_ROOT.'/cron/list.php" target="_blank">'.$langs->trans('Setup').' '.$langs->trans('CronList').'</a></td>';
 print '<td>';
 print '<input type="text" name="EVENT_DELAY_BEFORE_RELAUNCH_CONFIRMED" value="'.$conf->global->EVENT_DELAY_BEFORE_RELAUNCH_CONFIRMED.'" size="3"/>'.' '.$langs->trans('Hours');
@@ -715,15 +709,15 @@ print '<tr class="liste_titre">';
 print '<td colspan="2">'.$langs->trans("AdminManageRule1stCreate").'</td>';
 print "</tr>";
 
-// Prefixe pour le nom de la 1ère journée crée
-print '<tr class="pair">';
+// Prefix For The Name of The First Day Created
+print '<tr>';
 print '<td>'.$langs->trans("PrefixNameEventDay").'</td>';
 print '<td>';
 print '<input type="text" name="event_PrefixNameEventDay" value="'.$conf->global->PREFIX_NAME_EVENTDAY.'" size="40"/>';
 print '</td>';
 print '</tr>';
 
-// Journée active par défaut à la création
+// Default Active Day At Creation
 if (isset($conf->global->DISABLE_CREATE_1ST_DAY_BY_DEFAULT))
 {
 	if ($conf->global->DISABLE_CREATE_1ST_DAY_BY_DEFAULT > 0) {
@@ -744,7 +738,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr class="pair">';
+print '<tr>';
 print '<td>'.$langs->trans("Event_DisableCreate1stDayByDefaut").'</td>';
 print '<td>';
 print '<input type="radio" id="event_DisableCreate1stDayByDefaut_confirm" name="event_DisableCreate1stDayByDefaut" value="1" '.$checkedYes.'/> <label for="event_DayActiveByDefault_confirm">'.$langs->trans('Yes').'</label>';
@@ -753,7 +747,7 @@ print '<input type="radio" id="event_DisableCreate1stDayByDefaut_cancel" name="e
 print '</td>';
 print '</tr>';
 
-// Evénement actif par défaut à la création
+// Event Active By Default At Creation
 if (isset($conf->global->EVENT_ACTIVE_BY_DEFAULT))
 {
 	if ($conf->global->EVENT_ACTIVE_BY_DEFAULT > 0) {
@@ -774,7 +768,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr class="pair">';
+print '<tr>';
 print '<td>'.$langs->trans("EventActiveByDefault").'</td>';
 print '<td>';
 print '<input type="radio" id="event_EventActiveByDefault_confirm" name="event_EventActiveByDefault" value="5" '.$checkedYes.'/> <label for="event_EventActiveByDefault_confirm">'.$langs->trans('Yes').'</label>';
@@ -783,7 +777,7 @@ print '<input type="radio" id="event_EventActiveByDefault_cancel" name="event_Ev
 print '</td>';
 print '</tr>';
 
-// Journée active par défaut à la création
+// Default Active Day At Creation
 if (isset($conf->global->DAY_ACTIVE_BY_DEFAULT))
 {
 	if ($conf->global->DAY_ACTIVE_BY_DEFAULT > 0) {
@@ -804,7 +798,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr class="pair">';
+print '<tr>';
 print '<td>'.$langs->trans("DayActiveByDefault").'</td>';
 print '<td>';
 print '<input type="radio" id="event_DayActiveByDefault_confirm" name="event_DayActiveByDefault" value="4" '.$checkedYes.'/> <label for="event_DayActiveByDefault_confirm">'.$langs->trans('Yes').'</label>';
@@ -813,7 +807,7 @@ print '<input type="radio" id="event_DayActiveByDefault_cancel" name="event_DayA
 print '</td>';
 print '</tr>';
 
-// event_ActiveCloneFunc
+// Event Active Clone Function
 if (isset($conf->global->EVENT_ACTIVE_CLONE_FUNC))
 {
 	if ($conf->global->EVENT_ACTIVE_CLONE_FUNC > 0) {
@@ -834,7 +828,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr><td colspan="">'.$langs->trans('Event_ActiveCloneFunc');
+print '<tr><td>'.$langs->trans('Event_ActiveCloneFunc');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_ActiveCloneFunc_confirm" name="event_ActiveCloneFunc" value="1" '.$checkedYes.'/> <label for="event_ActiveCloneFunc">'.$langs->trans('Yes').'</label>';
@@ -843,7 +837,7 @@ print '<input type="radio" id="event_ActiveCloneFunc_cancel" name="event_ActiveC
 print '</td>';
 print '</tr>';
 
-// eventday_ActiveCloneFunc - EVENTDAY_ACTIVECLONEFUNC
+// Event Day Active Clone Function
 if (isset($conf->global->EVENTDAY_ACTIVE_CLONE_FUNC))
 {
 	if ($conf->global->EVENTDAY_ACTIVE_CLONE_FUNC > 0) {
@@ -864,7 +858,7 @@ else
 		$checkedNo='checked="checked"';
 	}
 }
-print '<tr><td colspan="">'.$langs->trans('EventDay_ActiveCloneFunc');
+print '<tr><td>'.$langs->trans('EventDay_ActiveCloneFunc');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="eventday_ActiveClone_confirm" name="eventday_ActiveCloneFunc" value="1" '.$checkedYes.'/> <label for="eventday_ActiveCloneFunc">'.$langs->trans('Yes').'</label>';
@@ -873,15 +867,14 @@ print '<input type="radio" id="eventday_ActiveClone_cancel" name="eventday_Activ
 print '</td>';
 print '</tr>';
 
-print '<tr class="pair"><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
 print '</table>';
 
 print '<br/>';
 print load_fiche_titre($langs->trans('Admin_menu_manage_interface'));
-print '<table class="border" width="100%">';
-print '<tr class="liste_titre">';
+print '<table class="noborder" width="100%">';
+print '<tr class="liste_titre oddeven">';
 print '<td>'.$langs->trans("Description").'</td>';
-print '<td width="400px">'.$langs->trans("Valeur").'</td>';
+print '<td width="30%">'.$langs->trans("Value").'</td>';
 print "</tr>\n";
 
 // Hide pdf bill - event_hide_pdf_bill & EVENT_HIDE_PDF_BILL
@@ -906,7 +899,7 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('registration_event_hide_pdf_bill');
+print '<tr class="oddeven"><td>'.$langs->trans('registration_event_hide_pdf_bill');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_hide_pdf_bill_confirm" name="event_hide_pdf_bill" value="1" '.$checkedYes.'/> <label for="event_hide_pdf_bill_confirm">'.$langs->trans('Yes').'</label>';
@@ -915,7 +908,7 @@ print '<input type="radio" id="event_hide_pdf_bill_cancel" name="event_hide_pdf_
 print '</td>';
 print '</tr>';
 
-// Hide registration group
+// Hide Registration Group
 if (isset($conf->global->EVENT_REGISTRATION_BLOCK_TIERS))
 {
 	if ($conf->global->EVENT_REGISTRATION_BLOCK_TIERS > 0) {
@@ -937,7 +930,7 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('registration_block_group');
+print '<tr><td>'.$langs->trans('registration_block_group');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_registration_block_group_confirm" name="event_registration_block_tiers" value="1" '.$checkedYes.'/> <label for="event_hide_group_confirm">'.$langs->trans('Yes').'</label>';
@@ -968,7 +961,7 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('RegistrationExpiration');
+print '<tr><td>'.$langs->trans('RegistrationExpiration');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_expiration_confirm" name="event_expiration" value="1" '.$checkedYes.'/> <label for="event_expiration_confirm">'.$langs->trans('Yes').'</label>';
@@ -999,7 +992,7 @@ else
 	}
 }
 
-print '<tr><td colspan="">'.$langs->trans('RegistrationInscriptionStatement');
+print '<tr><td>'.$langs->trans('RegistrationInscriptionStatement');
 print '</td>';
 print '<td>';
 print '<input type="radio" id="event_inscription_statement_confirm" name="event_inscription_statement" value="1" '.$checkedYes.'/> <label for="event_inscription_statement_confirm">'.$langs->trans('Yes').'</label>';
@@ -1009,7 +1002,7 @@ print '</td>';
 print '</tr>';
 
 // // SMS - numéro d'envoi
-// print '<tr class="impair">';
+// print '<tr>';
 // print '<td>'.$langs->trans("EventSmsNumberFrom").'</td>';
 // print '<td>';
 // if ($conf->global->MAIN_SMS_SENDMODE == 'ovh')        // For backward compatibility        @deprecated
@@ -1073,10 +1066,14 @@ print '</tr>';
 // }
 // print '</td>';
 // print '</tr>';
-
-print '<tr class="pair"><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
 print '</table>';
+dol_fiche_end();
 
+print '<div class="center">';
+print '<input type="submit" class="button hideifnotset" value="'.$langs->trans("Save").'">';
+print '</div>';
+
+print "</form>\n";
 print '<br />';
 
 // End of page

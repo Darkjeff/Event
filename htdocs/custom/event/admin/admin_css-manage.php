@@ -36,12 +36,9 @@ require_once("../class/eventlevel.class.php");
 require_once("../class/day.class.php");
 require_once("../lib/event.lib.php");
 
-// Load traductions files requiredby by page
-$langs->load("admin");
-$langs->load("companies");
-$langs->load("other");
-$langs->load("event@event");
-$langs->load("cron");
+// Load traductions files required by by page
+$langs->loadLangs(array("admin","companies","other","event@event","cron"));
+
 
 // Get parameters
 $id			= GETPOST('id','int');
@@ -101,14 +98,15 @@ $linkback='<a href="'.DOL_URL_ROOT.'/admin/modules.php">'.$langs->trans("BackToM
 
 print load_fiche_titre($langs->trans('CssTitreMail'));
 
-print '<table class="border" width="100%">';
+print '<div class="div-table-responsive">';
+print "\n".'<table class="noborder" width=100%>';
 
 // SEPARATOR
 print '<tr class="liste_titre">';
 print '<td colspan="2">'.$langs->trans("css_menu").'</td>';
 print "</tr>";
 
-//CSS CONFIG
+// CSS CONFIG
 $url = DOL_URL_ROOT.'/custom/event/admin/admin_css-manage.php';
 $file = '../css/custom.css';
 
@@ -125,12 +123,16 @@ $text = file_get_contents($file);
 print '<form action="" method="post">';
 print '<tr><td width="35%">'.$langs->trans("CssTitreMail").'</td><td>';
 print '<textarea name="text" cols="90" rows="39">'.htmlspecialchars($text).'</textarea>';
-print '<tr>';
-print '<td colspan="2" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"><input type="reset" class="button" value="'.$langs->trans("css_reset").'"></td>';
-print '</tr>';
-print '</form>';
-
 print '</td></tr></table>'."\n";
+print '</div>';
+dol_fiche_end();
+
+print '<div class="center">';
+print '<input type="submit" class="button hideifnotset" value="'.$langs->trans("Save").'"><input type="reset" class="button" value="'.$langs->trans("css_reset").'">';
+print '</div>';
+
+print "</form>\n";
+print '<br />';
 
 // End of page
 llxFooter();

@@ -253,7 +253,7 @@ class FormRegistration
         	if ($this->fk_eventday > 0)
         	{
         		$eventdaystat->fetch($this->fk_eventday);
-        		print '<td  width="25%;"><a href="'.DOL_URL_ROOT.'/custom/event/day/fiche.php?id='.$this->fk_eventday.'"><img src="'.DOL_URL_ROOT.'/custom/event/img/object_day.png" border="0" alt="" title="Voir la journée: '.$eventdaystat->ref.' - '.$eventdaystat->label.'"> '.$eventdaystat->label.'</a>';
+        		print '<td  width="25%;"><a href="'.DOL_URL_ROOT.'/custom/event/day/card.php?id='.$this->fk_eventday.'"><img src="'.DOL_URL_ROOT.'/custom/event/img/object_day.png" border="0" alt="" title="Voir la journée: '.$eventdaystat->ref.' - '.$eventdaystat->label.'"> '.$eventdaystat->label.'</a>';
         		print ' &nbsp; ';
         		print '<a href="'.$_SERVER['PHP_SELF'].'?action=create">'.img_picto($langs->trans('ChooseAnotherDay'), 'edit').'</a></td>';
         		// Date of eventday
@@ -829,7 +829,7 @@ class FormRegistration
         	if ($this->fk_eventday > 0)
         	{
         		$eventdaystat->fetch($this->fk_eventday);
-        		print '<td  width="25%;"><a href="'.DOL_URL_ROOT.'/custom/event/day/fiche.php?id='.$this->fk_eventday.'"><img src="'.DOL_URL_ROOT.'/custom/event/img/object_day.png" border="0" alt="" title="Voir la journée: '.$eventdaystat->ref.' - '.$eventdaystat->label.'"> '.$eventdaystat->label.'</a>';
+        		print '<td  width="25%;"><a href="'.DOL_URL_ROOT.'/custom/event/day/card.php?id='.$this->fk_eventday.'"><img src="'.DOL_URL_ROOT.'/custom/event/img/object_day.png" border="0" alt="" title="Voir la journée: '.$eventdaystat->ref.' - '.$eventdaystat->label.'"> '.$eventdaystat->label.'</a>';
         		// Date of eventday
         		print '<td width="25%;">'.$langs->trans('EventDayDate').'</td>';
         		print '<td width="25%;">'.dol_print_date($this->datec,'daytext').'</td>';

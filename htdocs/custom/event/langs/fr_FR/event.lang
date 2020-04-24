@@ -2,9 +2,11 @@
 CHARSET=UTF-8
 
 ##### Module #####
-Event=Evènement
-Module1680Name= Evènements
-Module1680Desc= Gestion d'évènements et d'inscriptions par groupe/session
+Event=Événement
+Events=Événements
+EventsSetup=Configuration du module événements
+Module1680Name=Événements
+Module1680Desc=Gestion d'évènements et d'inscriptions par groupe/session
 RegistrationsModelModule=Modèles de document des inscriptions
 RegistrationExtraFieldsManage=Gérér les champs des inscriptions
 EventMakeLevelRequired=Rendre obligatoire  le choix d'un groupe pour une inscription
@@ -31,7 +33,7 @@ DayListShowClosedToo=Voir aussi les journées cloturées
 nombreInscrit=Nombre d'inscrit(s)
 eventPlaceAvailable=Afficher le nombre d'inscrit(s) à la place du nombre de place(s) disponible(s).
 EVENT_MANAGE_ECOMMERCE=Gestion de la page BOUTIQUE
-EVENT_MANAGE_PUBLIC_REGITRASTION=Gestion de la page publique de création de compte
+EVENT_MANAGE_PUBLIC_REGISTRATION=Gestion de la page publique de création de compte
 eventSwitchRegister=Activer la création publique de compte
 eventNavbarRegister=Afficher la barre de naviguation
 EVENT_PUBLIC_DESCRIPTION_1=1<sup>ère</sup> page<br />(Page de saisi des informations générales)
@@ -530,10 +532,9 @@ errTooLateSub=Il est trop tard pour s'inscrire
 errTooLateUnSub=Il est trop tard pour se désinscrire
 errNoSpot=Plus de place disponible
 
-ParticipateSujet=Sujet du mail de confirmation de participation
+ParticipateSubject=Sujet du mail de confirmation de participation
 ParticipateMessage=Corps du mail de confirmation de participation<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__<i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br /></p>
-
-NotParticipateSujet=Sujet du mail de refus de participation
+NotParticipateSubject=Sujet du mail de refus de participation
 NotParticipateMessage=Corps du mail de refus de participation<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__<i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br /></p>
 
 # TO CLEAN #
