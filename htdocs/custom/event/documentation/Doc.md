@@ -67,7 +67,7 @@ Ces menus permettent de modifier le contenu de la page publique
 
 ##Gestion des relances
 
-![Eventg](img/EventAdminRelance.JPG)
+![Eventg](img/EventAdminRelance.jpg)
 
 Ces paramètres permettent de configurer l'envoi des mails de relance, ces mails permettant le renvoi d'un mail de rappel à l'utilisateur inscrit ou invité.
 
