@@ -39,9 +39,9 @@ Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de 
 
 ![Eventd](img/EventAdminCreationCompte.JPG)
 
-1) Activer la création publique de compte : Permet de désactiver la possibilités aux utilisateurs non-inscrit de s'inscrire, via la page publique.
+1) Activer la création publique de compte : Permet d'activer ou de désactiver la possibilité aux utilisateurs non-inscrit de s'inscrire, via la page publique en créant un compte utilisateur.
 
-2)Champs 1ère, 2ème, 3ème page : Permer de personnaliser le message affiché à chaque étape de l'inscription.
+2) Champs 1ère, 2ème, 3ème page : Permer de personnaliser le message affiché à chaque étape de l'inscription.
 
 ##Feuille de Style
 
@@ -98,7 +98,7 @@ Lorsqu'on est administrateur, on a acces au panneau d'administration (ADMIN), à
 
 Un administrateur ne peur pas utiliser la boutique et s'acheter lui-même des crédits.
 
- Il ne peut pas non plus s'inscrire à ses propre cours.
+Il ne peut pas non plus s'inscrire à ses propre cours.
 
 ###Utilisateur
 
