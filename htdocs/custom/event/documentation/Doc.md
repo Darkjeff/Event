@@ -1,10 +1,13 @@
 
 #Fonctionnement
 Les pages publique du module se décomposent en plusieurs fonctionnalités permettant à l'utilisateur d'effectuer de nombreuses tâches. On peut parametrer ces fonctionnalités via le panneau d'administration, dans "Gestion page publique". Vous trouverez donc ainsi des informations pour vous aider sur le parametrage du module, puis des explications sur le contenu affiché dans les pages publique.
+
 #Panneaux d'Administration
+
 ##Gestion de la boutique
 
 ![Eventa](img/EventAdminBoutiqueGestion.JPG)
+
 1) Activer la boutique : Permet d'activer ou de désactiver l'achat d'objets via la page publique
 
 2) Texte affiché avant la liste des produits : Permet d'afficher un texte de description des produits mis en vente dans la boutique
