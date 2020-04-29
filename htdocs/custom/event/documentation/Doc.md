@@ -25,7 +25,7 @@ Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de 
 
 ##Comportement
 
-![Eventc](img/EventAdminComportement.JPG)
+![Eventc](img/EventAdminComportement.jpg)
 
 1) Activer la page publique : Permet de désactiver totalement la page publique, la boutique, la création de compte, la page d'inscription et l'acces publique au compte de l'utilisateur.
 
