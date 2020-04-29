@@ -104,12 +104,12 @@ Un utilisateur qui n'est pas connecté peut seulement se connecter ou créer son
 Cette page permet d'accéder à la liste des factures validées.
 
 ##Bas de page - Footer
-![Eventn](img/EventFooterView.jpg) !!!!!!!
+![Eventn](img/EventFooterView.jpg)
 
 Ceci est le contenu de bas de page.
 
 ##Entête - Header
-![Evento](img/EventHeaderView.jpg) !!!!!!
+![Evento](img/EventHeaderView.jpg)
 
 Ceci est le contenu de l'entête.
 
