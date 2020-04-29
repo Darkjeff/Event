@@ -115,10 +115,9 @@ Ceci est l'historique des cours auquel l'Utilisateur a participé.
 Un administrateur ne peut pas s'inscrire à un cours.
 
 ###Utilisateur
-![Eventr](img/EventInscriptionCoursDoneUserView.jpg)
 ![Events](img/EventInscriptionCoursUserView.jpg)
 
-L'utilisateur peut s'inscrire et de désinscrire via cette interface.
+L'utilisateur peut s'inscrire et de désinscrire via cette interface (une inscription ou une désinscription à la fois).
 
 ##Création de compte
 ###Première page :
