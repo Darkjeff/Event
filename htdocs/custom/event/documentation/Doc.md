@@ -86,9 +86,8 @@ En revanche il peut accéder à la boutique
 ###Non-inscrit
 ![Eventy](img/EventPanelLogoutView.jpg)
 
-Un utilisateur qui n'est pas connecté peut seulement s'inscrire ou se connecter.
+Un utilisateur qui n'est pas connecté peut seulement se connecter ou créer son compte.
 ##Contenu de la page
-![Eventl](img/EventContentView.jpg)
 
 Ceci est le contenu de la page affiché après l'entête
 
