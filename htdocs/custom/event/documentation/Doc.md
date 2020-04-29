@@ -87,9 +87,6 @@ En revanche il peut accéder à la boutique
 ![Eventy](img/EventPanelLogoutView.jpg)
 
 Un utilisateur qui n'est pas connecté peut seulement se connecter ou créer son compte.
-##Contenu de la page
-
-Ceci est le contenu de la page affiché après l'entête
 
 ##Mon compte - Liste des factures
 ![Eventm](img/EventFacturesUserView.jpg)
