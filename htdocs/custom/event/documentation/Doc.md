@@ -15,7 +15,7 @@ Les pages publique du module se décomposent en plusieurs fonctionnalités perme
 
 ##Mail de la boutique
 
-![Eventb](img/EventAdminBoutiqueMail.jpg)!!!!!!!!!!!!
+![Eventb](img/EventAdminBoutiqueMail.jpg)
 Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de l'achat d'un produit sur la boutique. Le mail peut contenir un lien pour valider le paiement sur paypal ou sur Stripe ou pour télécharger la facture.
 
 ##Comportement
@@ -120,7 +120,7 @@ Ceci est l'historique des cours auquel l'Utilisateur a participé.
 
 ##Inscription
 ###Administrateur
-![Eventq](img/EventInscriptionCoursAdminView.jpg) !!!!!!!!
+![Eventq](img/EventInscriptionCoursAdminView.jpg)
 
 Un administrateur ne peut pas s'inscrire à un cours.
 
