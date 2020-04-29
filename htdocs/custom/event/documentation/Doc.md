@@ -45,7 +45,7 @@ Ce menu permet d'éditer la feuille de style afin de personnaliser l'affichage d
 
 Ces menus permettent de modifier le contenu de la page publique
 
-![Eventf](img/EventAdminPublicPageContent.jpg) !!!!!!!!!
+![Eventf](img/EventAdminPublicPageContent.jpg)
 1) Texte d'entête : Permet d'afficher un logo, un titre à la page
 
 2) Barre de navigation : Permet d'insérer un contenu intermediaire entre l'entête et le contenu de la page, le plus souvent une barre de navigation
@@ -59,6 +59,7 @@ Ces menus permettent de modifier le contenu de la page publique
 ##Gestion des relances
 
 ![Eventg](img/EventAdminRelance.JPG)
+
 Ces paramètres permettent de configurer l'envoi des mails de relance, ces mails permettant le renvoi d'un mail de rappel à l'utilisateur inscrit ou invité.
 
 #Vue de la page publique
