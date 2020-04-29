@@ -1,5 +1,6 @@
 
 #Fonctionnement
+
 Les pages publique du module se décomposent en plusieurs fonctionnalités permettant à l'utilisateur d'effectuer de nombreuses tâches. On peut parametrer ces fonctionnalités via le panneau d'administration, dans "Gestion page publique". Vous trouverez donc ainsi des informations pour vous aider sur le parametrage du module, puis des explications sur le contenu affiché dans les pages publique.
 
 #Panneaux d'Administration
