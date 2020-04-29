@@ -4,7 +4,7 @@ Les pages publique du module se décomposent en plusieurs fonctionnalités perme
 #Panneaux d'Administration
 ##Gestion de la boutique
 ![Eventa](img/EventAdminBoutiqueGestion.jpg)
-1) Activer la boutique : Permet de désactiver l'achat d'objets via la page publique
+1) Activer la boutique : Permet d'activer ou de désactiver l'achat d'objets via la page publique
 
 2) Texte affiché avant la liste des produits : Permet d'afficher un texte de description des produits mis en vente dans la boutique
 
@@ -13,14 +13,14 @@ Les pages publique du module se décomposent en plusieurs fonctionnalités perme
 4) Lien vers les CGV : Si un lien est entré, l'utilisateur devra valider ces CGV pour pouvoir confirmer l'achat
 ##Mail de la boutique
 ![Eventb](img/EventAdminBoutiqueMail.jpg)
-Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de l'achat d'un produit sur la boutique. Le mail peut contenir un lien pour valider le paiement sur paypal ou pour télécharger la facture.
+Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de l'achat d'un produit sur la boutique. Le mail peut contenir un lien pour valider le paiement sur paypal ou sur Stripe ou pour télécharger la facture.
 ##Comportement
 ![Eventc](img/EventAdminComportement.jpg)
 1) Activer la page publique : Permet de désactiver totalement la page publique, la boutique, la création de compte, la page d'inscription et l'acces publique au compte de l'utilisateur.
 
 2) Afficher la barre de navigation : Permet d'implémenter un champ personnalisable pour y insérer une barre de navigation.
 
-3)Afficher le nombre d'inscrit à la place du nombre de places disponible : Change l'affichage du nombre de place, Exemple : 2 / 5 places disponible = 3 / 5 personnes inscrite.
+3)Afficher le nombre d'inscrit à la place du nombre de places disponible : Change l'affichage du nombre de place, Exemple : 2 / 5 places disponible = 3 / 5 personnes inscrite sur le nombre total défini.
 
 4) Blocage des inscriptions / Désinscription : Permet d'empêcher un utilisateur de s'inscrire ou se désinscrire X heure(s) avant l'évènement.
 ##Création de Compte
