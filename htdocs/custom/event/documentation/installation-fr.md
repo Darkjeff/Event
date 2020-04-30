@@ -5,9 +5,11 @@ Configuration
 - la TVA doit être définis
 
 Module pré-requis à activer 
+
 - 1 modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
 
 -- Décompresser le module dans le dossier custom
+
 -- Activer le module
 
 - 2 Tiers
