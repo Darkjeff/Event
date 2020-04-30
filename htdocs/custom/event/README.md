@@ -13,8 +13,8 @@ Module pré-requis à activer
 - Paypal
 - Tâches planifiés
 
-Pour connaitre les différentes fonctionnalité de la version 1.8.6:
-https://groups.google.com/forum/#!forum/module-event
+Pour connaitre les différentes fonctionnalité et l'évolution du module:
+https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
 
 INSTALLATION:
 
