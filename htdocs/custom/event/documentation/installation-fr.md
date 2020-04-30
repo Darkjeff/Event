@@ -38,6 +38,15 @@ Module pré-requis à activer
 
 -- Dans outils administrateur/travaux planfiés/nouveau
 
+Libellé: Relance(s) invitation(s) en attente
+Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
+Module: registration
+Nom de fichier intégrant la classe: custom/event/class/send_reminders.class.php
+Instance/objet à créer: Reminders
+Méthode: send_reminders_waiting
+Paramètres:
+Commentaire: Envoi des invitations en relance
+Exécuter chaque tâche: 5 mins
 
 Attributs supplémentaires à rajouter dans:
 --les produits et services: 
