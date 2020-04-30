@@ -343,6 +343,7 @@ ValidSendPDF=Envoyer un PDF en pièce jointe
 RegistrationUserInfos=Coordonnées participant
 RegistrationExtraInfos=Informations complémentaires
 
+
 # Payments
 RegistrationPayments=Paiements des inscriptions
 MakePaymentOnRegistrations=Effectuer un paiement pour les inscriptions
@@ -355,16 +356,20 @@ RegistrationDoPayement=Enregistrer le paiement
 ErrorAmountOrPaiementRequired=Le montant et le mode de règlement sont requis
 RegistrationPaidAndConfirmed=Inscription payée et confirmée : %s
 
+
 # Commandes
 RegistrationOrdersState=État des inscriptions
 ConfirmRegistrationAfterPayment=Confirmer l'inscription après l'enregistrement du paiement
+
 
 # New
 SendReminders=Relance
 Sent=Nb relance
 Level=Groupe
 
+
 # Code
+pleaseCheck=Veuillez cocher au moins une case pour valider le formulaire.
 WarningEvent=ATTENTION
 WarningCheck=Veuillez cocher ou décocher au moins une case pour valider le formulaire.
 Participate=Participer
@@ -406,8 +411,8 @@ RelanceWaitingTopic=Relance inscription __JOURNEE__
 RelanceWaitingBody=Bonjour __PARTICIPANT__,<br /><br />Ceci est un message de relance concernant votre inscription au rendez-vous __JOURNEE__. <br /><br />Vous n'avez pas validé votre inscription. Merci de nous informer de votre présence, en cliquant sur ce lien -> __LIEN_VALIDATION__ <br /><br />
 Valid_hide_group=Masquage des notions de groupe
 registration_block_group=Blocage de l'enregistrement de Tiers
-RegistrationExpiration=Evenement - Afficher l'onglet des expirations
-RegistrationInscriptionStatement=Evenement - Afficher l'onglet des états des règlements
+RegistrationExpiration=Evénement - Afficher l'onglet des expirations
+RegistrationInscriptionStatement=Evénement - Afficher l'onglet des états des règlements
 MessageDesc=<p><b>Corps du mail</b></p><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__ <i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin<</i>br/></p>
 ImgHeader=Image de début
 ImgFooter=Image de fin
@@ -424,31 +429,31 @@ RelanceConfirmedNONE=Pas encore d'inscriptions validées
 EventErrorBadEMail=Problème avec l'adresse mail
 EventRegSuccesswithMail=Inscription(s) effectuée(s) avec envoi de mail
 EventRegSuccesswitouthMail=Inscription(s) effectuée(s) sans envoi de mail
-ToggleAll=Selectionnez tout
+ToggleAll=Sélectionnez tout
 ActionEmpty=Veuillez choisir une action
 DayEventLink=Lien vers la newsletter
 EventUseMailing=Utilisation du module de mailing pour l'envoi de mail
-ReminderWaitingSent= Relance(s) invitation(s) en attente envoyé(s)
-ReminderConfirmedSent= Relance(s) inscription(s) validé(s) envoyé(s)
+ReminderWaitingSent=Relance(s) invitation(s) en attente envoyé(s)
+ReminderConfirmedSent=Relance(s) inscription(s) validé(s) envoyé(s)
 DescriptionMail=Corps du mail<br /><br /><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
 DescriptionWeb=Contenu de la page Internet / Page publique<br /><br /><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__ <i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
 MailText=<p><b>Corps du mail</b></p><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__<i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
 HTML_HEADER=<html><body>
 HTML_FOOTER=</body></html>
-PrefixNameEventDay=Prefixe pour le nom
+PrefixNameEventDay=Préfixe pour le nom
 PriceBase=Base du prix
 EventActiveByDefault=Evénement actif par défaut à la création
 DayActiveByDefault=Journée active par défaut à la création
-Event_DisableCreate1stDayByDefaut=Désactivation de la création auto.
+Event_DisableCreate1stDayByDefaut=Désactivation de la création auto
 Event_ActiveCloneFunc=Activer la fonction de clonage d'évenement
 EventDay_ActiveCloneFunc=Activer la fonction de clonage de journée
 Clone=Cloner
 CloneEvent=Cloner l'évenement
 CloneDay=Cloner le(s) journée(s)
 CloneGroup=Cloner le(s) groupe(s)
-CloneConfirm=Voulez vous cloner l'évement, les journées, les groupes associés?
+CloneConfirm=Voulez vous cloner l'événement, les journées, les groupes associés?
 CloneDayConfirm=Voulez vous cloner la journée et les groupes associés?
-CloneOK=L'évenement et les journées associées ont bien été clonés
+CloneOK=L'événement et les journées associées ont bien été clonés
 CloneDayOK=La journée et les groupes associés ont bien été clonés
 NoLevelOnThisRegistration=Attention, il faut choisir un groupe
 AddDel=Sélection
@@ -465,7 +470,7 @@ Delaybeforlaunchwaiting=Délai avant relance global des invitation(s) en attente
 AdminManageRuleInvitation=Gestion des invitations
 AdminManageRuleReminder=Gestion des relances
 AdminManageRule1stCreate=Gestion de la création des évenements et journées
-AdminValidRegistrationAfterCreationDefault=Gestion par defaut d'une invitation manuelle?
+AdminValidRegistrationAfterCreationDefault=Gestion par défaut d'une invitation manuelle?
 
 UserAlreadyCreate=Utilisateur déjà inscrit à cette journée
 UsersTagAlreadyRegister=Tous les utilisateurs de cette catégorie sont déjà inscrits
@@ -481,45 +486,45 @@ CanceledSujet=Sujet du mail d'annulation d'une inscription
 
 
 # ADMIN #
-EventAboutTitle=Module évènement - A propos
-EventSetup=Module évènement - Configuration
+EventAboutTitle=Module événement - A propos
+EventSetup=Module événement - Configuration
 
 EventAboutMessage=Un bug, un problème d'affichage ou une idée d'amélioration ? Rendez-vous sur le forum de Dolibarr https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
 EventLicenseMessage=A venir
 AdminEventBehaviour=Comportement
 
-EventSetupExtrafieldsTitle=Module évènement - Gestion Extrafields
+EventSetupExtrafieldsTitle=Module événement - Gestion Extrafields
 EventSetupExtrafields=Gestion Extrafields
 
 EventSetupBackOfficeTitle=Module évènement - Gestion BackOffice
 EventSetupBackOffice=Gestion BackOffice
-EventSetupPagePublicTitle=Module évènement - Gestion page Public
-PagePublicDisable=Page Public désactivé, vous allez être rediriger vers le site web par défaut
+EventSetupPagePublicTitle=Module événement - Gestion page Public
+PagePublicDisable=Page Public désactivé, vous allez être redirigé vers le site web par défaut
 EventSetupPagePublic=Gestion Page Public
 PagePublic=Page Public
 
 EventPublicRegistrationLimitDate=Blocage des inscriptions x heure(s) avant l'événement
 
-EventSetupPagePublicManageText=Module évènement - Gestion Mail Text
-EventSetupPagePublicManageCSS=Module évènement - Gestion Mail CSS
+EventSetupPagePublicManageText=Module événement - Gestion Email Text
+EventSetupPagePublicManageCSS=Module événement - Gestion Email CSS
 EventSetupPageManageCSS=Gestion Mail CSS
 CssTitreMail=Feuille de style Mail
-EventSetupPageStyle=Module ÉVÈNEMENT - Gestion du style
+EventSetupPageStyle=Module événement - Gestion du style
 EventSetupStyle=Gestion du style
 
 css_file=Feuille de style global à la page publique
 css_menu=Menu
 css_titre=Feuille de style
 css_reset=Annuler les changements
-EventSetupTextAddTitle=Module évènement - Gestion du contenu des mails
+EventSetupTextAddTitle=Module événement - Gestion du contenu des mails
 EventSetupTextAdd=Adm Contenu des mails
 EventSetupTextMail=Gestion contenu des mails
 
-EventSetupLevelTitle=Module évènement - Gestion des groupes
+EventSetupLevelTitle=Module événement - Gestion des groupes
 EventSetupLevel=Gestion des groupes
 
 NoDayIncoming=Pas de journée à venir
-ListDayIncoming=Liste des Evenements & Journées à venir
+ListDayIncoming=Liste des Evénements & Journées à venir
 
 PlaceFree=Place(s) restante(s)
 Place=Place(s)
@@ -527,20 +532,20 @@ Place=Place(s)
 Authors=Développeur(s)
 OldAuthors=Anciens Développeur(s)
 QuotaRestant=Votre quota restant :
-Panier= Votre panier :
+Panier=Votre panier :
 
 DayFull=Journée pleine
 PlaceNoLimit=Pas de limite de places
 GrpFull=Groupe plein
 PlaceFree=Place libre
 ShowInfoAccount=Consultez vos informations de compte et votre solde
-InfoEventCounter=Votre quota d'unitées restantes
+InfoEventCounter=Votre quota d'unités restantes
 Hello=Bonjour
 Reserve=Réserver
 Connect=Connectez vous
 Create=Créer un compte
 Disconnect=Déconnexion
-Eventt=COURS
+Eventt=Cours
 Empty=Vide
 
 errNoUnit=Contactez le service commercial
