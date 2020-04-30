@@ -80,29 +80,50 @@ Priorité: 0
 
 -8 Ajouter les attributs supplémentaires dans:
 
-- - 8.1 les produits et services: 
+- - 8.1 les produits et services:
+
 Libellé: EVENT - Nombre d'unités
+
 Code de l'attribut: nbunitbuy
+
 Type:Numérique entier
+
 Taille: 10
+
 Peut toujours être édité
+
 Visibilité
 
 - - 8.2 Utilisateurs et groupes:
+
 Libellé: Nombre unités restantes
+
 Code de l'attribut: event_counter
+
 Type: Numérique entier
+
 Taille: 10
+
 Position: 2
+
 Peut toujours être édité	
+
 Visibilité
 
 - - 8.3 Dans l'admin du module
+
 Durée du cours (en minutes, heure, ...)
+
 Libellé: Durée du cours (en minutes)
+
 Code de l'attribut: duree_cours
+
 Type: Numérique entier
+
 Taille: 10
+
 Position: 0
+
 Peut toujours être édité	
+
 Visibilité
