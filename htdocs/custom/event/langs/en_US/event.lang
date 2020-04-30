@@ -1,4 +1,4 @@
-# Dolibarr language file - fr_FR - events
+# Dolibarr language file - en_US - events
 CHARSET=UTF-8
 
 ##### Module #####
@@ -16,28 +16,36 @@ EventRegistrationLimitToExpire=Timeout entries
 EventRegistrationLevelDefaultNumber=Number of places available by default for groups (0=Place unlimited)
 EventRegistrationLevelDefaultLimit=Threshold for calculating space availability
 EventTextToAddEmails=Text to add to emails
+EventRegistrationWaitingLimitToExpire=Delay before non-relaunching of pending registrations
+EventPublicUnregistrationLimitDate=Blocking unsubscriptions x hour (s) before the event
+
 
 ##### Index #####
-nombreInscrit=Sub
 EventGestion=Events management
 EventList=Events list
 ShowEvent=Show event
 EventListShowActive=Show active events
 EventListShowClosedToo=Show closed events too
+DayListShowActive=See active days
+DayListShowClosedToo=See also the closed days
 
 css_file=CSS File
 css_menu=CSS Menu
 css_titre=CSS File
 css_reset=Reset
-EVENT_BOUTIQUE_CGU=Lien vers les Conditions Générale d'Utilisation / Règlement Intèrieur. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
-EVENT_BOUTIQUE_CGV=Lien vers les Conditions Générale de Vente. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
-EVENT_CGU_LINK=Conditions Générale d'Utilisation / Règlement Interieur
-EVENT_CGV_LINK=Conditions Générale de Vente
-EVENT_AGREE=J'accepte les 
+EVENT_BOUTIQUE_CGU=Link to the General Conditions of Use / Internal Regulations. If no link is indicated for the Terms & Conditions, no verification will be made before making the purchase.
+EVENT_BOUTIQUE_CGV=Link to the General Conditions of Sale. If no link is indicated for the Terms & Conditions, no verification will be made before making the purchase.
+EVENT_CGU_LINK=General Conditions of Use / Internal Regulations
+EVENT_CGV_LINK=General Conditions of Sale
+EVENT_AGREE=I accept
 
 
 ##### Fiche event ####
+nombreInscrit=Sub
 EVENT_MANAGE_PUBLIC_REGISTRATION=Manage public page of events creation
+EVENT_MANAGE_ECOMMERCE=Management of the SHOP page
+EVENT_MANAGE_PUBLIC_REGISTRATION=Managing the public account creation page
+EVENT_MANAGE_MAIL=Mail management of the shop
 EVENT_PUBLIC_DESCRIPTION_1=Text printed on the first page of the subscribe form.
 EVENT_PUBLIC_DESCRIPTION_2=Text printed on the second page of the subscribe form.
 EVENT_PUBLIC_DESCRIPTION_3=Text printed on the third page of the subscribe form.
@@ -57,6 +65,15 @@ errTooLateSub=Too late to subscribe
 errTooLateUnSub=Too late for unsubscribe
 errNoSpot=No spot Available
 EventPublicUnregistrationLimitDate=Public price - lock of unregistrations x hours before the event
+
+eventPlaceAvailable=Public price - blocking unsubscriptions x hours before the event Display the number of registrants in place of the number of places available.
+eventSwitchRegister=Activate public account creation
+eventNavbarRegister=Show navigation bar
+MailCanceled =Mail following cancellation
+ConfirmSubmit=Are you sure?
+EVENT_BOUTIQUE_VALIDATION=Purchase validation page<br />Displayed text
+EventPublicUnitName=Change unit names<br />(credit, unit, euros, minutes, $, etc...)
+SetupPagePublicTexte=Content of the public page
 NoPlaceAvailable=There is no spot available
 SubTooLate=It's too late to register on this spot.
 NewEvent=New event
@@ -81,6 +98,7 @@ ConfirmCloseRegistration=Confirm closing registrations
 EventContact=Contacts
 RegistrationIsNowOpen=Registration is now available
 RegistrationIsNowClosed=registration is now closed
+EventRegistrationIsNowClosed=Event level invitations are currently closed
 RegistrationIsNowAvailableByDay=It is now possible to register separately for days
 RegistrationIsNowNotAvailableByDay=
 DateValid=Validation date
@@ -99,6 +117,7 @@ NumberRegistrationShort=Nb
 ErrorRefRegistrationMustBeProvided=A reference or registration number must be provided.
 EventAlsoValidateDay=Also validate days
 EventAlsoOpenDays=Also open days registrations
+EventPageLink=Invitation validation page
 
 ##### Journées #####
 NewEventDay=New event day
@@ -107,6 +126,7 @@ RefEventDay=Ref day
 DayPriceHt=Price HT day
 DayPriceTtc=Price inclusive of the day
 EventDay=Day
+LabelDays=Day label
 EventDays=Days
 ListOfEventDay=List of days of the event
 EventDayDate=Day date
@@ -120,6 +140,7 @@ NoEventDayRegistered=No day recorded
 NotAllowedBecauseNotValidated=Not available car invalid
 ChooseADay=Choice of the day
 MenuListEventDays=List of days
+MenuListEvent=List of event (s)
 ListEventDay=List of days
 SelectEventDay=Select a date
 EditEventDayOptions=Edit day options
@@ -127,6 +148,14 @@ EventProductOptionsList=Products linked as option
 EventProductOptionsNumber=Number of linked options for this day
 EventOptionsSuccessfullyEdit=Options modified for the day : %s
 EventOptions=Day options
+DeleteAnDay=Delete day
+ConfirmDeleteAnDay=Confirm deletion of the day
+NoDayRegistered=No days recorded
+CloseDay=Close
+CloseDayDone=Closed day
+ConfirmCloseADay=Do you want to end this day?
+CloseAday=Close the day
+
 
 ##### Groupe ####
 EventLevel=Level
@@ -136,6 +165,7 @@ LevelList=List of levels
 NewLevel=New level
 CreateLevel=Create a level
 DeleteLevel=Delete level
+ConfirmDeleteLevel=Confirm group deletion
 NoLevel=You must create one or more levels before continuing.
 LevelCreatedSuccess=Level created with success
 LevelUpdatedSuccess=Level updated
@@ -165,15 +195,18 @@ EventPeriodSuccessfullyDeleted=Period delete with success
 EventLevelSetTiming=Timing setup
 EventNoPlannedTiming=No planned timing
 
+
 #### Inscription ####
 Registrations=Registrations
 Registration=Registration
 RegistrationRefShort=Ref registration
 RegistrationGestion=Registration management
 AddRegistration=Add a registration
+AddRegistrationTag=Add invitation(s) by TAG
 RegistrationCreate=Create a registration
 RegistrationFrom=Ask by
 UserToRegistration=User to register
+GroupToRegistration=Group to invite
 RegistrationCreate=Create registration
 PleaseChoiceLevel=Please choose a level
 RegistrationDate=Registration date
@@ -190,7 +223,7 @@ RegistrationToDay=Registration day
 RelatedRegistration=Registration(s) attached(s)
 MarkAsPaid=Mark as paid
 MarkAsValid=Validate
-ConfirmRegistration=Confirm registration
+ConfirmRegistration=Confirm registration ?
 ConfirmRegistrationMsg=Confirm registration %s
 Confirmed=Confirmed
 RegistrationConfirmed=Registration confirmed
