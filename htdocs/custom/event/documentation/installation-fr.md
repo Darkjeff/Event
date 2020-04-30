@@ -38,7 +38,7 @@ Module pré-requis à activer
 
 -- Dans outils administrateur/travaux planfiés/nouveau
 
-- - 7.1 Libellé: Relance(s) invitation(s) en attente
+  - 7.1 Libellé: Relance(s) invitation(s) en attente
 
 Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
 
@@ -58,7 +58,7 @@ Exécuter chaque tâche: 5 mins
 
 Priorité: 0
 
-- - 7.2 Libellé: Relance(s) invitation(s) validé(s)
+  - 7.2 Libellé: Relance(s) invitation(s) validé(s)
 
 Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
 
@@ -94,7 +94,7 @@ Peut toujours être édité
 
 Visibilité
 
-- - 8.2 Utilisateurs et groupes:
+  - 8.2 Utilisateurs et groupes:
 
 Libellé: Nombre unités restantes
 
@@ -110,7 +110,7 @@ Peut toujours être édité
 
 Visibilité
 
-- - 8.3 Dans l'admin du module
+  - 8.3 Dans l'admin du module
 
 Durée du cours (en minutes, heure, ...)
 
