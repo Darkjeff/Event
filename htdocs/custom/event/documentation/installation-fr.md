@@ -6,11 +6,16 @@ Configuration
 
 Module pré-requis à activer 
 - 1 modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
+
 -- Décompresser le module dans le dossier custom
 -- Activer le module
+
 - 2 Tiers
+
 -- Activer la gestion des tiers
+
 - 3 Factures et avoirs
+
 -- Activer la gestion des factures
 - 4 Produits
 -- Activer la gestion des produits et services
