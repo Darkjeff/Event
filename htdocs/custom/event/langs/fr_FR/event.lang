@@ -12,10 +12,10 @@ RegistrationExtraFieldsManage=Gérér les champs des inscriptions
 EventMakeLevelRequired=Rendre obligatoire  le choix d'un groupe pour une inscription
 EventRegistrationMakeEmailRequired=Rendre la saisie d'un email obligatoire pour l'inscription
 EventSmsNumberFrom=Numéro d'envoi des SMS de confirmation
+EventRegistrationLimitToExpire=Délai avant non relance des invitations en attente
 EventRegistrationLevelDefaultNumber=Nombre de place(s) disponible(s) par défaut pour les groupe(s) (0=Places illimitées)
 EventRegistrationLevelDefaultLimit=Seuil pour le calcul de disponibilité des places
 EventTextToAddEmails=Texte à ajouter en signature des emails<br /><br />Note : deux retours à la ligne sont placés automatiquement entre le corps du mail et la signature
-EventRegistrationLimitToExpire=Délai avant non relance des invitations en attente
 EventRegistrationWaitingLimitToExpire=Délai avant non relance des inscriptions en attente
 EventPublicUnregistrationLimitDate=Blocage des désinscriptions x heure(s) avant l'événement
 
@@ -29,35 +29,50 @@ EventListShowClosedToo=Voir aussi les évènements cloturés
 DayListShowActive=Voir les journées actives
 DayListShowClosedToo=Voir aussi les journées cloturées
 
+css_file=CSS File
+css_menu=CSS Menu
+css_titre=CSS File
+css_reset=Reset
+EVENT_BOUTIQUE_CGU=Lien vers les Conditions Générale d'Utilisation / Règlement Intèrieur. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
+EVENT_BOUTIQUE_CGV=Lien vers les Conditions Générale de Vente. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
+EVENT_CGU_LINK=Conditions Générale d'Utilisation / Règlement Interieur
+EVENT_CGV_LINK=Conditions Générale de Vente
+EVENT_AGREE=J'accepte les 
+
+
 ##### Fiche event ####
 nombreInscrit=Nombre d'inscrit(s)
-eventPlaceAvailable=Afficher le nombre d'inscrit(s) à la place du nombre de place(s) disponible(s).
+EVENT_MANAGE_PUBLIC_REGISTRATION=Gérer la page publique de création d'événements
 EVENT_MANAGE_ECOMMERCE=Gestion de la page BOUTIQUE
 EVENT_MANAGE_PUBLIC_REGISTRATION=Gestion de la page publique de création de compte
-eventSwitchRegister=Activer la création publique de compte
-eventNavbarRegister=Afficher la barre de naviguation
+EVENT_MANAGE_MAIL=Gestion de mail de la boutique
 EVENT_PUBLIC_DESCRIPTION_1=1<sup>ère</sup> page<br />(Page de saisi des informations générales)
 EVENT_PUBLIC_DESCRIPTION_2=2<sup>nd</sup> page<br />(Page de saisi du mot de passe)
 EVENT_PUBLIC_DESCRIPTION_3=3<sup>ème</sup> page<br />(Page de validation de l'inscription)
 EVENT_PUBLIC_DESCRIPTION_BOUTIQUE=Texte affiché avant la liste des produits
 EVENT_SWITCH_BOUTIQUE=Activer la boutique
-EVENT_MANAGE_MAIL=Gestion de mail de la boutique
-EVENT_MAIL_SUBJECT=Sujet du mail de facturation
-MailCanceled = Mail suite à l'annulation
-ConfirmSubmit=Êtes vous sur?
-
-
-
 EVENT_MAIL_CONTENT=Contenu du mail, vous pouvez utiliser les macros suivante : <br /><p>__VALIDER_FACTURE__<i> : Affiche un lien pour procéder au paiement.</i></p><p>__AFFICHER_FACTURE__<i> : Affiche un lien pour télécharger la facture</i></p><p>__PRENOM__<i> : Affiche le prénom du client</i></p><p>__NOUVEAU_SOLDE__<i> : Affiche le nombre d'unités du client après le paiement</i></p><p>__NOM__<i> : Affiche le nom du client</i></p><p>__SOLDE__<i> : Affiche le nombre d'unités du client avant le paiement</i></p><p>__QUANTITE__<i> : Affiche le nombre de produits achetés pas le client</i></p><p>__DATE__<i> : Affiche la date d'envoi du mail</i></p><p>__NOM_PRODUIT__<i> : Affiche le nom du produit acheté par le client</i></p><p>__PRIX_UNITE__<i> : Affiche le prix du produit acheté par le client</i></p><p>__PRIX_TTC__<i> : Affiche le prix total des produits achetés par le client.</i></p>
+EVENT_MAIL_SUBJECT=Sujet du mail de facturation
 event_public_active=Activer la page publique
 event_public_header=Texte d'entête<br />(après le LOGO d'entête de page)
-event_public_navbar=Barre de navigation<br />(HTML5 & Javascript BOOTSTRAP pur)
-event_public_content=Contenu de la page <br />(avant liste des évenement(s) & journée(s))
 event_public_footer=Texte de pied<br />(avant le LOGO de pied de page)
 event_public_website=URL présente dans le pied<br />(après le LOGO de pied de page)
-EVENT_BOUTIQUE_VALIDATION=Page de validation des achats<br />Texte affiché
+event_public_navbar=Barre de navigation<br />(HTML5 & Javascript BOOTSTRAP pur)
+event_public_content=Contenu de la page <br />(avant liste des évenement(s) & journée(s)
 
-EventPublicUnitName=Change le nom des unités<br />(crédit, unité, euros, minutes, $, etc...)
+errNoUnit=Contacter le service commercial
+errTooLateSub=Trop tard pour souscrire
+errTooLateUnSub=Trop tard pour se désinscrire
+errNoSpot=Pas de place disponible
+EventPublicUnregistrationLimitDate=Prix public - blocage des désinscriptions x heures avant l'événement
+
+eventPlaceAvailable=Afficher le nombre d'inscrit(s) à la place du nombre de place(s) disponible(s).
+eventSwitchRegister=Activer la création publique de compte
+eventNavbarRegister=Afficher la barre de navigation
+MailCanceled =Mail suite à l'annulation
+ConfirmSubmit=Êtes vous sur?
+EVENT_BOUTIQUE_VALIDATION=Page de validation des achats<br />Texte affiché
+EventPublicUnitName=Changer le nom des unités<br />(crédit, unité, euros, minutes, $, etc...)
 SetupPagePublicTexte=Contenu de la page publique
 NoPlaceAvailable=Plus de place disponible
 SubTooLate=Il est trop tard pour s'inscrire
@@ -102,7 +117,7 @@ NumberRegistrationShort=Nb d'invitation(s)
 ErrorRefRegistrationMustBeProvided=Une référence ou un numéro d'inscription doit être fourni.
 EventAlsoValidateDay=Valider aussi les journées
 EventAlsoOpenDays=Ouvrir aussi l'inscription des journées
-EventPageLink=Page de validation des invitaitons
+EventPageLink=Page de validation des invitations
 
 ##### Journées #####
 NewEventDay=Nouvelle journée
@@ -125,7 +140,7 @@ NoEventDayRegistered=Aucune journée enregistrée
 NotAllowedBecauseNotValidated=Non disponible car non validé
 ChooseADay=Choix de la journée
 MenuListEventDays=Liste journée(s)
-MenuListEvent=Liste évenement(s)
+MenuListEvent=Liste événement(s)
 ListEventDay=Liste des journées
 SelectEventDay=Sélectionner une date
 EditEventDayOptions=Editer les options de la journée
@@ -155,6 +170,7 @@ NoLevel=Vous devez créer un ou plusieurs groupe(s) avant de continuer.
 LevelCreatedSuccess=Groupe créé avec succès!
 LevelUpdatedSuccess=Groupe mis à jour!
 LevelDeletedSuccess=Groupe supprimé avec succès!
+ConfirmDeleteLevel=Confirmer le niveau de suppression?
 LevelGestionByDay=Gestion des groupe(s) pour la journée
 LevelAvailable=Groupe(s) disponible(s)
 LevelAvailableForThisDay=Groupe(s) disponible(s)
@@ -178,6 +194,7 @@ EventDeletePeriodConfirm=Confirmer la suppression de la période
 EventPeriodSuccessfullyDeleted=Période effacée avec succès
 EventLevelSetTiming=Configuration des paramètre horaires
 EventNoPlannedTiming=Pas d'horaire de planifié pour ce groupe
+
 
 #### Inscription ####
 Registrations=Invitations
@@ -467,7 +484,7 @@ CanceledSujet=Sujet du mail d'annulation d'une inscription
 EventAboutTitle=Module évènement - A propos
 EventSetup=Module évènement - Configuration
 
-EventAboutMessage=Un bug, un problème d'affichage ou une idée d'amélioration ? Envoyez un email à <a milto="support@code42.fr">support@code42.fr</a>
+EventAboutMessage=Un bug, un problème d'affichage ou une idée d'amélioration ? Rendez-vous sur le forum de Dolibarr https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
 EventLicenseMessage=A venir
 AdminEventBehaviour=Comportement
 
