@@ -17,14 +17,23 @@ Module pré-requis à activer
 - 3 Factures et avoirs
 
 -- Activer la gestion des factures
+
 - 4 Produits
+
 -- Activer la gestion des produits et services
+
 - 5 Paypal ou Stripe
+
 -- Active le ou les module(s) de paiement en ligne 
+
 -- Configurer votre ou vos compte(s) paypal et Stripe
+
 - 6 Travaux planifiés
+
 -- Activer le module
+
 - 7 Créer les travaux planifier
+
 -- Dans outils administrateur/travaux planfiés/nouveau
 
 
