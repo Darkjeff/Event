@@ -247,6 +247,9 @@ MarkAsWaiting=Place on the waiting list
 SetWaiting=Put on the waiting list
 ConfirmSetWaiting=Confirm registration moving to waiting list
 EventRegistrationSetInWaiting=Registration put on the waiting list
+Queued=Waiting list
+Waited=Waiting for confirmation
+Cancelled=Refused
 DownloadRegistrationTicket=Download the registration form
 RegistrationAreNotOpenForThisEvent=Registration for the event is not open
 RegistrationArePossibleButNotOpenForThisEventDay=Subscribe to all days of the event only
@@ -315,6 +318,9 @@ CreateANewContactFromRegistrationInfo=A new contact will be created with the inf
 ShowRegistration=See the registration card
 ValidRegistrationAfterCreation=Validate registration after creation ?
 ValidRegistrationAfterCreationInfo=Whether the registration is validated awaiting confirmation and PDF registration sent to the participant. Otherwise the status will be "draft" and each entry must be validated manually.
+ValidRegistrationAfterCreation=Send invitation
+StandbyRegistrationAfterCreation=Pause invitation without sending information
+ValidRegistrationAfterCreationInfo=If so, the registration will be validated pending confirmation and the PDF bulletin sent to the participant. Otherwise its status will be "draft" and each registration must be validated manually.
 RegistrationReminderText=Hello,<br /><br />__PARTICIPANT__ : this is an automatic reminder message about a registration on __DATEJOURNEE__ into level __LEVEL__. <br /><br />You haven't validate this registration yet. Please send us your payment to confirm. Without answer, we will be forced to put you on the waiting list.  If in the meantime it was a fact, thank you to disregard this message.
 ReminderSentTo=Reminder sent to %s (%s)
 ReminderNotSentTo=Reminder not send to %s (%s)
@@ -329,10 +335,14 @@ RegistrationAutoReminderTextRegistrationCanceled=The reservation was canceled to
 RegistrationAutoReminderSummarySent=Summary sent reminders
 RegistrationAutoReminderTotalCancelled=Registrations cancelled : %s
 RegistrationForLevel=Registrations for level : %s
+ValidSendEmail=Send an Email
+ValidSendPDF=Send a PDF as an attachment
+
 
 # PDF
 RegistrationUserInfos=Participant contact
 RegistrationExtraInfos=Additional Information
+
 
 # Payments
 RegistrationPayments=Registrations payment
@@ -345,44 +355,208 @@ RegisteredContact=Contact registered
 RegistrationDoPayement=Save payment
 ErrorAmountOrPaiementRequired=Amount and payment method are required
 RegistrationPaidAndConfirmed=Registration paid and confirmed : %s
-ConfirmRegistrationAfterPayment=Confirm registration after payment
+
 
 # Orders
 RegistrationOrdersState=Orders state
 ConfirmRegistrationAfterPayment=Confirm registration after payment
+
 
 # New
 SendReminders=Reminder
 Sent=Nb remind
 Level=Group
 
-# Code 42
-pleaseCheck=Veuillez cocher au moins une case pour valider le formulaire.
+
+# Code
+pleaseCheck=Please tick at least one box to validate the form.
 WarningEvent=WARNING
 WarningCheck=Please check or uncheck at lease one checkbox to send the form.
-Participate=Participer
-NotParticipate=Ne pas participer
-AlreadyConfirm=Vous avez déjà validé votre inscription
-AlreadyRefused=Vous avez déjà refusé l'invitation
-WaitingList=Vous êtes sur liste d'attente
-NoValidInformation=Aucun enregistrement n'est associé à ce nom, veuillez nous contacter à '%s' pour plus d'information
-DayAlreadyPast=La journée est passée, vous ne pouvez plus ajouter d'inscription
-MainUrlRegistration=Url de base pour l'envoi de mail
-ParticipateSubject=Confirmation participation
-ParticipateMessage=Votre participation a bien été prise en compte
-NotParticipateSubject=Confirmation refus
-NotParticipateMessage=Votre annulation a bien été prise en compte
-DayDescription=Description Journée
-NoDescriptionAvailable=Aucune description disponible
-ValidRegistration=Inscription validée
-CancelRegistration=Inscription refusée
-TimeStart=Heure de début
-TimeEnd=Heure de fin
-RelanceConfirmed=Relancer inscriptions validées
-RelanceWaiting=Relancer inscriptions en attente
-RelanceConfirmedTopic=Relance inscription __JOURNEE__
-RelanceConfirmedBody=Bonjour,<br /><br />__PARTICIPANT__ : ceci est un message de relance concernant votre inscription à la journée du __DATEJOURNEE__ dans le groupe __LEVEL__. <br /><br />
-RelanceWaitingTopic=Relance inscription __JOURNEE__
-RelanceWaitingBody=Bonjour,<br /><br />__PARTICIPANT__ : ceci est un message de relance concernant votre inscription à la journée du __DATEJOURNEE__ dans le groupe __LEVEL__. <br /><br />Vous n'avez pas validé votre inscription. Merci de nous informer de votre présence, en cliquant sur ce lien -> __LIEN_VALIDATION__
+Participate=Participate
+NotParticipate=Do not participate
+AlreadyConfirm=You have already validated your registration
+AlreadyRefused=You have already declined the invitation
+WaitingList=You are on the waiting list
+NoValidInformation=No record is associated with this name, please contact us at '% s' for more information
+DayAlreadyPast=The day has passed, you cannot add any more registrations
+MainUrlRegistration=Basic url for sending mail
+NbDay=Nb day(s)
+GrpComplement=Complement
+CancelledInvitation=Decline invitation
+ConfirmCancelRegistration=Do you confirm the refusal of the invitation?
+ValidInvitation=Confirm the invitation
+GrpRang=Position
+registration_event_hide_pdf_bill=Hiding PDFs in the interface
+Admin_menu_manage_interface=Module interface management
+registration_event_manage_ics=Send an ICS calendar invitation as an attachment
+Admin_menu_manage_content_add=Management of additional content for emails
+Admin_menu_extrafields=Management of additional field (s)
+Groupe_change=Change group
+NoRegistrationGroupe=No registration (s) defined for this group
+RegistrationForLevelling=Registration for the group (s)
+EventRegistrationLimitToExpireInfo=IMPORTANT: Registrations less than <b>% s </b> day (s) will not be restarted.
+EventDefaultMail=Default Mail
+
+DayDescription=Description Day
+NoDescriptionAvailable=No description available
+ValidRegistration=Registration validated
+CancelRegistration=Registration refused
+TimeStart=Start time
+TimeEnd=End time
+RelanceConfirmed=Relaunch validated registrations
+RelanceWaiting=Relaunch pending registrations
+RelanceConfirmedTopic=Relaunch registration __DAY
+RelanceConfirmedBody=Hello, <br /> <br /> __PARTICIPANT__: this is a reminder message regarding your registration for the day of __DATEDAYDAY__ in the group __LEVEL__. <br /> <br />
+RelanceWaitingTopic=Relaunch registration __DAY
+RelanceWaitingBody=Hello, <br /> <br /> __PARTICIPANT__: this is a reminder message regarding your registration for the day of __DATEDAYDAY__ in the group __LEVEL__. <br /> <br /> You have not validated your registration. Please inform us of your presence by clicking on this link -> __LIEN_VALIDATION__
 Valid_hide_group=Hide group
 registration_block_group=Block tiers registration
+RegistrationExpiration=Event - Display the expiration tab
+RegistrationInscriptionStatement=Event - Display the tab of the states of the regulations
+MessageDesc=<p><b>Body of the email </b> </p> <p> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event < / i> <br /> __DAY DAY <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Surname and first name of the participant </ i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> < br /> __ TIMEEND__ <i> End time<</i>br/></p>
+ImgHeader=Start image
+ImgFooter=End image
+DayClose=The day is closed
+DayProgramme=Please find attached the program :
+
+Event_block_relance_waiting=Blocking of the revival of pending registrations
+Event_block_relance_valid=Blocking of the revival of validated registrations
+Event_block_registration_tag=Block invitations by TAG
+
+RelanceWaitingNONE=No invitation (s) pending
+RelanceConfirmedNONE=No registrations validated yet
+
+EventErrorBadEMail=Problem with email address
+EventRegSuccesswithMail=Registration (s) made with sending email
+EventRegSuccesswitouthMail=Registration (s) made without sending email
+ToggleAll=Select all
+ActionEmpty=Please choose an action
+DayEventLink=Link to newsletter
+EventUseMailing=Use of the mailing module for sending mail
+ReminderWaitingSent=Reminder (s) pending invitation (s) sent
+ReminderConfirmedSent=Relaunch validated registration (s) sent
+DescriptionMail=Body of the email <br /> <br /> <p> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event < / i> <br /> __DAY DAY <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Surname and first name of the participant </ i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __TIMESTART__ <i> Start time </i> <br/> __TIMEEND__ <i> End time</i><br/></p>
+DescriptionWeb=Content of the Internet page / Public page <br /> <br /> <p> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event </i> <br /> __DAYDAY__ <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Name and participant's first name </i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> <br/> __TIMEEND__ <i> End time</i><br/></p>
+MailText=<p><b>Body of the email </b> </p> <p> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event < / i> <br /> __DAY DAY <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Surname and first name of the participant </ i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> < br /> __ TIMEEND__ <i> End time</i><br/></p>
+HTML_HEADER=<html><body>
+HTML_FOOTER=</body></html>
+PrefixNameEventDay=Prefix for name
+PriceBase=Price basis
+EventActiveByDefault=Event active by default at creation
+DayActiveByDefault=Active day by default at creation
+Event_DisableCreate1stDayByDefaut=Disabling auto creation
+Event_ActiveCloneFunc=Activate the event cloning function
+EventDay_ActiveCloneFunc=Activate day cloning function
+Clone=Clone
+CloneEvent=Clone the event
+CloneDay=Clone the day (s)
+CloneGroup=Clone group (s)
+CloneConfirm=Do you want to clone the event, the days, the associated groups?
+CloneDayConfirm=Do you want to clone the day and the associated groups?
+CloneOK=The event and the associated days have been cloned
+CloneDayOK=The day and the associated groups have been cloned
+NoLevelOnThisRegistration=Attention, you must choose a group
+AddDel=Selection
+Plagehoraire=Time slots
+EventNotifyCreationPlage=<br />Note: setting an end date will create as many days as number of days
+
+RelanceWaitingMessage=Body of the reminder email for pending invitations <br /> <br /> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the 'event </i> <br /> __DAYDAY__ <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Name and first name of participant </i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </ i> <br/> __TIMEEND__ <i> End time</i><br/></p>
+RelanceWaitingSujet=Subject of the reminder email of pending invitations
+RelanceConfirmedMessage=Body of the reminder email for validated registrations <br /> <br /> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event </i> <br /> __DAYDAY__ <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Name and surname of the participant </i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </ i > <br/> __TIMEEND__ <i> End time</i><br/></p>
+RelanceConfirmedSujet=Subject of the email to relaunch validated registrations
+
+Delaybeforlaunchconfirmed=Delay before global relaunch of validated registrations - Hidden if at 0
+Delaybeforlaunchwaiting=Delay before global restart of pending invitation (s) - Hidden if at 0
+AdminManageRuleInvitation=Management of invitations
+AdminManageRuleReminder=Reminder management
+AdminManageRule1stCreate=Management of the creation of events and days
+AdminValidRegistrationAfterCreationDefault=Default management of a manual invitation?
+
+UserAlreadyCreate=User already registered for this day
+UsersTagAlreadyRegister=All users in this category are already registered
+
+MailParticipate=Participation confirmation email
+MailNotParticipate=Mail of non participation
+MailRelanceWaiting=Pending dunning email
+MailRelanceConfirmed=Participation confirmation reminder email
+
+CanceledMessage=Body of the email for the cancellation of a registration <br /> <br /> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event </i> <br /> __DAYDAY__ <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Name and participant's first name </i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> <br/> __TIMEEND__ <i> End time</i><br/></p>
+CanceledSujet=Subject of the cancellation of registration email
+
+
+
+# ADMIN #
+EventAboutTitle=Event module - About
+EventSetup=Event module - Configuration
+
+EventAboutMessage=A bug, a display problem or an idea for improvement? Visit the Dolibarr forum https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
+EventLicenseMessage=To come up
+AdminEventBehaviour=Behaviour
+
+EventSetupExtrafieldsTitle=Event module - Extrafields management
+EventSetupExtrafields=Gestion Extrafields
+
+EventSetupBackOfficeTitle=Module évènement - Gestion BackOffice
+EventSetupBackOffice=Gestion BackOffice
+EventSetupPagePublicTitle=Event module - Public page management
+PagePublicDisable=Public page disabled, you will be redirected to the default website
+EventSetupPagePublic=Public Page Management
+PagePublic=Public Page
+
+EventPublicRegistrationLimitDate=Blocking of registrations x hour (s) before the event
+
+EventSetupPagePublicManageText=Event module - Email Text Management
+EventSetupPagePublicManageCSS=Event module - CSS Email Management
+EventSetupPageManageCSS=Gestion Mail CSS
+CssTitreMail=Feuille de style Mail
+EventSetupPageStyle=Event module - Style management
+EventSetupStyle=Style management
+
+css_file=Global style sheet on public page
+css_menu=Menu
+css_titre=Style sheet
+css_reset=Cancel changes
+EventSetupTextAddTitle=Event module - Email content management
+EventSetupTextAdd=Adm Content of mails
+EventSetupTextMail=Content management of emails
+
+EventSetupLevelTitle=Event module - Group management
+EventSetupLevel=Group management
+
+NoDayIncoming=No day ahead
+ListDayIncoming=List of Upcoming Events & Days
+
+PlaceFree=Remaining place (s)
+Place=Place(s)
+
+Authors=Developer (s)
+OldAuthors=Former Developer (s)
+QuotaRestant=Your remaining quota :
+Panier=your basket :
+
+DayFull=Full day
+PlaceNoLimit=No seat limit
+GrpFull=Full group
+PlaceFree=Free place
+ShowInfoAccount=View your account information and balance
+InfoEventCounter=Your quota of remaining units
+Hello=Hello
+Reserve=Reserve
+Connect=Log in
+Create=Create an account
+Disconnect=Logout
+Eventt=Classes
+Empty=Empty
+
+errNoUnit=Contact the sales department
+errAdmin=No registration for ADMINS
+errTooLateSub=It is too late to register
+errTooLateUnSub=It's too late to unsubscribe
+errNoSpot=More space available
+
+ParticipateSubject=Subject of the confirmation of participation email
+ParticipateMessage=Body of the participation confirmation email <br /> <br /> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event </i> <br /> __DAY DAY <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Surname and first name of the participant < / i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> <br/> __TIMEEND__ <i> End time</i><br /></p>
+NotParticipateSubject=Subject of refusal to participate email
+NotParticipateMessage=Body of the refusal of participation email <br /> <br /> You can use the following fields so that they are taken into account as for a direct mail: </p> <p> __EVENEMENT__ <i> Name of the event </i> <br /> __DAY DAY <i> Name of the day </i> <br/> __DATEJOURNEE__ <i> Date of the day </i> <br/> __PARTICIPANT__ <i> Surname and first name of the participant < / i> <br/> __LIEN_VALIDATION__ <i> Validation link </i> <br/> __LIEN_VALIDATION_IMG__ <i> Special validation link IMAGE </i> <br/> __TIMESTART__ <i> Start time </i> <br/> __TIMEEND__ <i> End time</i><br /></p>
+
+# TO CLEAN #
