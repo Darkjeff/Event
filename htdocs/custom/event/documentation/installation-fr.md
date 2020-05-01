@@ -1,10 +1,10 @@
-##Installation:
+#Installation:
 
 Configuration
 - La Société/Institution doit être configuré
 - la TVA doit être définis
 
-Module pré-requis à activer 
+##Module pré-requis à activer 
 
 - 1 modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
 
