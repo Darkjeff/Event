@@ -1,4 +1,4 @@
-#Installation:
+Installation:
 
 Configuration
 - La Société/Institution doit être configuré
