@@ -38,7 +38,7 @@ Module pré-requis à activer
 
 -- Dans outils administrateur/travaux planfiés/nouveau
 
-  * 7.1 Libellé: Relance(s) invitation(s) en attente
+   * 7.1 Libellé: Relance(s) invitation(s) en attente
 
 Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
 
