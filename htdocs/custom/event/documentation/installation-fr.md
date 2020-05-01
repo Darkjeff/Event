@@ -94,7 +94,7 @@ Peut toujours être édité
 
 Visibilité
 
-`*8.2 Utilisateurs et groupes:
+`* 8.2 Utilisateurs et groupes:`
 
 Libellé: Nombre unités restantes
 
