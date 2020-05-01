@@ -80,7 +80,7 @@ Priorité: 0
 
 * 8 Ajouter les attributs supplémentaires dans:
 
-** 8.1 les produits et services:
+**8.1 les produits et services:
 
 Libellé: EVENT - Nombre d'unités
 
