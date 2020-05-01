@@ -1,4 +1,4 @@
-#titreInstallation:
+#titre Installation:
 
 Configuration
 - La Société/Institution doit être configuré
