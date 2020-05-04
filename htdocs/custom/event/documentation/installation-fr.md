@@ -78,7 +78,7 @@ Exécuter chaque tâche: 5 mins
 
 Priorité: 0
 
-* 8 Ajouter les attributs supplémentaires dans:
+- 8 Ajouter les attributs supplémentaires dans:
 
 8.a les produits et services:
 
@@ -127,3 +127,9 @@ Position: 0
 Peut toujours être édité	
 
 Visibilité
+
+- 9 redirection vers page plublic après login
+
+Rajouter la constante dans onfiguration / divers 
+
+`MAIN_LANDING_PAGE: custom/event/public/`
