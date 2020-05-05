@@ -24,6 +24,8 @@
 
 - [ ] Activate the management of products and services
 
+- [ ] Create a TAG: Event which will be used to place your products and services in order to find them on your public page
+
 - 5 Paypal or Stripe
 
 - [ ] Activate the online payment module (s)
