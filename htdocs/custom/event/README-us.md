@@ -22,7 +22,7 @@ find detailed documentation -> [documentation in English](https://github.com/Dar
 
 
 ## Installation
-Installation procedure -> [installation in English](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/installation-us.md)
+Installation procedure -> [installation in English](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/install-us.md)
 
 
 
