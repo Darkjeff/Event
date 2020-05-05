@@ -1,8 +1,10 @@
-#Module to manage event and registration in Dolibarr ERP/CRM.#
+# Module permettant de gérer vos événements dans Dolibarr ERP/CRM.
 
-Configuration
-- La Société/Institution doit être configuré
-- la TVA doit être définis
+## Documentation
+retrouver la documentation détaillé -> https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc.md
+
+## 
+
 
 Module pré-requis à activer 
 - modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
