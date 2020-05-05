@@ -78,9 +78,11 @@ Exécuter chaque tâche: 5 mins
 
 Priorité: 0
 
-- 8 Ajouter les attributs supplémentaires dans:
+## Attribus et constantes à rajouter
 
-- [ ] 8.a les produits et services:
+- 1 Ajouter les attributs supplémentaires dans:
+
+- [ ] 1.a les produits et services:
 
 Libellé: EVENT - Nombre d'unités
 
@@ -94,7 +96,7 @@ Peut toujours être édité
 
 Visibilité
 
-- [ ] 8.b Utilisateurs et groupes:
+- [ ] 1.b Utilisateurs et groupes:
 
 Libellé: Nombre unités restantes
 
@@ -110,7 +112,7 @@ Peut toujours être édité
 
 Visibilité
 
-- [ ] 8.c Dans l'admin du module
+- [ ] 1.c Dans l'admin du module
 
 Durée du cours (en minutes, heure, ...)
 
@@ -128,7 +130,7 @@ Peut toujours être édité
 
 Visibilité
 
-- 9 redirection vers page plublic après login
+- 2 redirection vers page plublic après login
 
 - [ ] Rajouter la constante dans onfiguration / divers 
 
