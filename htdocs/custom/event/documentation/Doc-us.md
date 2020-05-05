@@ -1,8 +1,8 @@
-# Operation
+# How the public page works
 
 The public pages of the module are broken down into several functionalities allowing the user to perform numerous tasks. You can configure these features via the administration panel, in "Public page management". You will therefore find information to help you with the module settings, then explanations of the content displayed in the public pages.
 
-## Administration panels
+## Public page administration panels
 
 ### Store management
 
