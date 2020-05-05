@@ -6,7 +6,7 @@ The public pages of the module are broken down into several functionalities allo
 
 ### Store management
 
-! [Eventa](img/EventAdminBoutiqueGestion.JPG)
+![Eventa](img/EventAdminBoutiqueGestion.JPG)
 
 1) Activate the store: Allows you to activate or deactivate the purchase of objects via the public page
 
@@ -18,7 +18,7 @@ The public pages of the module are broken down into several functionalities allo
 
 ## Shop mail
 
-! [Eventb](img/EventAdminBoutiqueMail.jpg)
+![Eventb](img/EventAdminBoutiqueMail.jpg)
 
 These fields allow you to configure the content of the email that will be sent when purchasing a product on the store. The email may contain a link to validate the payment on paypal or on Stripe or to download the invoice.
 
