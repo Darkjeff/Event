@@ -6,7 +6,7 @@ The public pages of the module are broken down into several functionalities allo
 
 ### Store management
 
-! [Eventa] (img / EventAdminBoutiqueGestion.JPG)
+! [Eventa](img/EventAdminBoutiqueGestion.JPG)
 
 1) Activate the store: Allows you to activate or deactivate the purchase of objects via the public page
 
@@ -18,7 +18,7 @@ The public pages of the module are broken down into several functionalities allo
 
 ## Shop mail
 
-! [Eventb] (img / EventAdminBoutiqueMail.jpg)
+! [Eventb](img/EventAdminBoutiqueMail.jpg)
 
 These fields allow you to configure the content of the email that will be sent when purchasing a product on the store. The email may contain a link to validate the payment on paypal or on Stripe or to download the invoice.
 
@@ -36,7 +36,7 @@ These fields allow you to configure the content of the email that will be sent w
 
 ## Account creation
 
-! [Eventd] (img / EventAdminCreationCompte.JPG)
+! [Eventd](img/EventAdminCreationCompte.JPG)
 
 1) Activate public account creation: Allows you to activate or deactivate the possibility for non-registered users to register, via the public page by creating a user account.
 
@@ -44,7 +44,7 @@ These fields allow you to configure the content of the email that will be sent w
 
 ## Style Sheet
 
-! [Evente] (img / EventAdminCSS.JPG)
+! [Evente](img/EventAdminCSS.JPG)
 
 This menu allows you to edit the style sheet in order to personalize the display of the public page menus.
 
@@ -52,7 +52,7 @@ This menu allows you to edit the style sheet in order to personalize the display
 
 These menus allow you to modify the content of the public page
 
-! [Eventf] (img / EventAdminPublicPageContent.jpg)
+! [Eventf](img/EventAdminPublicPageContent.jpg)
 
 1) Header text: Displays a logo, a title on the page
 
@@ -66,7 +66,7 @@ These menus allow you to modify the content of the public page
 
 ## Management of reminders
 
-! [Eventg] (img / EventAdminRelance.jpg)
+! [Eventg](img/EventAdminRelance.jpg)
 
 These parameters are used to configure the sending of follow-up emails, these emails allowing the sending of a reminder email to the registered or invited user.
 
@@ -76,7 +76,7 @@ When you are a user, you can access this information:
 
 ## Shop
 
-! [Eventi] (img / EventBoutiqueUserView.JPG)
+! [Eventi](img/EventBoutiqueUserView.JPG)
 
 
 After accepting the CGU & CGV, and selecting an article, we access the confirmation of our purchase.
