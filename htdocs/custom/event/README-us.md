@@ -1,11 +1,11 @@
 # Module allowing to manage your events in Dolibarr ERP / CRM.
 
 ## Documentation
-find detailed documentation -> [documentation in French](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-fr.md)
+find detailed documentation -> [documentation in English](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-fr.md)
 
 
 ## Installation
-Installation procedure -> [installation in French](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/installation-fr.md)
+Installation procedure -> [installation in English](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/installation-fr.md)
 
 
 
