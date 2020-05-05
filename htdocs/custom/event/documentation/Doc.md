@@ -48,7 +48,7 @@ Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de 
 
 Ce menu permet d'éditer la feuille de style afin de personnaliser l'affichage des menus de pages publique.
 
-##Contenu de la page publique
+## Contenu de la page publique
 
 Ces menus permettent de modifier le contenu de la page publique
 
@@ -70,7 +70,7 @@ Ces menus permettent de modifier le contenu de la page publique
 
 Ces paramètres permettent de configurer l'envoi des mails de relance, ces mails permettant le renvoi d'un mail de rappel à l'utilisateur inscrit ou invité.
 
-#Vue de la page publique
+# Vue de la page publique
 
 Lorsqu'on est un utilisateur, on peut accéder à ces informations :
 
@@ -159,7 +159,7 @@ L'utilisateur peut s'inscrire et de désinscrire via cette interface (une inscri
 
 Tous ces champs doivent être remplis pour pouvoir accéder à la seconde étape de l'inscription.
 
-###Deuxième Étape :
+### Deuxième Étape :
 
 ![Eventt](img/EventInscriptionEtapeDeuxViewLogout.jpg)
 
