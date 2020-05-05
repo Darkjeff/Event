@@ -24,7 +24,7 @@ These fields allow you to configure the content of the email that will be sent w
 
 ## Behaviour
 
-! [Eventc] (img / EventAdminComportement.jpg)
+![Eventc](img/EventAdminComportement.jpg)
 
 1) Activate the public page: Allows you to completely deactivate the public page, the store, the account creation, the registration page and public access to the user's account.
 
@@ -36,7 +36,7 @@ These fields allow you to configure the content of the email that will be sent w
 
 ## Account creation
 
-! [Eventd](img/EventAdminCreationCompte.JPG)
+![Eventd](img/EventAdminCreationCompte.JPG)
 
 1) Activate public account creation: Allows you to activate or deactivate the possibility for non-registered users to register, via the public page by creating a user account.
 
@@ -44,7 +44,7 @@ These fields allow you to configure the content of the email that will be sent w
 
 ## Style Sheet
 
-! [Evente](img/EventAdminCSS.JPG)
+![Evente](img/EventAdminCSS.JPG)
 
 This menu allows you to edit the style sheet in order to personalize the display of the public page menus.
 
@@ -52,7 +52,7 @@ This menu allows you to edit the style sheet in order to personalize the display
 
 These menus allow you to modify the content of the public page
 
-! [Eventf](img/EventAdminPublicPageContent.jpg)
+![Eventf](img/EventAdminPublicPageContent.jpg)
 
 1) Header text: Displays a logo, a title on the page
 
@@ -66,7 +66,7 @@ These menus allow you to modify the content of the public page
 
 ## Management of reminders
 
-! [Eventg](img/EventAdminRelance.jpg)
+![Eventg](img/EventAdminRelance.jpg)
 
 These parameters are used to configure the sending of follow-up emails, these emails allowing the sending of a reminder email to the registered or invited user.
 
@@ -76,7 +76,7 @@ When you are a user, you can access this information:
 
 ## Shop
 
-! [Eventi](img/EventBoutiqueUserView.JPG)
+![Eventi](img/EventBoutiqueUserView.JPG)
 
 
 After accepting the CGU & CGV, and selecting an article, we access the confirmation of our purchase.
@@ -91,7 +91,7 @@ Click on confirm the order to access the payment interface.
 
 ### Administrator
 
-! [Eventj] (img / EventCommandeAdminView.JPG)
+![Eventj](img/EventCommandeAdminView.JPG)
 
 When you are an administrator, you have access to the administration panel (ADMIN), to reservations and to logout.
 
@@ -101,7 +101,7 @@ He cannot register for his own courses either.
 
 ### User
 
-! [Eventk] (img / EventCommandeUserView.JPG)
+![Eventk](img/EventCommandeUserView.JPG)
 
 A user does not have access to the administration panel.
 
@@ -115,20 +115,72 @@ A user who is not logged in can only log in or create their account.
 
 ## My account - List of invoices
 
-! [Eventm] (img / EventFacturesUserView.jpg)
+![Eventm](img/EventFacturesUserView.jpg)
 
 This page provides access to the list of validated invoices.
 
 ## Footer - Footer
 
-! [Eventn] (img / EventFooterView.jpg)
+![Eventn](img/EventFooterView.jpg)
 
 This is the content of the footer that you can modify to adapt it to your graphic charter.
 
 ## Header - Header
 
-! [Evento] (img / EventHeaderView.jpg)
+![Evento](img/EventHeaderView.jpg)
 
 This is the content of the header that you can modify to adapt it to your graphic charter.
 
 ## My account - History
+
+![Eventp](img/EventHistoriqueUserView.JPG)
+
+This is the history of the courses in which the User has participated.
+
+## Registration
+
+### Administrator
+
+![Eventq](img/EventInscriptionCoursAdminView.jpg)
+
+An administrator cannot register for a course.
+
+### User
+
+![Events](img/EventInscriptionCoursUserView.JPG)
+
+The user can subscribe and unsubscribe via this interface (one subscription or one unsubscription at a time).
+
+## Account creation
+
+### First page :
+
+![Eventv](img/EventInscriptionlogout.JPG)
+
+All of these fields must be completed in order to access the second stage of registration.
+
+### Second step :
+
+![Eventt](img/EventInscriptionEtapeDeuxViewLogout.jpg)
+
+This step allows the user to choose a password. It can log in with the generated identifier or with the email address.
+
+### Third step :
+
+![Eventu](img/EventInscriptionEtapeTroisViewLogout.jpg)
+
+When registration is complete, a message is displayed and the user is invited to log on.
+
+## Registration - My account:
+
+### User
+
+![Eventw](img/EventMonCompteUserView.JPG)
+
+This displays the number of user units, the cost of the courses to which the user registers, and a link to access the account.
+
+### Administrator
+
+![Eventx](img/EventMonCompteView.JPG)
+
+The Administrator does not have access to the course registration, he can only access the course information.
