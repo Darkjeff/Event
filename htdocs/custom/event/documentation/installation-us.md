@@ -1,44 +1,44 @@
 # Installation:
 
 ## Configuration
-- [] The Company / Institution must be configured
-- [] VAT must be defined
+- [ ] The Company / Institution must be configured
+- [ ] VAT must be defined
 
 ## Prerequisite module to activate
 
 - 1 modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
 
-- [] Unzip the module in the custom folder
+- [ ] Unzip the module in the custom folder
 
-- [] Activate the module
+- [ ] Activate the module
 
 - 2 Third Parties
 
-- [] Activate third party management
+- [ ] Activate third party management
 
 - 3 Invoices and assets
 
-- [] Activate invoice management
+- [ ] Activate invoice management
 
 - 4 Products
 
-- [] Activate the management of products and services
+- [ ] Activate the management of products and services
 
 - 5 Paypal or Stripe
 
-- [] Activate the online payment module (s)
+- [ ] Activate the online payment module (s)
 
-- [] Configure your paypal and Stripe account (s)
+- [ ] Configure your paypal and Stripe account (s)
 
 - 6 Planned works
 
-- [] Activate the module
+- [ ] Activate the module
 
 - 7 Create the planned works
 
 - In administrator tools / planned works / new
 
-- [] 7.a Label: Reminder (s) pending invitation (s)
+- [ ] 7.a Label: Reminder (s) pending invitation (s)
 
 Type of scheduled work: Call of a method of a Dolibarr class
 
@@ -58,7 +58,7 @@ Perform each task: 5 mins
 
 Priority: 0
 
-- [] 7.b Label: Relaunched invitation (s) validated
+- [ ] 7.b Label: Relaunched invitation (s) validated
 
 Type of scheduled work: Call of a method of a Dolibarr class
 
@@ -82,7 +82,7 @@ Priority: 0
 
 - 1 Add the additional attributes in:
 
-- [] 1.a products and services:
+- [ ] 1.a products and services:
 
 Label: EVENT - Number of units
 
@@ -96,7 +96,7 @@ Can still be edited
 
 Visibility
 
-- [] 1.b Users and groups:
+- [ ] 1.b Users and groups:
 
 Label: Number of remaining units
 
@@ -112,7 +112,7 @@ Can still be edited
 
 Visibility
 
-- [] 1.c In the module admin
+- [ ] 1.c In the module admin
 
 Duration of the course (in minutes, hour, ...)
 
@@ -132,6 +132,6 @@ Visibility
 
 - 2 redirection to public page after login
 
-- [] Add the constant in onfiguration / miscellaneous
+- [ ] Add the constant in onfiguration / miscellaneous
 
 `MAIN_LANDING_PAGE: custom/event/public/`
