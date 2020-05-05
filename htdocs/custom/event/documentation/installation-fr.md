@@ -1,44 +1,44 @@
 # Installation:
 
 ## Configuration
-- La Société/Institution doit être configuré
-- la TVA doit être définis
+- [ ] La Société/Institution doit être configuré
+- [ ] la TVA doit être définis
 
 ## Module pré-requis à activer 
 
 - 1 modFormStyler -> https://github.com/Darkjeff/Event/tree/master/htdocs/custom
 
--- Décompresser le module dans le dossier custom
+- [ ] Décompresser le module dans le dossier custom
 
--- Activer le module
+- [ ] Activer le module
 
 - 2 Tiers
 
--- Activer la gestion des tiers
+- [ ] Activer la gestion des tiers
 
 - 3 Factures et avoirs
 
--- Activer la gestion des factures
+- [ ] Activer la gestion des factures
 
 - 4 Produits
 
--- Activer la gestion des produits et services
+- [ ] Activer la gestion des produits et services
 
 - 5 Paypal ou Stripe
 
--- Active le ou les module(s) de paiement en ligne 
+- [ ] Active le ou les module(s) de paiement en ligne 
 
--- Configurer votre ou vos compte(s) paypal et Stripe
+- [ ] Configurer votre ou vos compte(s) paypal et Stripe
 
 - 6 Travaux planifiés
 
--- Activer le module
+- [ ] Activer le module
 
 - 7 Créer les travaux planifier
 
--- Dans outils administrateur/travaux planfiés/nouveau
+- [ ] Dans outils administrateur/travaux planfiés/nouveau
 
-7.a Libellé: Relance(s) invitation(s) en attente
+- [ ] 7.a Libellé: Relance(s) invitation(s) en attente
 
 Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
 
@@ -58,7 +58,7 @@ Exécuter chaque tâche: 5 mins
 
 Priorité: 0
 
-7.b Libellé: Relance(s) invitation(s) validé(s)
+- [ ] 7.b Libellé: Relance(s) invitation(s) validé(s)
 
 Type de travail planifié: Appelle d'une méthode d'une classe Dolibarr
 
@@ -80,7 +80,7 @@ Priorité: 0
 
 - 8 Ajouter les attributs supplémentaires dans:
 
-8.a les produits et services:
+- [ ] 8.a les produits et services:
 
 Libellé: EVENT - Nombre d'unités
 
@@ -94,7 +94,7 @@ Peut toujours être édité
 
 Visibilité
 
-8.b Utilisateurs et groupes:
+- [ ] 8.b Utilisateurs et groupes:
 
 Libellé: Nombre unités restantes
 
@@ -110,7 +110,7 @@ Peut toujours être édité
 
 Visibilité
 
-8.c Dans l'admin du module
+- [ ] 8.c Dans l'admin du module
 
 Durée du cours (en minutes, heure, ...)
 
@@ -130,6 +130,6 @@ Visibilité
 
 - 9 redirection vers page plublic après login
 
-Rajouter la constante dans onfiguration / divers 
+- [ ] Rajouter la constante dans onfiguration / divers 
 
 `MAIN_LANDING_PAGE: custom/event/public/`
