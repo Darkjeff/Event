@@ -1,18 +1,20 @@
-# Module permettant de gérer vos événements dans Dolibarr ERP/CRM.
+# Module de gestion d'événements dans Dolibarr ERP/CRM.
 
 ## Présentation du module:
 Le module Event, peut vous permettre:
 
-- [ ] D'organiser des conférences
-- [ ] De mettre en place des séminaires
-- [ ] De planifier vos formations, vos cours en ligne,
-- [ ] Une inauguration…
-Vous pouvez facturer vos prestations.
+- [ ] D'organiser des conférences, de mettre en place des séminaires, de planifier vos formations, vos cours en ligne ou physique, une inauguration ...
 
-Votre client peux créer un compte avec des identifiants et un mot de passe sur une page public afin de réserver dans un événement une plage horaire.
-Un paiement en ligne est proposé pour vos services ou produits.
+- [ ] De facturer vos prestations et (ou) vos produits
 
-Vous pouvez incrémenter son compte de X formations ou cours ou autre.
+- [ ] De créer un compte avec des identifiants et un mot de passe sur une page public afin que vos clients puisse réserver dans un événement une plage horaire
+
+- [ ] De facturer en ligne vos services et (ou) produits avec Paypal ou Stripe
+
+- [ ] De gérer les invitations, les relances et les rappels par Emails
+
+- [ ] D'incrémenter le compte du client de X formations, cours, heures ...
+
 
 ## Documentation
 retrouver la documentation détaillé -> [documentation en Français](https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-fr.md)
