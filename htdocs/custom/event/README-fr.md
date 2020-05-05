@@ -3,7 +3,7 @@
 ## Présentation du module:
 Le module Event, peut vous permettre:
 
-- [ ] D'organiser des conférences, de mettre en place des séminaires, de planifier vos formations, vos cours en ligne ou physique, une inauguration ...
+- [ ] D'organiser des conférences ou une inauguration, de mettre en place des séminaires, de planifier vos formations, vos cours en ligne ou physique ...
 
 - [ ] De facturer vos prestations et (ou) vos produits
 
