@@ -123,13 +123,13 @@ Cette page permet d'accéder à la liste des factures validées.
 
 ![Eventn](img/EventFooterView.jpg)
 
-Ceci est le contenu de bas de page.
+Ceci est le contenu du bas de page que vous pouvez modifer pour l'adapter à votre charte graphique.
 
 ## Entête - Header
 
 ![Evento](img/EventHeaderView.jpg)
 
-Ceci est le contenu de l'entête.
+Ceci est le contenu de l'entête que vous pouvez modifer pour l'adapter à votre charte graphique.
 
 ## Mon compte - Historique
 
