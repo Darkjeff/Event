@@ -24,6 +24,8 @@
 
 - [ ] Activer la gestion des produits et services
 
+- [ ] Créer un TAG: Event qui vous servira à placer vos produits et services afin de les retrouver sur votre page public
+
 - 5 Paypal ou Stripe
 
 - [ ] Active le ou les module(s) de paiement en ligne 
