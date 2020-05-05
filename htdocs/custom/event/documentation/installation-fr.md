@@ -36,7 +36,7 @@
 
 - 7 Créer les travaux planifier
 
-- [ ] Dans outils administrateur/travaux planfiés/nouveau
+-- Dans outils administrateur/travaux planfiés/nouveau
 
 - [ ] 7.a Libellé: Relance(s) invitation(s) en attente
 
