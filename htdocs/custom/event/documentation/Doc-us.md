@@ -78,12 +78,11 @@ When you are a user, you can access this information:
 
 ![Eventi](img/EventBoutiqueUserView.JPG)
 
-
 After accepting the CGU & CGV, and selecting an article, we access the confirmation of our purchase.
 
 ## Confirmed Purchase
 
-! [Eventh] (img / EventBoutiqueAchatUserView.JPG)
+![Eventh](img/EventBoutiqueAchatUserView.JPG)
 
 Click on confirm the order to access the payment interface.
 
@@ -109,7 +108,7 @@ However, he can access the store
 
 ### Not enrolled
 
-! [Eventy] (img / EventPanelLogoutView.JPG)
+![Eventy](img/EventPanelLogoutView.JPG)
 
 A user who is not logged in can only log in or create their account.
 
