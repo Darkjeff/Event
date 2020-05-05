@@ -1,7 +1,7 @@
 # Module permettant de gérer vos événements dans Dolibarr ERP/CRM.
 
 ## Documentation
-retrouver la documentation détaillé -> https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-fr.md
+retrouver la documentation détaillé -> [documentation en français] https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-fr.md
 
 find detailed documentation -> https://github.com/Darkjeff/Event/blob/10.0/htdocs/custom/event/documentation/Doc-us.md
 
