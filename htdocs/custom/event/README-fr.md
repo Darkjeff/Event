@@ -7,13 +7,15 @@ Le module Event, peut vous permettre:
 
 - [ ] De facturer vos prestations et (ou) vos produits
 
-- [ ] De créer un compte avec des identifiants et un mot de passe sur une page public afin que vos clients puisse réserver dans un événement une plage horaire
+- [ ] De créer un compte avec des identifiants et un mot de passe sur une page public afin que vos clients puissent réserver dans un événement une plage horaire
+
+- [ ] De gérer les inscriptions et les désinscriptions manuellement ou automatiquement
 
 - [ ] De facturer en ligne vos services et (ou) produits avec Paypal ou Stripe
 
-- [ ] De gérer les invitations, les relances et les rappels par Emails
+- [ ] De gérer les invitations, les relances et les rappels par Emails automatiques
 
-- [ ] D'incrémenter le compte du client de X formations, cours, heures ...
+- [ ] D'incrémenter le compte du client de X formations, cours, heures ... manuellement ou automatiquement
 
 
 ## Documentation
