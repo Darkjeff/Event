@@ -1,11 +1,10 @@
-
-#Fonctionnement
+# Fonctionnement
 
 Les pages publique du module se décomposent en plusieurs fonctionnalités permettant à l'utilisateur d'effectuer de nombreuses tâches. On peut parametrer ces fonctionnalités via le panneau d'administration, dans "Gestion page publique". Vous trouverez donc ainsi des informations pour vous aider sur le parametrage du module, puis des explications sur le contenu affiché dans les pages publique.
 
-#Panneaux d'Administration
+## Panneaux d'Administration
 
-##Gestion de la boutique
+### Gestion de la boutique
 
 ![Eventa](img/EventAdminBoutiqueGestion.JPG)
 
@@ -17,13 +16,13 @@ Les pages publique du module se décomposent en plusieurs fonctionnalités perme
 
 4) Lien vers les CGV : Si un lien est entré, l'utilisateur devra valider ces CGV pour pouvoir confirmer l'achat
 
-##Mail de la boutique
+## Mail de la boutique
 
 ![Eventb](img/EventAdminBoutiqueMail.jpg)
 
 Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de l'achat d'un produit sur la boutique. Le mail peut contenir un lien pour valider le paiement sur paypal ou sur Stripe ou pour télécharger la facture.
 
-##Comportement
+## Comportement
 
 ![Eventc](img/EventAdminComportement.jpg)
 
@@ -35,7 +34,7 @@ Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de 
 
 4) Blocage des inscriptions / Désinscription : Permet d'empêcher un utilisateur de s'inscrire ou se désinscrire X heure(s) avant l'évènement.
 
-##Création de Compte
+## Création de Compte
 
 ![Eventd](img/EventAdminCreationCompte.JPG)
 
@@ -43,7 +42,7 @@ Ces champs permettent de configurer le contenu du mail qui sera envoyé lors de 
 
 2) Champs 1ère, 2ème, 3ème page : Permer de personnaliser le message affiché à chaque étape de l'inscription.
 
-##Feuille de Style
+## Feuille de Style
 
 ![Evente](img/EventAdminCSS.JPG)
 
@@ -65,7 +64,7 @@ Ces menus permettent de modifier le contenu de la page publique
 
 5) URL présente dans le pied : Permet de paramétrer l'URL du site (Site vers lequel sera dirigé l'utilisateur si les pages sont desactivés.)
 
-##Gestion des relances
+## Gestion des relances
 
 ![Eventg](img/EventAdminRelance.jpg)
 
@@ -75,22 +74,22 @@ Ces paramètres permettent de configurer l'envoi des mails de relance, ces mails
 
 Lorsqu'on est un utilisateur, on peut accéder à ces informations :
 
-##Boutique
+## Boutique
 
 ![Eventi](img/EventBoutiqueUserView.JPG)
 
 
 Après avoir accepté les CGU & CGV, et selectionné, un article, on accèse à la confirmation de notre achat.
 
-##Achat Confirmé
+## Achat Confirmé
 
 ![Eventh](img/EventBoutiqueAchatUserView.JPG)
 
 Cliquer sur valider la commande permet d'accéder à l'interface de paiement.
 
-##Menus de navigation
+## Menus de navigation
 
-###Administrateur
+### Administrateur
 
 ![Eventj](img/EventCommandeAdminView.JPG)
 
@@ -100,7 +99,7 @@ Un administrateur ne peur pas utiliser la boutique et s'acheter lui-même des cr
 
 Il ne peut pas non plus s'inscrire à ses propre cours.
 
-###Utilisateur
+### Utilisateur
 
 ![Eventk](img/EventCommandeUserView.JPG)
 
@@ -108,53 +107,53 @@ Un utilisateur n'a pas accès au panneau d'administration.
 
 En revanche il peut accéder à la boutique
 
-###Non-inscrit
+### Non-inscrit
 
 ![Eventy](img/EventPanelLogoutView.JPG)
 
 Un utilisateur qui n'est pas connecté peut seulement se connecter ou créer son compte.
 
-##Mon compte - Liste des factures
+## Mon compte - Liste des factures
 
 ![Eventm](img/EventFacturesUserView.jpg)
 
 Cette page permet d'accéder à la liste des factures validées.
 
-##Bas de page - Footer
+## Bas de page - Footer
 
 ![Eventn](img/EventFooterView.jpg)
 
 Ceci est le contenu de bas de page.
 
-##Entête - Header
+## Entête - Header
 
 ![Evento](img/EventHeaderView.jpg)
 
 Ceci est le contenu de l'entête.
 
-##Mon compte - Historique
+## Mon compte - Historique
 
 ![Eventp](img/EventHistoriqueUserView.JPG)
 
 Ceci est l'historique des cours auquel l'Utilisateur a participé.
 
-##Inscription
+## Inscription
 
-###Administrateur
+### Administrateur
 
 ![Eventq](img/EventInscriptionCoursAdminView.jpg)
 
 Un administrateur ne peut pas s'inscrire à un cours.
 
-###Utilisateur
+### Utilisateur
 
 ![Events](img/EventInscriptionCoursUserView.JPG)
 
 L'utilisateur peut s'inscrire et de désinscrire via cette interface (une inscription ou une désinscription à la fois).
 
-##Création de compte
+## Création de compte
 
-###Première page :
+### Première page :
 
 ![Eventv](img/EventInscriptionlogout.JPG)
 
@@ -166,21 +165,21 @@ Tous ces champs doivent être remplis pour pouvoir accéder à la seconde étape
 
 Cette étape permet à l'utilisateur de choisir un mot de passe. Il pourra se loguer avec l'identifiant généré ou avec l'adresse mail.
 
-###Troisième Étape :
+### Troisième Étape :
 
 ![Eventu](img/EventInscriptionEtapeTroisViewLogout.jpg)
 
 Lorsque l'inscription est effectuée, on affiche un message et on invite l'utilisateur à se connecter.
 
-##Inscription - Mon compte :
+## Inscription - Mon compte :
 
-###Utilisateur
+### Utilisateur
 
 ![Eventw](img/EventMonCompteUserView.JPG)
 
 Ceci permet d'afficher le nombre d'unités de l'utilisateur, le coût des cours auquel l'utilisateur s'inscrit, et un lien pour acceder au compte.
 
-###Administrateur
+### Administrateur
 
 ![Eventx](img/EventMonCompteView.JPG)
 
