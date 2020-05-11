@@ -113,7 +113,7 @@ ConfirmCancelAnEvent=Confirm the cancellation of this event? The information wil
 CloseAnEvent=Close an event
 CloseEvent=Closed
 ConfirmCloseAnEvent=Closing the event and the corresponding days?
-NumberRegistrationShort=Nb
+NumberRegistrationShort=Number of registrants
 ErrorRefRegistrationMustBeProvided=A reference or registration number must be provided.
 EventAlsoValidateDay=Also validate days
 EventAlsoOpenDays=Also open days registrations
@@ -393,7 +393,7 @@ Admin_menu_manage_content_add=Management of additional content for emails
 Admin_menu_extrafields=Management of additional field (s)
 Groupe_change=Change group
 NoRegistrationGroupe=No registration (s) defined for this group
-RegistrationForLevelling=Registration for the group (s)
+RegistrationForLevelling=Registration for the group
 EventRegistrationLimitToExpireInfo=IMPORTANT: Registrations less than <b>% s </b> day (s) will not be restarted.
 EventDefaultMail=Default Mail
 
