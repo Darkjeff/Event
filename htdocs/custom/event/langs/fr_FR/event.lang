@@ -393,7 +393,7 @@ Admin_menu_manage_content_add=Gestion des contenus additionnels pour les mails
 Admin_menu_extrafields=Gestion de(s) champ(s) additionnel(s)
 Groupe_change=Changer de groupe
 NoRegistrationGroupe=Aucune inscription(s) défini(s) pour ce groupe
-RegistrationForLevelling=Inscriptions pour le(s) groupe(s)
+RegistrationForLevelling=Inscriptions pour le groupe
 EventRegistrationLimitToExpireInfo=IMPORTANT : Les inscriptions de moins de <b>%s</b> jour(s) ne seront pas relancés.
 EventDefaultMail=Mail par défaut
 
