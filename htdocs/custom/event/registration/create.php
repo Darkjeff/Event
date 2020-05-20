@@ -85,7 +85,7 @@ $hookmanager->initHooks(array('event_registration'));
 $parameters=array('socid'=>$socid);
 $reshook=$hookmanager->executeHooks('doActions',$parameters,$object,$action);    // Note that $action and $object may have been modified by some hooks
 
-if ( $action == 'addd' && $user->rights->event->registration->creer )
+if ( $action == 'addd') //&& $user->rights->event->registration->creer 
 {
 
 $userId = $user->id;
