@@ -1,0 +1,118 @@
+input[type=submit], button, .button, .butAction, .butActionDelete, .butActionRefused, div.tabs .tabsElem a {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+    margin: 2 2 2 2;
+    padding: 4 4 4 4;
+}
+
+input[type=submit]:hover, button:hover, .button:hover, .butAction:hover, .butActionDelete:hover, div.tabs .tabsElem a:hover, .divButAction a.butActionDelete:hover, .butActionRefused:hover, input[type=submit], button, .button, .butAction, .butActionDelete, .butActionRefused, div.tabs .tabsElem a, div.tabsAction .butAction:hover {
+    border: 1px solid #8CC3BE;
+}
+
+.butAction:hover, div.tabs .tabsElem a:hover, div.tabsAction .butAction:hover, .butActionRefused:hover, input[type=submit]:hover, button:hover, .button:hover, .butAction:hover, .butActionDelete:hover, div.tabs .tabsElem a:hover, .divButAction a.butActionDelete:hover {
+    color: #8CC3BE;
+}
+
+input.dolibarrcombobox+button {
+    background-color: #8CC3BE !important;
+}
+
+.butAction:hover, .divButAction a.butActionDelete:hover, div.tabsAction .butAction:hover, input[type=submit]:hover, button:hover, .button:hover, .butAction:hover, .butActionDelete:hover, div.tabs .tabsElem a:hover {
+    background: #fff;
+}
+
+.butActionRefused:link, .divButAction a.butActionDelete, select, div.tabs .tabsElem a:link, div.tabs .tabsElem a:visited, .butAction:link, div.tabsAction .butAction:link, input[type=submit]:visited, button:visited, .button:visited, .butAction:visited, .butActionDelete:visited, .butActionRefused:visited, div.tabs .tabsElem a:visited, input[type=submit], button, .button, .butAction, .butActionDelete, .butActionRefused, div.tabs .tabsElem a {
+    background: #8CC3BE;
+    font-weight: 300;
+}
+
+a.button_napf:hover{
+    background-color: white;
+}
+
+div.titre_blue {
+    background-color: #8CC3BE;
+    color: white;
+    font-size: 20px;
+    width: 80%;
+}
+
+div.titre_red {
+    background-color: #94183C;
+    color: white;
+    font-size:20px;
+    width: 80%;
+}
+
+p.warning {
+    color: #94183C;
+    font-size: 15px;
+    width: 80%;
+}
+
+p.ok {
+    color: #34C924;
+    font-size: 15px;
+    width: 80%;
+}
+
+.button:hover {
+    font-size: 15px;
+}
+
+fieldset {
+    border: 1px solid #8CC3BE;
+}
+
+div.logo {
+    width: 80%;
+    height: 40%;
+    background: url(../img/napf-vertical.png) no-repeat 50% 50%;
+}
+
+div.logo_footer {
+    width: 80%;
+    height: 20%;
+    background: url(../img/NAPF-Bandeau.jpg) no-repeat 50% 50%;
+}
+
+@media only screen and (max-width: 960px) {
+    div.logo_header {
+        width: 100%;
+        height: 15%;
+        background: url(../img/napf-vertical.png) no-repeat 50% 50%;
+    }
+
+    div.logo_footer {
+        width: 100%;
+        height: 15%;
+        background: url(../img/NAPF-Bandeau.jpg) no-repeat 50% 50%;
+    }
+
+    div.titre_blue {
+        background-color: #8CC3BE;
+        color: white;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    body, p.warning, .button {
+        font-size: 16px;
+    }
+
+    fieldset {
+        border: 3px solid #8CC3BE;
+    }
+
+    p.warning {
+        width: 100%;
+    }
+
+    div.logo_footer_phone {
+        display: none;
+    }
+}

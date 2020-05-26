@@ -1,0 +1,539 @@
+﻿# Dolibarr language file - fr_FR - events
+CHARSET=UTF-8
+
+##### Module #####
+Event=Evènement
+Module1680Name= Evènements
+Module1680Desc= Gestion d'évènements et d'inscriptions par groupe/session
+RegistrationsModelModule=Modèles de document des inscriptions
+RegistrationExtraFieldsManage=Gérér les champs des inscriptions
+EventMakeLevelRequired=Rendre obligatoire  le choix d'un groupe pour une inscription
+EventRegistrationMakeEmailRequired=Rendre la saisie d'un email obligatoire pour l'inscription
+EventSmsNumberFrom=Numéro d'envoi des SMS de confirmation
+EventRegistrationLevelDefaultNumber=Nombre de place(s) disponible(s) par défaut pour les groupe(s) (0=Places illimitées)
+EventRegistrationLevelDefaultLimit=Seuil pour le calcul de disponibilité des places
+EventTextToAddEmails=Texte à ajouter en signature des emails<br /><br />Note : deux retours à la ligne sont placés automatiquement entre le corps du mail et la signature
+EventRegistrationLimitToExpire=Délai avant non relance des invitations en attente
+EventRegistrationWaitingLimitToExpire=Délai avant non relance des inscriptions en attente
+EventPublicUnregistrationLimitDate=Blocage des désinscriptions x heure(s) avant l'événement
+
+
+##### Index #####
+EventGestion=Gestion des évènements
+EventList=Liste
+ShowEvent=Voir l'évènement
+EventListShowActive=Voir les évènements actifs
+EventListShowClosedToo=Voir aussi les évènements cloturés
+DayListShowActive=Voir les journées actives
+DayListShowClosedToo=Voir aussi les journées cloturées
+
+##### Fiche event ####
+nombreInscrit=Nombre d'inscrit(s)
+eventPlaceAvailable=Afficher le nombre d'inscrit(s) à la place du nombre de place(s) disponible(s).
+EVENT_MANAGE_ECOMMERCE=Gestion de la page BOUTIQUE
+EVENT_MANAGE_PUBLIC_REGITRASTION=Gestion de la page publique de création de compte
+eventSwitchRegister=Activer la création publique de compte
+eventNavbarRegister=Afficher la barre de naviguation
+EVENT_PUBLIC_DESCRIPTION_1=1<sup>ère</sup> page<br />(Page de saisi des informations générales)
+EVENT_PUBLIC_DESCRIPTION_2=2<sup>nd</sup> page<br />(Page de saisi du mot de passe)
+EVENT_PUBLIC_DESCRIPTION_3=3<sup>ème</sup> page<br />(Page de validation de l'inscription)
+EVENT_PUBLIC_DESCRIPTION_BOUTIQUE=Texte affiché avant la liste des produits
+EVENT_SWITCH_BOUTIQUE=Activer la boutique
+EVENT_MANAGE_MAIL=Gestion de mail de la boutique
+EVENT_MAIL_SUBJECT=Sujet du mail de facturation
+MailCanceled = Mail suite à l'annulation
+ConfirmSubmit=Êtes vous sur?
+
+
+
+EVENT_MAIL_CONTENT=Contenu du mail, vous pouvez utiliser les macros suivante : <br /><p>__VALIDER_FACTURE__<i> : Affiche un lien pour procéder au paiement.</i></p><p>__AFFICHER_FACTURE__<i> : Affiche un lien pour télécharger la facture</i></p><p>__PRENOM__<i> : Affiche le prénom du client</i></p><p>__NOUVEAU_SOLDE__<i> : Affiche le nombre d'unités du client après le paiement</i></p><p>__NOM__<i> : Affiche le nom du client</i></p><p>__SOLDE__<i> : Affiche le nombre d'unités du client avant le paiement</i></p><p>__QUANTITE__<i> : Affiche le nombre de produits achetés pas le client</i></p><p>__DATE__<i> : Affiche la date d'envoi du mail</i></p><p>__NOM_PRODUIT__<i> : Affiche le nom du produit acheté par le client</i></p><p>__PRIX_UNITE__<i> : Affiche le prix du produit acheté par le client</i></p><p>__PRIX_TTC__<i> : Affiche le prix total des produits achetés par le client.</i></p>
+event_public_active=Activer la page publique
+event_public_header=Texte d'entête<br />(après le LOGO d'entête de page)
+event_public_navbar=Barre de navigation<br />(HTML5 & Javascript BOOTSTRAP pur)
+event_public_content=Contenu de la page <br />(avant liste des évenement(s) & journée(s))
+event_public_footer=Texte de pied<br />(avant le LOGO de pied de page)
+event_public_website=URL présente dans le pied<br />(après le LOGO de pied de page)
+EVENT_BOUTIQUE_VALIDATION=Page de validation des achats<br />Texte affiché
+
+EventPublicUnitName=Change le nom des unités<br />(crédit, unité, euros, minutes, $, etc...)
+SetupPagePublicTexte=Contenu de la page publique
+NoPlaceAvailable=Plus de place disponible
+SubTooLate=Il est trop tard pour s'inscrire
+NewEvent=Créer évenement
+EventSponsor=Commanditaire
+EventManager=Gestionnaire
+RegistrationForeachDay=Invitation(s) par journée
+RegistrationIsOpen=Invitation(s) possible
+EventPriceHt=Prix HT de l'évènement
+EventPriceTtc=Prix TTC de l'évènement
+EventPriceHtByDay=Prix HT par journée
+EventPriceTtcByDay=Prix TTC par journée
+EventSingular=Evènement
+ValidateEvent=Valider l'évènement
+ConfirmationDate=Date de confirmation
+ConfirmValidateEvent=Confirmer la validation de l'évènement
+DeleteAnEvent=Effacer un évènement
+ConfirmDeleteAnEvent=Confirmer la suppression de cet évènement?
+OpenRegistration=Ouvrir les inscriptions
+ConfirmOpenRegistration=Confimer l'ouverture des inscriptions
+CloseRegistration=Fermer les inscriptions
+ConfirmCloseRegistration=Confimer la fermeture des inscriptions
+EventContact=Contacts
+RegistrationIsNowOpen=Les inscriptions sont maintenantenant ouvertes
+RegistrationIsNowClosed=Les inscriptions sont actuellement fermées
+EventRegistrationIsNowClosed=Les invitations au niveau de l'évenement sont actuellement fermées
+RegistrationIsNowAvailableByDay=Il est maintenant possible de s'inscrire séparément aux journées
+RegistrationIsNowNotAvailableByDay=Il n'est plus possible de s'inscrire aux journées séparément
+DateValid=Date validation
+NoEventRegistered=Aucun évènement enregistré
+NewDay=Nouvelle journée
+ChooseAnotherEvent=Choisir un autre évènement
+LabelSelectAnEventDay=Sélectionner une journée
+ChooseAnEvent=Choix de l'évènement
+LabelSelectAnEvent=Sélectionner un évènement
+CancelAnEvent=Supprimer cet évènement ?
+ConfirmCancelAnEvent=Confirmer l'annulation de cet évènement? Les informations ne seront pas effacées.
+CloseAnEvent=Clôturer l'évènement
+CloseEvent=Clôturer
+ConfirmCloseAnEvent=Clôturer l'évènement et les journées correspondantes?
+NumberRegistrationShort=Nb d'invitation(s)
+ErrorRefRegistrationMustBeProvided=Une référence ou un numéro d'inscription doit être fourni.
+EventAlsoValidateDay=Valider aussi les journées
+EventAlsoOpenDays=Ouvrir aussi l'inscription des journées
+EventPageLink=Page de validation des invitaitons
+
+##### Journées #####
+NewEventDay=Nouvelle journée
+RefEvent=Réf. évènement
+RefEventDay=Réf. journée
+DayPriceHt=Prix HT de la journée
+DayPriceTtc=Prix TTC de la journée
+EventDay=Journée
+LabelDay=Libellé journée
+EventDays=Journées
+ListOfEventDay=Liste des journées de l'évènement
+EventDayDate=Date de la journée
+ValidateEventDay=Valider la journée
+ConfirmValidateEventDay=Confirmer la validation de la journée
+DeleteAnEventDay=Effacer une journée
+ConfirmDeleteAnEvent=Confirmer la suppression de cette journée
+NumberShort=N°
+LabelEventDayOf=Journée du %s
+NoEventDayRegistered=Aucune journée enregistrée
+NotAllowedBecauseNotValidated=Non disponible car non validé
+ChooseADay=Choix de la journée
+MenuListEventDays=Liste journée(s)
+MenuListEvent=Liste évenement(s)
+ListEventDay=Liste des journées
+SelectEventDay=Sélectionner une date
+EditEventDayOptions=Editer les options de la journée
+EventProductOptionsList=Produits liés en tant qu'option
+EventProductOptionsNumber=Nombre d'options liées à la journée
+EventOptionsSuccessfullyEdit=Options liées à la journée : %s
+EventOptions=Option(s) journée
+DeleteAnDay=Supprimer la journée
+ConfirmDeleteAnDay=Confirmer la suppression de la journée
+NoDayRegistered=Aucune journée enregistrée
+CloseDay=Clôturer
+CloseDayDone=Journée clotûré
+ConfirmCloseADay=Voulez vous clôturer cette journée?
+CloseAday=Clôturer la journée
+
+
+##### Groupe ####
+EventLevel=Groupe
+LevelGestion=Gestion des groupe(s)
+EventLevels=Groupe(s)
+LevelList=Liste globale de(s) groupe(s)
+NewLevel=Nouveau groupe
+CreateLevel=Créer un groupe
+DeleteLevel=Supprimer le groupe
+ConfirmDeleteLevel=Confirmer la suppression du groupe
+NoLevel=Vous devez créer un ou plusieurs groupe(s) avant de continuer.
+LevelCreatedSuccess=Groupe créé avec succès!
+LevelUpdatedSuccess=Groupe mis à jour!
+LevelDeletedSuccess=Groupe supprimé avec succès!
+LevelGestionByDay=Gestion des groupe(s) pour la journée
+LevelAvailable=Groupe(s) disponible(s)
+LevelAvailableForThisDay=Groupe(s) disponible(s)
+PlaceAvailable=Place(s) disponible(s)
+NbRegistered=Nombre d'invitation(s)
+LevelFull=Bloquer manuellement les invitation(s) pour ce groupe
+LevelParameters=Paramètre(s) de(s) groupe(s) utilisé(s)
+InfoLevelConfigWillErased=Attention, le paramétrage de(s) groupe(s) est supprimé si vous ajouter/supprimer un/des groupe(s).
+LevelModifiedSuccess=Groupe modifié avec succès
+LevelMassModifiedSuccess=%s groupe(s) modifié(s)
+EventInfoAboutCountRegistrationLevel=Les inscriptions comptabilisées sont celles qui ont le statut soit "brouillon" soit "validé" soit "confirmé".
+NoLevelDefine=Pas de niveau défini
+EventButtonPeriods=Périodes
+EventCalendar=Calendrier de la journée pour le(s) groupe(s)
+EventCalendarFromTemplate=D'après le modèle
+EventPeriodDate=Date
+EventPeriodTimeB=Début
+EventPeriodTimeE=Fin
+EventDeletePeriod=Supprimer période
+EventDeletePeriodConfirm=Confirmer la suppression de la période
+EventPeriodSuccessfullyDeleted=Période effacée avec succès
+EventLevelSetTiming=Configuration des paramètre horaires
+EventNoPlannedTiming=Pas d'horaire de planifié pour ce groupe
+
+#### Inscription ####
+Registrations=Invitations
+Registration=Invitation
+RegistrationRefShort=Réf inscription
+RegistrationGestion=Gestion des inscriptions
+AddRegistration=Ajouter invitation manuelle
+AddRegistrationTag=Ajouter invitation(s) par TAG
+RegistrationCreate=Créer invitation
+RegistrationFrom=Demande faite par
+UserToRegistration=Utilisateur à inviter
+GroupToRegistration=Groupe à inviter
+RegistrationCreate=Demande d'invitation
+PleaseChoiceLevel=Veuillez choisir un groupe
+RegistrationDate=Date d'invitation
+NoThirdPartyAssociatedToRegistration=Pas de tiers associé à l'inscription
+LinkedToDolibarrThirdParty=Tiers lié à l'inscription
+RegistrationList=Invitation(s)
+RegistrationForThisDay=Invitation pour cette journée
+RegistrationsForThisDay=Invitations pour cette journée
+RegistrationTicket=Fiche inscription
+NoRegistration=Pas d'inscription
+ValidateRegistration=Valider l'inscription
+ConfirmValidateRegistration=Confirmer la prise en compte de l'inscription
+RegistrationToDay=Inscription journée
+RelatedRegistration=Inscription(s) rattachée(s)
+MarkAsPaid=Marquer "payé"
+MarkAsValid=Valider
+ConfirmRegistration=Confirmer l'inscription ?
+ConfirmRegistrationMsg=Confirmer l'inscription %s
+Confirmed=Confirmée
+RegistrationConfirmed=Inscription confirmée
+RegistrationInfos=Infos invitation
+UserRegistrationInfos=Infos participant
+EventRegistrationValidated=Inscription validée
+EventRegistrationConfirmed=Inscription confirmée
+EventRegistrationPaid=Paiement de l'inscription
+ActionEVE_RV=Validation
+ActionEVE_RC=Confirmation
+ActionEVE_ERW=Mise en attente
+ActionEVE_REMAIL=Envoi email
+ActionEVE_REMIND=Relance inscription
+ActionEVE_RPAID=Inscription marquée payée
+MsgActionAC_REMAIL=Envoi de la confirmation par mail
+MsgActionAC_RPAID=Paiement de l'inscription
+MsgActionAC_RESMS=Envoi confirmation SMS
+MsgActionAC_REMIND=Relance invitation par email
+NumberAvailableForThisLevel=%s place(s) disponible pour ce groupe
+MarkAsWaiting=Placer en liste d'attente
+SetWaiting=Mettre en liste d'attente
+ConfirmSetWaiting=Confirmer le déplacement de l'inscription en liste d'attente
+EventRegistrationSetInWaiting=Inscription placée en liste d'attente
+Queued=Liste d'attente
+Waited=Attente de confirmation
+Cancelled=Refusée
+DownloadRegistrationTicket=Télécharger le bulletin d'inscription
+RegistrationAreNotOpenForThisEvent=Les inscriptions à l'évènement ne sont pas ouvertes
+RegistrationArePossibleButNotOpenForThisEventDay=Inscription à l'ensemble des journées de cet évènement uniquement
+MsgPleaseReturnThisDocOnEventDay=Veuillez imprimer et nous retourner par courrier ce bulletin signé accompagné des pièces administratives nécessaires ainsi que le règlement correspondant à votre réservation.
+MsgPleaseBringThisDocOnEventDay=Vous pouvez apporter ce bulletin lors la journée.
+RegistrationsListIsEmpty=La liste des inscriptions est vide
+PDFMsgLegal=La signature de ce bulletin d'inscription implique la connaissance et l'acceptation des conditions générales consultables sur le site internet  %s.
+SendRegistrationByMail=Envoyer l'inscription par mail
+SendRegistrationRef=Envoi inscription %s
+PredefinedMailContentSendRegistration=Bonjour __PARTICIPANT__,<br><br>Veuillez trouver ci-joint le programme %s pour le rendez-vous __JOURNEE__.
+RegistrationSentByMail=Envoi email du bulletin d'inscription %s
+ContactWhoMadeRegistration=Invitation faite par
+ContactWhoValidRegistration=Invitation validée par
+ConfirmClassifyPaidRegistration=Marquer cette invitation comme payée?
+RegistratioWithoutLevel=Liste des invitations
+RegistratioWithoutLevelInfo=Inscriptions sans groupe
+NoRegistrationWithoutLevel=Aucune inscription(s) défini(s)
+PleaseSelectAnEventForRegistration=Veuillez choisir un évènement pour l'inscription
+NoLevelDefinedForThisDay=Pas de groupe défini pour cette journée
+RegistartionForThisDay=invitations pour cette journée
+PrintVersion=Version imprimable
+BoxTitleLastRegistrations=Les %s dernières inscriptions
+BoxLastRegistrations=Dernières invitations aux évènements
+ConfirmSetPrivateNote=Editer la note privée
+ConfirmSetPrivateNoteMsg=Cette note est interne et n'est pas visible par le participant
+NoteSuccessfullySaved=Note mise à jour
+SendConfirmRegistration=Confirmation d'inscription - %s
+EventHello=Bonjour,
+SendConfirmRegistrationBody=Votre inscription est confirmée pour la journée du %s - %s dans le groupe %s
+SendConfirmRegistrationBodyTrainee=Cette confirmation est valable pour le participant : %s
+SendValidRegistration=Invitation - %s
+SendValidRegistrationBody=Veuillez trouver ci-joint le bulletin d'inscription pour la journée du %s - %s
+SendValidRegistrationBodyGroup=Groupe sélectionné : %s.
+SendValidRegistrationBodyPrint=Merci de confirmer ou non votre présence, en cliquant sur ce lien -> __LIEN_VALIDATION__
+SendSMSConfirmRegistrationBody=Confirmation de votre inscription pour la journée du %s - %s - %s
+RegistrationSentBySms=Envoi SMS de la confirmation d'inscription
+SmsTextUsedInTheMessageBody=Texte du SMS envoyé
+SmsSentTo=SMS envoyé au numéro
+ListRegistrationToExpire=Liste des inscriptions arrivant à expiration
+RegistrationToExpireInfo=Inscriptions en attente de validation, au minimum %s jours après leur création
+RegistrationExpires=Expirées
+NoRegistrationToExpire=Aucune inscription arrivant à expiration
+EventLabelMarkAsPaid=Marquer payée?
+EventRegistrationAlreadyPaid=Inscription déjà marqué comme payé
+DeleteRegistration=Supprimer l'inscription
+ConfirmDeleteRegistration=Confirmer la suppression de l'inscription?
+RegistrationListOfContact=Liste des inscriptions du contact
+RegistrationSearch=Recherche d'invitation
+RegistrationSearchHelp=Saisir une partie du nom, du prénom, de la journée ou de l'événement de l'invitation
+RegistrationSearchResults=Résultats de recherche pour "%s"
+MoveRegistration=Déplacer l'invitation
+ConfirmMoveToAnotherDayMsg=L'inscription sera ajoutée à la journée, sans groupe défini.
+RegistrationSuccessFullyMoved=Inscription déplacée avec succès.
+SeeRegistrationTicket=Voir la fiche d'inscription
+RegistrationDeletedSuccessfully=Inscription(s) supprimée(s) avec succès
+RegistrationMassDeletedSuccessfully=%s inscriptions supprimées avec succès
+NumberDayInLate=Jour(s) retard
+RegistrationLimitDate=Date limite
+RegistrationCreation=Nouvelle inscription
+EventSendRegistrationReminder=Envoyer rappel
+CreateNewThirdParty=Créer un nouveau tiers
+CreateNewThirdPartyInfo=Un nouveau tiers sera crée avec les infos de ce formulaire
+NewRegistrationsCreated=Nouvelles inscriptions créées
+CreateANewContactFromRegistration=Créer un nouveau contact
+CreateANewContactFromRegistrationInfo=Un nouveau contact sera créé avec les informations saisies et sera associé au tiers
+ShowRegistration=Voir la fiche inscription
+ValidAfterCreation=Gestion de l'invitation?
+ValidParticipationAfterCreation=Valider la participation et envoyer une confirmation
+ValidRegistrationAfterCreation=Envoyer l'invitation
+StandbyRegistrationAfterCreation=Mettre l'invitation en pause et sans envoi d'information
+ValidRegistrationAfterCreationInfo=Si oui l'inscription sera validée en attente de confirmation et le bulletin PDF envoyé au participant. Sinon son statut sera "brouillon" et chaque inscription devra être validée manuellement.
+RegistrationReminderText=Bonjour,<br /><br />__PARTICIPANT__ : ceci est un message de relance concernant votre inscription à la journée du __DATEJOURNEE__ dans le groupe __LEVEL__. <br /><br />Vous n'avez pas validé votre inscription. Merci de nous informer de votre présence, en cliquant sur ce lient -> __LIEN_VALIDATION__
+ReminderSentTo=Relance envoyée à %s (%s)
+ReminderNotSentTo=Relance non envoyée à %s (%s)
+RemindersSuccessfullySent=%s relances envoyées avec succès.
+RegistrationAutoReminderSubject=Rappel inscription non confirmée
+RegistrationAutoReminderTextIntro=Bonjour,<br /><br />__PARTICIPANT__ : ceci est un rappel automatique à propos de l'inscription à la journée du __DATEJOURNEE__ dans le niveau __LEVEL__. <br /><br />Vous n'avez pas validé cette réservation d'inscription.<br />
+RegistrationAutoReminderTextPayment=Veuillez procéder au règlement pour confirmer cette réservation. Sans action de votre part nous serons contraint de libérer la place. Si vous avez fait le nécessaire, merci de ne pas tenir compte de ce message.
+RegistrationAutoReminderTextDaysLeft=Nombre de jours restant avant que la réservation ne soit annulée : %s jours
+RegistrationAutoReminderTextFirstMail=Ceci est le premier rappel. Un second mail sera envoyé %s jours avant l'expiration de la réservation, si la réservation n'est pas encore confirmée entre-temps.
+RegistrationAutoReminderTextLastMail=Ce sera le dernier rappel et la dernière chance de confirmer la réservation. Dans 3 jours, la réservation sera annulée pour libérer la place à un autre participant.
+RegistrationAutoReminderTextRegistrationCanceled=La réservation a été annulée pour libérer la place à un autre participant. Veuillez procéder à une nouvelle inscription si vous voulez encore participer.
+RegistrationAutoReminderSummarySent=Récapitulatif relance des inscription
+RegistrationAutoReminderTotalCancelled=Inscripions annulées : %s
+RegistrationForLevel=Inscriptions pour le groupe : %s
+ValidSendEmail=Envoyer un Email
+ValidSendPDF=Envoyer un PDF en pièce jointe
+
+
+# PDF
+RegistrationUserInfos=Coordonnées participant
+RegistrationExtraInfos=Informations complémentaires
+
+# Payments
+RegistrationPayments=Paiements des inscriptions
+MakePaymentOnRegistrations=Effectuer un paiement pour les inscriptions
+CommentOnPayment=Commentaire pour l'inscription
+PaymentAmount=Montant du paiement
+RegistrationStatusNotPaid=Inscription non payée
+RegistrationAlreadyPaid=Déjà payée
+RegisteredContact=Contact inscrit
+RegistrationDoPayement=Enregistrer le paiement
+ErrorAmountOrPaiementRequired=Le montant et le mode de règlement sont requis
+RegistrationPaidAndConfirmed=Inscription payée et confirmée : %s
+
+# Commandes
+RegistrationOrdersState=État des inscriptions
+ConfirmRegistrationAfterPayment=Confirmer l'inscription après l'enregistrement du paiement
+
+# New
+SendReminders=Relance
+Sent=Nb relance
+Level=Groupe
+
+# Code 42
+WarningEvent=ATTENTION
+WarningCheck=Veuillez cocher ou décocher au moins une case pour valider le formulaire.
+Participate=Participer
+NotParticipate=Ne pas participer
+AlreadyConfirm=Vous avez déjà validé votre inscription
+AlreadyRefused=Vous avez déjà refusé l'invitation
+WaitingList=Vous êtes sur liste d'attente
+NoValidInformation=Aucun enregistrement n'est associé à ce nom, veuillez nous contacter à '%s' pour plus d'information
+DayAlreadyPast=Il n'est pas possible d'ajouter des inscriptions
+MainUrlRegistration=Url publique pour la validation des invitations
+NbDay=Nb journée(s)
+GrpComplement=Complément
+CancelledInvitation=Refuser l'invitation
+ConfirmCancelRegistration=Confirmez vous le refus de l'invitation?
+ValidInvitation=Valider l'invitation
+GrpRang=Position
+registration_event_hide_pdf_bill=Masquage des PDF dans l'interface
+Admin_menu_manage_interface=Gestion de l'interface du module
+registration_event_manage_ics=Envoyer une invitation calendrier ICS en pièce jointe
+Admin_menu_manage_content_add=Gestion des contenus additionnels pour les mails
+Admin_menu_extrafields=Gestion de(s) champ(s) additionnel(s)
+Groupe_change=Changer de groupe
+NoRegistrationGroupe=Aucune inscription(s) défini(s) pour ce groupe
+RegistrationForLevelling=Inscriptions pour le(s) groupe(s)
+EventRegistrationLimitToExpireInfo=IMPORTANT : Les inscriptions de moins de <b>%s</b> jour(s) ne seront pas relancés.
+EventDefaultMail=Mail par défaut
+
+DayDescription=Description de l'évenement
+NoDescriptionAvailable=Aucune description disponible pour cette journée
+ValidRegistration=Inscription validée
+CancelRegistration=Inscription refusée
+TimeStart=Heure de début
+TimeEnd=Heure de fin
+RelanceConfirmed=Relance inscription(s) validées
+RelanceWaiting=Relance invitation(s) en attente
+RelanceConfirmedTopic=Relance inscription __JOURNEE__
+RelanceConfirmedBody=Bonjour __PARTICIPANT__,<br /><br />Ceci est un message de relance concernant votre présence au rendez-vous __JOURNEE__. <br /><br />
+RelanceWaitingTopic=Relance inscription __JOURNEE__
+RelanceWaitingBody=Bonjour __PARTICIPANT__,<br /><br />Ceci est un message de relance concernant votre inscription au rendez-vous __JOURNEE__. <br /><br />Vous n'avez pas validé votre inscription. Merci de nous informer de votre présence, en cliquant sur ce lien -> __LIEN_VALIDATION__ <br /><br />
+Valid_hide_group=Masquage des notions de groupe
+registration_block_group=Blocage de l'enregistrement de Tiers
+RegistrationExpiration=Evenement - Afficher l'onglet des expirations
+RegistrationInscriptionStatement=Evenement - Afficher l'onglet des états des règlements
+MessageDesc=<p><b>Corps du mail</b></p><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__ <i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin<</i>br/></p>
+ImgHeader=Image de début
+ImgFooter=Image de fin
+DayClose=La journée est cloturée
+DayProgramme=Veuillez trouver ci-joint le programme :
+
+Event_block_relance_waiting=Blocage de la relance des inscriptions en attente
+Event_block_relance_valid=Blocage de la relance des inscriptions validés
+Event_block_registration_tag=Blocage des invitations par TAG
+
+RelanceWaitingNONE=Pas d'invitation(s) en attente
+RelanceConfirmedNONE=Pas encore d'inscriptions validées
+
+EventErrorBadEMail=Problème avec l'adresse mail
+EventRegSuccesswithMail=Inscription(s) effectuée(s) avec envoi de mail
+EventRegSuccesswitouthMail=Inscription(s) effectuée(s) sans envoi de mail
+ToggleAll=Selectionnez tout
+ActionEmpty=Veuillez choisir une action
+DayEventLink=Lien vers la newsletter
+EventUseMailing=Utilisation du module de mailing pour l'envoi de mail
+ReminderWaitingSent= Relance(s) invitation(s) en attente envoyé(s)
+ReminderConfirmedSent= Relance(s) inscription(s) validé(s) envoyé(s)
+DescriptionMail=Corps du mail<br /><br /><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+DescriptionWeb=Contenu de la page Internet / Page publique<br /><br /><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__ <i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+MailText=<p><b>Corps du mail</b></p><p>Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__<i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__ <i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+HTML_HEADER=<html><body>
+HTML_FOOTER=</body></html>
+PrefixNameEventDay=Prefixe pour le nom
+PriceBase=Base du prix
+EventActiveByDefault=Evénement actif par défaut à la création
+DayActiveByDefault=Journée active par défaut à la création
+Event_DisableCreate1stDayByDefaut=Désactivation de la création auto.
+Event_ActiveCloneFunc=Activer la fonction de clonage d'évenement
+EventDay_ActiveCloneFunc=Activer la fonction de clonage de journée
+Clone=Cloner
+CloneEvent=Cloner l'évenement
+CloneDay=Cloner le(s) journée(s)
+CloneGroup=Cloner le(s) groupe(s)
+CloneConfirm=Voulez vous cloner l'évement, les journées, les groupes associés?
+CloneDayConfirm=Voulez vous cloner la journée et les groupes associés?
+CloneOK=L'évenement et les journées associées ont bien été clonés
+CloneDayOK=La journée et les groupes associés ont bien été clonés
+NoLevelOnThisRegistration=Attention, il faut choisir un groupe
+AddDel=Sélection
+Plagehoraire=Plage Horaire
+EventNotifyCreationPlage=<br />Note: la définition d'une date de fin aura pour effet de créer autant de journées que de nombre de jours
+
+RelanceWaitingMessage=Corps du mail de relance des invitation en attente<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+RelanceWaitingSujet=Sujet du mail de relance des invitation en attente
+RelanceConfirmedMessage=Corps du mail de relance des inscriptions validées<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+RelanceConfirmedSujet=Sujet du mail de relance des inscriptions validées
+
+Delaybeforlaunchconfirmed=Délai avant relance global des inscription(s) validé(s) - Masqué si à 0
+Delaybeforlaunchwaiting=Délai avant relance global des invitation(s) en attente - Masqué si à 0
+AdminManageRuleInvitation=Gestion des invitations
+AdminManageRuleReminder=Gestion des relances
+AdminManageRule1stCreate=Gestion de la création des évenements et journées
+AdminValidRegistrationAfterCreationDefault=Gestion par defaut d'une invitation manuelle?
+
+UserAlreadyCreate=Utilisateur déjà inscrit à cette journée
+UsersTagAlreadyRegister=Tous les utilisateurs de cette catégorie sont déjà inscrits
+
+MailParticipate=Mail de confirmation de participation
+MailNotParticipate=Mail de non participation
+MailRelanceWaiting=Mail de relance en attente
+MailRelanceConfirmed=Mail de relance de confirmation de participation
+
+CanceledMessage=Corps du mail pour l'annulation d'une inscription<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__ <i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br/></p>
+CanceledSujet=Sujet du mail d'annulation d'une inscription
+
+
+
+# ADMIN #
+EventAboutTitle=Module évènement - A propos
+EventSetup=Module évènement - Configuration
+
+EventAboutMessage=Un bug, un problème d'affichage ou une idée d'amélioration ? Envoyez un email à <a milto="support@code42.fr">support@code42.fr</a>
+EventLicenseMessage=A venir
+AdminEventBehaviour=Comportement
+
+EventSetupExtrafieldsTitle=Module évènement - Gestion Extrafields
+EventSetupExtrafields=Gestion Extrafields
+
+EventSetupBackOfficeTitle=Module évènement - Gestion BackOffice
+EventSetupBackOffice=Gestion BackOffice
+EventSetupPagePublicTitle=Module évènement - Gestion page Public
+PagePublicDisable=Page Public désactivé, vous allez être rediriger vers le site web par défaut
+EventSetupPagePublic=Gestion Page Public
+PagePublic=Page Public
+
+EventPublicRegistrationLimitDate=Blocage des inscriptions x heure(s) avant l'événement
+
+EventSetupPagePublicManageText=Module évènement - Gestion Mail Text
+EventSetupPagePublicManageCSS=Module évènement - Gestion Mail CSS
+EventSetupPageManageCSS=Gestion Mail CSS
+CssTitreMail=Feuille de style Mail
+EventSetupPageStyle=Module ÉVÈNEMENT - Gestion du style
+EventSetupStyle=Gestion du style
+
+css_file=Feuille de style global à la page publique
+css_menu=Menu
+css_titre=Feuille de style
+css_reset=Annuler les changements
+EventSetupTextAddTitle=Module évènement - Gestion du contenu des mails
+EventSetupTextAdd=Adm Contenu des mails
+EventSetupTextMail=Gestion contenu des mails
+
+EventSetupLevelTitle=Module évènement - Gestion des groupes
+EventSetupLevel=Gestion des groupes
+
+NoDayIncoming=Pas de journée à venir
+ListDayIncoming=Liste des Evenements & Journées à venir
+
+PlaceFree=Place(s) restante(s)
+Place=Place(s)
+
+Authors=Développeur(s)
+OldAuthors=Anciens Développeur(s)
+QuotaRestant=Votre quota restant :
+Panier= Votre panier :
+
+DayFull=Journée pleine
+PlaceNoLimit=Pas de limite de places
+GrpFull=Groupe plein
+PlaceFree=Place libre
+ShowInfoAccount=Consultez vos informations de compte et votre solde
+InfoEventCounter=Votre quota d'unitées restantes
+Hello=Bonjour
+Reserve=Réserver
+Connect=Connectez vous
+Create=Créer un compte
+Disconnect=Déconnexion
+Eventt=COURS
+Empty=Vide
+
+errNoUnit=Contactez le service commercial
+errAdmin=Pas d'inscription pour les ADMINS
+errTooLateSub=Il est trop tard pour s'inscrire
+errTooLateUnSub=Il est trop tard pour se désinscrire
+errNoSpot=Plus de place disponible
+
+ParticipateSujet=Sujet du mail de confirmation de participation
+ParticipateMessage=Corps du mail de confirmation de participation<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__<i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br /></p>
+
+NotParticipateSujet=Sujet du mail de refus de participation
+NotParticipateMessage=Corps du mail de refus de participation<br /><br />Vous pouvez utiliser les champs suivants afin qu'ils soient pris en compte comme pour un publipostage :</p><p>__EVENEMENT__ <i>Nom de l'évenement</i><br />__JOURNEE__ <i>Nom de la journée</i><br/>__DATEJOURNEE__ <i>Date de la journée</i><br/>__PARTICIPANT__ <i>Nom et prénom du participant</i><br/>__LIEN_VALIDATION__<i>Lien de validation</i><br/>__LIEN_VALIDATION_IMG__<i>Lien de validation spécial IMAGE</i><br/>__TIMESTART__<i>Heure de début</i><br/>__TIMEEND__ <i>Heure de fin</i><br /></p>
+
+# TO CLEAN #
