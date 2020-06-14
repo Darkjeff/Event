@@ -80,11 +80,11 @@ Exécuter chaque tâche: 5 mins
 
 Priorité: 0
 
-## Attribus et constantes à rajouter
+## Attribus et constantes et Tag rajouter
 
 - 1 Ajouter les attributs supplémentaires dans:
 
-- [ ] 1.a les produits et services:
+- [ ] 1.a Tag dans les produits et services:
 
 Libellé: EVENT - Nombre d'unités
 
@@ -98,7 +98,7 @@ Peut toujours être édité
 
 Visibilité
 
-- [ ] 1.b Utilisateurs et groupes:
+- [ ] 1.b Attribut supplémentaire dans Utilisateurs et groupes:
 
 Libellé: Nombre unités restantes
 
