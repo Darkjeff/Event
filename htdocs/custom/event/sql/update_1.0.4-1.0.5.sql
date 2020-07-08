@@ -1,1 +1,0 @@
-ALTER TABLE  `llx_event_day` ADD  `description_web`  TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ;
