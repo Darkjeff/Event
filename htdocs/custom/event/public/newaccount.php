@@ -340,7 +340,7 @@ if (empty($reshook))
 		
 
 		
-		$sql = "SELECT fk_soc, rowid FROM ".MAIN_DB_PREFIX."socpeople WHERE lastname='".$object->name_bis."' and firstname='".$object->firstname."'";
+		$sql = "SELECT fk_soc, rowid FROM llx_socpeople WHERE lastname='".$object->name_bis."' and firstname='".$object->firstname."'";
 		$resql = $db->query($sql);
 		if ($resql)
 		   $res = $resql->fetch_assoc();
@@ -353,7 +353,7 @@ if (empty($reshook))
 		 }
 		else
 		{
-			$sql = "SELECT fk_soc, rowid FROM ".MAIN_DB_PREFIX."socpeople WHERE email='".$object->email."'";
+			$sql = "SELECT fk_soc, rowid FROM llx_socpeople WHERE email='".$object->email."'";
 			$resql = $db->query($sql);
 			if ($resql)
 			   $res = $resql->fetch_assoc();
@@ -1098,7 +1098,7 @@ else
 			$object = new Societe($db);
 			$contact = new Contact($db);
 			$object->fetch($id);
-			$sql = "SELECT fk_soc, rowid FROM ".MAIN_DB_PREFIX."socpeople WHERE fk_soc=".$id;
+			$sql = "SELECT fk_soc, rowid FROM llx_socpeople WHERE fk_soc=".$id;
 		    $resql = $db->query($sql);
 			 if ($resql)
 			   $res = $resql->fetch_assoc();
@@ -1150,7 +1150,7 @@ else
 	            $db->begin();
 
 				//On essaye d'obtenir le contact
-				$sql = "SELECT fk_soc, rowid FROM ".MAIN_DB_PREFIX."socpeople WHERE fk_soc=".$id;
+				$sql = "SELECT fk_soc, rowid FROM llx_socpeople WHERE fk_soc=".$id;
 			   $resql = $db->query($sql);
 				 if ($resql)
 				   $res = $resql->fetch_assoc();

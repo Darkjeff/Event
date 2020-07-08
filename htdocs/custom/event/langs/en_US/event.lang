@@ -2,9 +2,8 @@
 CHARSET=UTF-8
 
 ##### Module #####
-Event=Event
-Events=Events
-EventsSetup=Event module setup
+Event=Evènement
+EventSetup=Event module setup
 Module1680Name= Events
 Module1680Desc= Event management with registration by level/group
 RegistrationsModelModule=Model of registrations document
@@ -31,13 +30,13 @@ css_titre=CSS File
 css_reset=Reset
 EVENT_BOUTIQUE_CGU=Lien vers les Conditions Générale d'Utilisation / Règlement Intèrieur. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
 EVENT_BOUTIQUE_CGV=Lien vers les Conditions Générale de Vente. Si aucun lien n'est indiqué pour les CGU & CGV, aucune vérification ne sera effectué avant de procéder à l'achat.
-EVENT_CGU_LINK=Conditions Générale d'Utilisation / Règlement Interieur
+EVENT_CGU_LINK=Conditions Générale d'Utilisation / et déclare en conformité avec le Règlement Intérieur 
 EVENT_CGV_LINK=Conditions Générale de Vente
 EVENT_AGREE=J'accepte les 
 
 
 ##### Fiche event ####
-EVENT_MANAGE_PUBLIC_REGISTRATION=Manage public page of events creation
+
 EVENT_PUBLIC_DESCRIPTION_1=Text printed on the first page of the subscribe form.
 EVENT_PUBLIC_DESCRIPTION_2=Text printed on the second page of the subscribe form.
 EVENT_PUBLIC_DESCRIPTION_3=Text printed on the third page of the subscribe form.
@@ -335,9 +334,9 @@ WaitingList=Vous êtes sur liste d'attente
 NoValidInformation=Aucun enregistrement n'est associé à ce nom, veuillez nous contacter à '%s' pour plus d'information
 DayAlreadyPast=La journée est passée, vous ne pouvez plus ajouter d'inscription
 MainUrlRegistration=Url de base pour l'envoi de mail
-ParticipateSubject=Confirmation participation
+ParticipateSujet=Confirmation participation
 ParticipateMessage=Votre participation a bien été prise en compte
-NotParticipateSubject=Confirmation refus
+NotParticipateSujet=Confirmation refus
 NotParticipateMessage=Votre annulation a bien été prise en compte
 DayDescription=Description Journée
 NoDescriptionAvailable=Aucune description disponible

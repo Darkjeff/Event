@@ -41,7 +41,7 @@ require_once("class/registration.class.php");
 require_once("class/day.class.php");
 require_once(DOL_DOCUMENT_ROOT . "/contact/class/contact.class.php");
 require_once(DOL_DOCUMENT_ROOT . "/core/class/html.formother.class.php");
-require_once(DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php");
+require_once(DOL_DOCUMENT_ROOT."/core/lib/admin.lib.php");
 
 // Load traductions files requiredby by page
 $langs->load("companies");
@@ -76,7 +76,9 @@ if ($action == 'search') {
 }
 
 /* * *************************************************
- * View
+ * VIEW
+ *
+ * Put here all code to build page
  * ************************************************** */
 $help_url = 'EN:Module_Event_/_Booking_EN|FR:Module_Évènements_et_inscriptions|ES:Module_Event_/_Booking_ES';
 llxHeader('', $langs->trans("EventGestion"), $help_url);
@@ -105,8 +107,10 @@ if ($user->rights->event->read) {
     $limit = $conf->liste_limit;
 
     $page = GETPOST("page", 'int');
-    if (empty($page) || $page == -1) { $page = 0; }     // If $page is not defined, or '' or -1
-    $offset = $limit * $page ;
+    if ($page == -1) {
+        $page = 0;
+    }
+    $offset = $limit * $page;
     $pageprev = $page - 1;
     $pagenext = $page + 1;
 
@@ -350,7 +354,7 @@ if ($user->rights->event->read) {
                 else print img_picto_common('','transparent','height="16" width="16"').'&nbsp;';
                 
                 // Visu
-                print '<a href="registration/card.php?id='.$registration->line[$i]->id.'">'.img_picto('View','detail').'</a>';
+                print '<a href="registration/fiche.php?id='.$registration->line[$i]->id.'">'.img_picto('View','detail').'</a>';
                 
                 // Delete
                 print ' <a href="'.DOL_URL_ROOT.'/custom/event/registration/list.php?dayid='.$event->id.'&amp;id='.$registration->line[$i]->id.'&action=delete">'.img_picto($langs->trans("Delete"),'delete').'</a>';

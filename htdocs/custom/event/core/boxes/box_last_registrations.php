@@ -104,17 +104,17 @@ class box_last_registrations extends ModeleBoxes {
     				$r=0;
     				$this->info_box_contents[$i][0] = array('td' => 'align="left" width="16"',
     				'logo' => $this->boximg,
-    				'url' => dol_buildpath("/event/registration/card.php?id=".$objp->rowid,1));
+    				'url' => dol_buildpath("/event/registration/fiche.php?id=".$objp->rowid,1));
     				$r++;
 
     				$this->info_box_contents[$i][$r] = array('td' => 'align="left"',
     				'text' => ($objp->ref?$objp->ref:$objp->rowid),	// Some event have no ref
-    				'url' => dol_buildpath("/event/registration/card.php?id=".$objp->rowid,1));
+    				'url' => dol_buildpath("/event/registration/fiche.php?id=".$objp->rowid,1));
     				$r++;
 
     				$this->info_box_contents[$i][$r] = array('td' => 'align="left"',
     				'text' => ($objp->label?dol_print_date($db->idate($objp->date_event),'day').' - '.$objp->label:$objp->fk_event),	// Some event have no ref
-    				'url' => dol_buildpath("/event/card.php?id=".$objp->fk_event,1));
+    				'url' => dol_buildpath("/event/fiche.php?id=".$objp->fk_event,1));
     				$r++;
 
 
@@ -126,7 +126,7 @@ class box_last_registrations extends ModeleBoxes {
 
     				$this->info_box_contents[$i][$r] = array('td' => 'align="left"',
     				'text' => dol_trunc($objp->nom,40),
-    				'url' => DOL_URL_ROOT."/comm/card.php?socid=".$objp->socid);
+    				'url' => DOL_URL_ROOT."/comm/fiche.php?socid=".$objp->socid);
     				$r++;
 
     				$this->info_box_contents[$i][$r] = array('td' => 'align="left" width="16"',
@@ -166,7 +166,7 @@ class box_last_registrations extends ModeleBoxes {
     	}
     }
 
-    function showBox($head = NULL, $contents = NULL, $nooutput = 0)
+    function showBox($head = null, $contents = null)
     {
         parent::showBox($this->info_box_head, $this->info_box_contents);
     }

@@ -33,7 +33,6 @@ create table llx_event_registration
   total_tva				double(24,8) DEFAULT 0,
   total_ttc				double(24,8) DEFAULT 0,
   tva_tx            	double(6,3),
-  paye            smallint DEFAULT '0',
   accountancy_code		varchar(32),
   fk_user_create		integer NOT NULL,
   fk_user_valid			integer NOT NULL,
@@ -51,7 +50,6 @@ create table llx_event_registration
   phone					varchar(255),
   phone_perso			varchar(255),
   phone_mobile			varchar(255),
-  email_registration varchar(255),
   note_private			text,
   note_public			text,
   unique_key      varchar(255)

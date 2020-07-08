@@ -29,8 +29,6 @@ create table llx_event_day
   date_event		date,
   label				varchar(255) NOT NULL,
   description		text,
-  description_web	text,
-  price_base_type varchar(10) DEFAULT 'HT',
   total_ht			double(24,8) DEFAULT 0,
   total_tva			double(24,8) DEFAULT 0,
   total_ttc			double(24,8) DEFAULT 0,
@@ -42,7 +40,5 @@ create table llx_event_day
   note_public		text,
   registration_open	integer DEFAULT 0,
   time_start    time,
-  time_end    time,
-  relance_waiting_auto INT,
-  relance_confirmed_auto INT
+  time_end    time
 )ENGINE=innodb;

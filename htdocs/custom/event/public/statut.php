@@ -121,7 +121,7 @@ if($eventdays < 0) dol_print_error($db,$object->error);
 /*### View ###*/
 print '
 <html><head>
-<title>'.$conf->global->MAIN_INFO_SOCIETE_NOM.' - '.$langs->trans('ListDayIncoming').'</title>
+<title>'.MAIN_INFO_SOCIETE_NOM.' - '.$langs->trans('ListDayIncoming').'</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>';
 print '<body>';

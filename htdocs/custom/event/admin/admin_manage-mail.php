@@ -37,8 +37,12 @@ require_once("../class/eventlevel.class.php");
 require_once("../class/day.class.php");
 require_once("../lib/event.lib.php");
 
-// Load traductions files required by by page
-$langs->loadLangs(array("admin","companies","other","event@event","cron"));
+// Load traductions files requiredby by page
+$langs->load("admin");
+$langs->load("companies");
+$langs->load("other");
+$langs->load("event@event");
+$langs->load("cron");
 
 // Get parameters
 $id			= GETPOST('id','int');
@@ -73,43 +77,43 @@ if ($action == 'setvar')
 	dolibarr_set_const($db, "EVENT_NOT_PARTICIPATE_SUJET",dol_htmlcleanlastbr($event_not_participate_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// Event Relance Waining Sujet
+	//EVENT_RELANCE_WAITING_SUJET
 	$event_relance_waiting_sujet=GETPOST('EVENT_RELANCE_WAITING_SUJET');
 	dolibarr_set_const($db, "EVENT_RELANCE_WAITING_SUJET",dol_htmlcleanlastbr($event_relance_waiting_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// Event Relance Wainting Message
+	//EVENT_RELANCE_WAITING_MESSAGE
 	$event_relance_waiting_message=GETPOST('EVENT_RELANCE_WAITING_MESSAGE');
 	dolibarr_set_const($db, "EVENT_RELANCE_WAITING_MESSAGE",dol_htmlcleanlastbr($event_relance_waiting_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// Event Relance Confirm Sujet
+	//EVENT_RELANCE_CONFIRM_SUJET
 	$event_relance_confirm_sujet=GETPOST('EVENT_RELANCE_CONFIRM_SUJET');
 	dolibarr_set_const($db, "EVENT_RELANCE_CONFIRM_SUJET",dol_htmlcleanlastbr($event_relance_confirm_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// Event Relance Confirm Message
+	//EVENT_RELANCE_CONFIRM_MESSAGE
 	$event_relance_confirm_message=GETPOST('EVENT_RELANCE_CONFIRM_MESSAGE');
 	dolibarr_set_const($db, "EVENT_RELANCE_CONFIRM_MESSAGE",dol_htmlcleanlastbr($event_relance_confirm_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 	
 	
-	// Event Canceled Sujet
+	//EVENT_CANCELED_SUJET
 	$event_canceled_sujet=GETPOST('EVENT_CANCELED_SUJET');
 	dolibarr_set_const($db, "EVENT_CANCELED_SUJET",dol_htmlcleanlastbr($event_canceled_sujet),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;	
 	
-	// Event Canceled Message
+	//EVENT_CANCELED_MESSAGE
 	$event_canceled_message=GETPOST('EVENT_CANCELED_MESSAGE');
 	dolibarr_set_const($db, "EVENT_CANCELED_MESSAGE",dol_htmlcleanlastbr($event_canceled_message),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;	
 
-	// Signature
+	//SIGNATURE
 	$event_registration_sign_email=GETPOST('EVENT_REGISTRATION_SIGN_EMAIL');
 	dolibarr_set_const($db, "EVENT_REGISTRATION_SIGN_EMAIL",dol_htmlcleanlastbr($event_registration_sign_email),'chaine',0,'',$conf->entity);
 	if (! $res > 0) $error++;
 
-	// Test error
+	//TEST ERROR
 	if (! $error)
 	{
 		$mesg = "<div class=\"ok\">".$langs->trans("SetupSaved")."</div>";
@@ -121,7 +125,9 @@ if ($action == 'setvar')
 }
 
 /***************************************************
- * View
+ * VIEW
+*
+* Put here all code to build page
 ****************************************************/
 
 llxHeader('',$langs->trans("EventSetupPageStyle"),'');
@@ -149,69 +155,70 @@ print '<input type="hidden" name="action" value="setvar">';
 */
 
 print load_fiche_titre($langs->trans('Admin_menu_manage_content_add'));
-print '<div class="div-table-responsive">';
-print "\n".'<table class="noborder" width=100%>';
+print '<table class="border" width="100%">';
 
-// Mail Participate
-print '<tr class="liste_titre oddeven">';
+$var=!$var;
+
+// MailParticipate
+print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailParticipate").'</td>';
 print '</tr>';
 
-// Participate Subject
-print '<tr><td width="35%">'.$langs->trans("ParticipateSubject").'</td><td colspan="2">';
+// ParticipateSujet
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("ParticipateSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_PARTICIPATE_SUJET" value="'.$conf->global->EVENT_PARTICIPATE_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// Participate Message
-print '<tr><td width="35%">'.$langs->trans("ParticipateMessage").'</td><td colspan="2">';
+// ParticipateMessage
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("ParticipateMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_PARTICIPATE_MESSAGE', (isset($conf->global->EVENT_PARTICIPATE_MESSAGE)?$conf->global->EVENT_PARTICIPATE_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// Mail Not Participate
+// MailNotParticipate
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailNotParticipate").'</td>';
 print '</tr>';
 
-// Not Participate Sujet
-print '<tr><td width="35%">'.$langs->trans("NotParticipateSujet").'</td><td colspan="2">';
+// NotParticipateSujet
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("NotParticipateSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_NOT_PARTICIPATE_SUJET" value="'.$conf->global->EVENT_NOT_PARTICIPATE_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// Not Participate Message
-print '<tr><td width="35%">'.$langs->trans("NotParticipateMessage").'</td><td colspan="2">';
+// NotParticipateMessage
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("NotParticipateMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_NOT_PARTICIPATE_MESSAGE', (isset($conf->global->EVENT_NOT_PARTICIPATE_MESSAGE)?$conf->global->EVENT_NOT_PARTICIPATE_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// Mail Relance Waiting
+// MailRelanceWaiting
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailRelanceWaiting").'</td>';
 print '</tr>';
 
-// Relance Waiting Sujet
-print '<tr><td width="35%">'.$langs->trans("RelanceWaitingSujet").'</td><td colspan="2">';
+//RelanceWaitingSujet
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("RelanceWaitingSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_RELANCE_WAITING_SUJET" value="'.$conf->global->EVENT_RELANCE_WAITING_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// Relance Waiting Message
-print '<tr><td width="35%">'.$langs->trans("RelanceWaitingMessage").'</td><td colspan="2">';
+//RelanceWaitingMessage
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("RelanceWaitingMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_RELANCE_WAITING_MESSAGE', (isset($conf->global->EVENT_RELANCE_WAITING_MESSAGE)?$conf->global->EVENT_RELANCE_WAITING_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-// Mail Relance Confirmed
+// MailRelanceConfirmed
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailRelanceConfirmed").'</td>';
 print '</tr>';
 
-// Relance Confirmed Sujet
-print '<tr><td width="35%">'.$langs->trans("RelanceConfirmedSujet").'</td><td colspan="2">';
+//RelanceConfirmedSujet
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("RelanceConfirmedSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_RELANCE_CONFIRM_SUJET" value="'.$conf->global->EVENT_RELANCE_CONFIRM_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// Relance Confirmed Message
-print '<tr><td width="35%">'.$langs->trans("RelanceConfirmedMessage").'</td><td colspan="2">';
+//RelanceConfirmedMessage
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("RelanceConfirmedMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_RELANCE_CONFIRM_MESSAGE', (isset($conf->global->EVENT_RELANCE_CONFIRM_MESSAGE)?$conf->global->EVENT_RELANCE_CONFIRM_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
@@ -219,18 +226,18 @@ print '</td></tr>'."\n";
 
 /// AJOUT LAURENT /////////////////////////////
 
-// Mail Canceled
+// MailCanceled
 print '<tr class="liste_titre">';
 print '<td colspan="4">'.$langs->trans("MailCanceled").'</td>';
 print '</tr>';
 
-// Relance Confirmed Sujet
-print '<tr><td width="35%">'.$langs->trans("CanceledSujet").'</td><td colspan="2">';
+//RelanceConfirmedSujet
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("CanceledSujet").'</td><td colspan="2">';
 print '<input type="text" name="EVENT_CANCELED_SUJET" value="'.$conf->global->EVENT_CANCELED_SUJET.'" size="50" maxlength="70">';
 print '</td></tr>'."\n";
 
-// Relance Confirmed Message
-print '<tr><td width="35%">'.$langs->trans("CanceledMessage").'</td><td colspan="2">';
+//RelanceConfirmedMessage
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("CanceledMessage").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_CANCELED_MESSAGE', (isset($conf->global->EVENT_CANCELED_MESSAGE)?$conf->global->EVENT_CANCELED_MESSAGE:''), '', 142, 'dolibarr_emailing', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
@@ -246,21 +253,17 @@ print '<td colspan="4">'.$langs->trans("Signature").'</td>';
 print '</tr>';
 
 // Text to add after email content - Signature
-print '<tr><td width="35%">'.$langs->trans("EventTextToAddEmails").'</td><td colspan="2">';
+print '<tr '.$bc[$var].'><td width="35%">'.$langs->trans("EventTextToAddEmails").'</td><td colspan="2">';
 $doleditor = new DolEditor('EVENT_REGISTRATION_SIGN_EMAIL', (isset($conf->global->EVENT_REGISTRATION_SIGN_EMAIL)?$conf->global->EVENT_REGISTRATION_SIGN_EMAIL:''), '', 142, 'event_registration_sign_email', 'In', true, true, true, ROWS_4, 90);
 $doleditor->Create();
 print '</td></tr>'."\n";
 
-print '</table>';
-print '</div>';
-dol_fiche_end();
+print '<tr class="pair"><td colspan="3" align="center"><input type="submit" class="button" value="'.$langs->trans("Save").'"></td>';
+print '</tr>';
 
-print '<div class="center">';
-print '<input type="submit" class="button hideifnotset" value="'.$langs->trans("Save").'">';
-print '</div>';
+print '</table><br>';
+print '</form>';
 
-print "</form>\n";
-print '<br />';
 
 // End of page
 llxFooter();

@@ -360,7 +360,7 @@ font-weight: 300;
 			border: none !important;
 			border-radius: unset !important;
 			box-shadow: unset !important;
-			color: #791418 !important;
+			color: #f1e0ce !important;
 	}
 
 
@@ -388,7 +388,7 @@ font-weight: 300;
 	}
 
   .footer_contact_title::after{
-		content:"39 Allée des Tricheries 31840 SEILH";
+		content:"14 bis rue du Turret 31150 Gagnac-sur-Garonne";
 	}
 	.footer_contact::before{
 		content:"Le Couturier du Mobilier";
@@ -456,7 +456,7 @@ font-weight: 300;
 
 /*MARK CC*/
 .header_contact_title::after{
-	content:"39 Allée des Tricheries 31840 SEILH";
+	content:"14 bis rue du Turret 31150 Gagnac-sur-Garonne";
 }
 .header_contact::after{
 	content:"Le Couturier du Mobilier";

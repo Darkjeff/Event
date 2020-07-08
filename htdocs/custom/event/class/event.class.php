@@ -165,6 +165,8 @@ class Event extends CommonObject
 		$sql.= " ".(! isset($this->note_public)?'NULL':"'".$this->db->escape($this->note_public)."'").",";
 		$sql.= " ".(! isset($this->registration_open)?'NULL':"'".$this->registration_open."'").",";
 		$sql.= " ".(! isset($this->registration_byday)?'NULL':"'".$this->registration_byday."'")."";
+
+
 		$sql.= ")";
 
 		$this->db->begin();
@@ -192,12 +194,16 @@ class Event extends CommonObject
 	            /*
 	             *  Create event_day on the event
 	             */
-	            if($conf->global->DISABLE_CREATE_1ST_DAY_BY_DEFAULT=="0") {
-			    include_once(DOL_DOCUMENT_ROOT . "/core/lib/date.lib.php");
+	            if($conf->global->DISABLE_CREATE_1ST_BAY_BY_DEFAULT=="0") {
+		            include_once(DOL_DOCUMENT_ROOT . "/core/lib/date.lib.php");
+		            if($this->date_end > 0)
+		            {
 		            	// Nb days between date_start & date_end
 		            	$nb_days = num_between_day($this->date_start,$this->date_end,1);
 
-		            }else{
+		            }
+		            else
+		            {
 		            	$nb_days = 1;
 		            }
 		            require_once('day.class.php');
@@ -252,9 +258,11 @@ class Event extends CommonObject
 
 	            }
 			}
+        }
 
         // Commit or rollback
-        if ($error){
+        if ($error)
+		{
 			foreach($this->errors as $errmsg)
 			{
 	            dol_syslog(get_class($this)."::create ".$errmsg, LOG_ERR);
@@ -733,7 +741,7 @@ class Event extends CommonObject
 
 		$result='';
 
-		$lien = '<a href="'.dol_buildpath('/event/card.php', 1).'?id='.$this->id.'">';
+		$lien = '<a href="'.dol_buildpath('/event/fiche.php', 1).'?id='.$this->id.'">';
 		$lienfin='</a>';
 
 		$picto='event@event';

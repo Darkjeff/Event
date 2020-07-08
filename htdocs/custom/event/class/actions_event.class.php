@@ -22,7 +22,8 @@ class ActionsEvent
 	 *  @param      action             current action (if set). Generally create or edit or null
 	 *  @return       void
 	 */
-	 public function paypaypal($parameters, &$object, &$action)
+
+	 function paypaypal($parameters, &$object, &$action)
 	 {
 	 if (in_array('paypal', explode(':', $parameters['context']))){
 
@@ -61,16 +62,8 @@ class ActionsEvent
 		}
 	 }
 
-    /**
-     * printSearchForm Method Hook Call
-     *
-     * @param array $parameters parameters
-     * @param Object &$object Object to use hooks on
-     * @param string &$action Action code on calling page ('create', 'edit', 'view', 'add', 'update', 'delete'...)
-     * @return void
-     */
-    /*
-	public function printSearchForm($parameters, $object, $action)
+
+	function printSearchForm($parameters, $object, $action)
 	{
 		global $langs;
 
@@ -108,34 +101,4 @@ class ActionsEvent
 			return -1;
 		}
 	}
-    */
-
-    /**
-     * addSearchEntry Method Hook Call
-     *
-     * @param array $parameters parameters
-     * @param Object &$object Object to use hooks on
-     * @param string &$action Action code on calling page ('create', 'edit', 'view', 'add', 'update', 'delete'...)
-     * @param object $hookmanager class instance
-     * @return void
-     */
-    public function addSearchEntry($parameters, &$object, &$action, $hookmanager) {
-        global $conf, $langs, $user, $db;
-        $langs->load('event@event');
-
-        dol_include_once('/event/core/modules/modEvent.class.php');
-        $modEvent = new modEvent($db);
-
-        $arrayresult = array();
-        if (empty($conf->global->EVENT_HIDE_QUICK_SEARCH) && $user->rights->event->read && empty($user->societe_id)) {
-            $arrayresult['searchintoeventsession'] = array(
-                'position' => $modEvent->numero,
-                'text' => img_object('', 'event_registration@event') . ' ' . $langs->trans("RegistrationRefShort"),
-                'url' => dol_buildpath('/event/index.php', 1) . '?query=' . urlencode($parameters['search_boxvalue'])
-            );
-        }
-        $this->results = $arrayresult;
-
-        return 0;
-    }
 }

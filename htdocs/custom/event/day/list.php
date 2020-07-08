@@ -85,23 +85,20 @@ if (!$sortorder)
 $limit = $conf->liste_limit;
 
 $page = GETPOST("page", 'int');
-if (empty($page) || $page == -1) { $page = 0; }     // If $page is not defined, or '' or -1
-$offset = $limit * $page ;
-$pageprev = $page - 1;
-$pagenext = $page + 1;
+if ($page == -1)
+{
+	$page = 0;
+}
+$offset = $limit * $page;
+$pageprev = $page -1;
+$pagenext = $page +1;
 
 $filter = array('t.date_event' => ($year>0?$year:date('Y')));
-// var_dump($filter);
+
 $eventdays = $object->fetch_all($sortorder,$sortfield, $limit, $offset,$arch,$filter);
 
 if($eventdays < 0)
 	dol_print_error($db,$object->error);
-
-if($year)
-	$param .= '&amp;year='.$year;
-
-if($arch)
-	$param .= '&amp;arch='.$arch;
 
 print_barre_liste($langs->trans('ListEventDay'), $page, 'list.php', $param, $sortfield, $sortorder, '', $eventdays,  $eventdays,'day_32@event');
 
@@ -132,7 +129,8 @@ print '</tr>';
 print '</form>';
 print '</table>';
 
-
+if($year)
+	$param .= '&amp;year='.$year;
 
 print '<table width="100%" class="noborder">';
 print '<tr class="liste_titre" >';
@@ -205,7 +203,7 @@ if(count($object->line)>0)
 		// Actions
 		print '<td>';
 		if($user->rights->event->day->delete)
-			print '<a href="card.php?action=edit&amp;id='.$daystat->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
+			print '<a href="fiche.php?action=edit&amp;id='.$daystat->id.'">'.img_picto('','edit').' '.$langs->trans('Edit').'</a> ';
 		if($conf->global->EVENT_HIDE_GROUP=='-1') print '<a href="level.php?dayid='.$daystat->id.'">'.img_picto('','object_group.png').' '.$langs->trans('EventLevels').'</a> ';
 		print '<a href="../registration/list.php?dayid='.$daystat->id.'">'.img_picto('','object_event_registration.png@event').' '.$langs->trans('RegistrationList').'</a>';
 		print '</td>';

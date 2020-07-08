@@ -226,7 +226,7 @@ if ($user->rights->event->read)
 
 					// Actions
 					print '<td align="center">';
-					print '<a href="card.php?id='.$registration->rowid.'">'.img_picto('View','detail').'</a>';
+					print '<a href="fiche.php?id='.$registration->rowid.'">'.img_picto('View','detail').'</a>';
 					print '</td>';
 					print '</tr>';
 					$statut = $registration->fk_statut;
@@ -237,9 +237,3 @@ if ($user->rights->event->read)
 		}
 	}
 }
-
-
-// End of page
-llxFooter();
-$db->close();
-

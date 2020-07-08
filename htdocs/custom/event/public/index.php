@@ -161,7 +161,7 @@ if($_SESSION["dol_login"])
 }
 	print '<div><span class="glyphicons glyphicons-vcard"></span><a href="'.DOL_URL_ROOT.'/custom/event/public/statut.php" class="account">Accéder à mon compte</a></div>';
 	//DEBUG
-	if($conf->global->MAIN_FEATURES_LEVEL == '3') print '<br />'.$user->showOptionals($extrafields);
+	if(MAIN_FEATURES_LEVEL=='3') print '<br />'.$user->showOptionals($extrafields);
 	}
 else
 	{

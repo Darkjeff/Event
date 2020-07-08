@@ -860,7 +860,7 @@ class Registration  extends CommonObject
 
 		$result='';
 
-		$lien = '<a href="'.dol_buildpath('/event/registration/card.php', 1).'?id='.$this->id.'">';
+		$lien = '<a href="'.dol_buildpath('/event/registration/fiche.php', 1).'?id='.$this->id.'">';
 		$lienfin='</a>';
 
 		$picto='event_registration@event';

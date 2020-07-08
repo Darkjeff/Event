@@ -51,7 +51,7 @@ foreach($linkedObjectBlock as $object)
 
 ?>
 <tr <?php echo $bc[$var]; ?>>
-	<td><a href="<?php echo dol_buildpath("/event/registration/card.php",1).'?id='.$object->id; ?>"><?php echo img_object($langs->trans("ShowRegistration"),"event@event").' '.$object->ref.' - '.$level->label; ?></a></td>
+	<td><a href="<?php echo dol_buildpath("/event/registration/fiche.php",1).'?id='.$object->id; ?>"><?php echo img_object($langs->trans("ShowRegistration"),"event@event").' '.$object->ref.' - '.$level->label; ?></a></td>
 	<td align="center"><?php echo dol_print_date($object->datec,'day'); ?></td>
 	<td align="right"><?php echo price($object->total_ht); ?></td>
 	<td align="right"><?php echo $object->getLibStatut(3); ?></td>

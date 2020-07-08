@@ -13,10 +13,6 @@
 
 ## DONE ##
 
-### ChangeLog for 1.8.7
-
-* Look & style for v10
-
 ### ChangeLog for 1.8.6
 
 * Fix Payment
@@ -95,7 +91,7 @@ LANGS - Correct global french lang
 ADMIN
  - Correct mise en forme : OK
  - Correct save Description : OK
- card.php
+ FICHE.PHP
  - Changement du libellé du bouton Cancel : OK
  - Ajout d'un bouton pour désactiver/réactiver une inscription : OK
 INDEX.PHP

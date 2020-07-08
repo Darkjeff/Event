@@ -155,8 +155,9 @@ $(':checkbox').change(function() {
    if(userHaveCredit() === true && !$(this).is(':checked')) // Modif pour 1 action à la fois car trop de bugs !!!
    {
         enableReservation();
-}else{
-	if ($(this).is(':checked') && $(this).prop("disabled", true))
+}else{        
+
+       if ($(this).is(':checked') && $(this).prop("disabled", true))
 		   enableReservation();
         $(".label-cours").find("input[type=checkbox]:not(:checked)").each(function(){
               //console.log($(this));

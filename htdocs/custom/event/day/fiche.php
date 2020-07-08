@@ -276,7 +276,7 @@ if ($action == 'add' && $user->rights->event->write) {
         $mesg = '<div class="error">' . $object->error . '</div>';
     }
 } else if ($action == confirm_delete_day && $confirm="yes") {
-    $sql="DELETE FROM ".MAIN_DB_PREFIX."event_day WHERE ".MAIN_DB_PREFIX."event_day.rowid =".$id;
+    $sql="DELETE FROM llx_event_day WHERE llx_event_day.rowid =".$id;
     $db->query($sql);
     header("Location: ".DOL_URL_ROOT."/custom/event/day/list.php");
     }
@@ -802,7 +802,7 @@ else if ($id || !empty($ref)) {
                     }
 
                     $data = array('series' => $dataseries);
-                    DolGraph objects('stats', 300, 180, $data, 1, 'pie', 0);
+                    dol_print_graph('stats', 300, 180, $data, 1, 'pie', 0);
                     print '</td>';
                     print '</tr>';
                 } else {

@@ -773,10 +773,13 @@ else if ($id || ! empty($ref))
 			$limit = $conf->liste_limit;
 
 			$page = GETPOST("page", 'int');
-			if (empty($page) || $page == -1) { $page = 0; }     // If $page is not defined, or '' or -1
-			$offset = $limit * $page ;
-			$pageprev = $page - 1;
-			$pagenext = $page + 1;
+			if ($page == -1)
+			{
+				$page = 0;
+			}
+			$offset = $limit * $page;
+			$pageprev = $page -1;
+			$pagenext = $page +1;
 			$sql_liste = "SELECT e.rowid as id, e.ref, e.fk_soc, e.label, e.datec, e.fk_statut, e.date_event, e.registration_open";
 			$sql_liste .= " FROM " . MAIN_DB_PREFIX . "event_day as e ";
 			$sql_liste .= ' WHERE e.fk_event = ' . $object->id;

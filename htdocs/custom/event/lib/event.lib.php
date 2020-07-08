@@ -22,20 +22,13 @@
  *		\brief      Tab bar for event object
  *      \ingroup    event
  */
-
-/**
- * Prepare array with list of tabs
- *
- * @param   Object	$object		Object related to tabs
- * @return  array				Array of tabs to show
- */
 function event_prepare_head($object)
 {
 	global $langs, $conf, $user, $db;
 	$h = 0;
 	$head = array();
 
-	$head[$h][0] = dol_buildpath('/event/card.php',1).'?id='.$object->id;
+	$head[$h][0] = dol_buildpath('/event/fiche.php',1).'?id='.$object->id;
 	$head[$h][1] = $langs->trans("EventSingular");
     $head[$h][2] = 'event';
 	$h++;
@@ -48,8 +41,7 @@ function event_prepare_head($object)
 		$h++;
 	}
 
-	/*
-	$sql = "SELECT total_ht, price_day FROM ".MAIN_DB_PREFIX."event WHERE rowid = ".$object->id;
+	$sql = "SELECT total_ht, price_day FROM llx_event WHERE rowid = ".$object->id;
 	$resql = $db->query($sql);
 	$res = $resql->fetch_assoc();
 	if ($res['total_ht'] != 0)
@@ -59,7 +51,6 @@ function event_prepare_head($object)
 		$head[$h][2] = 'registration_payment';
 		$h++;
 	}
-	*/
 	
 	if($conf->global->EVENT_INSCRIPTION_STATEMENT=='1')
 	{
@@ -79,10 +70,8 @@ function event_prepare_head($object)
 }
 
 /**
- * Prepare array with list of tabs
- *
- * @param   Object	$object		Object related to tabs
- * @return  array				Array of tabs to show
+ *		\brief      Tab bar for eventday object
+ *      \ingroup    event
  */
 function eventday_prepare_head($object)
 {
@@ -90,12 +79,12 @@ function eventday_prepare_head($object)
 	$h = 0;
 	$head = array();
 
-	$head[$h][0] = dol_buildpath('/event/card.php',1).'?id='.$object->fk_event;
+	$head[$h][0] = dol_buildpath('/event/fiche.php',1).'?id='.$object->fk_event;
 	$head[$h][1] = $langs->trans("EventSingular");
 	$head[$h][2] = 'event';
 	$h++;
 
-	$head[$h][0] = dol_buildpath('/event/day/card.php',1).'?id='.$object->id;
+	$head[$h][0] = dol_buildpath('/event/day/fiche.php',1).'?id='.$object->id;
 	$head[$h][1] = $langs->trans("EventDay");
 	$head[$h][2] = 'eventday';
 	$h++;
@@ -122,7 +111,7 @@ function eventday_prepare_head($object)
 	// Entries must be declared in modules descriptor with line
 	// $this->tabs = array('entity:+tabname:Title:@mymodule:/mymodule/mypage.php?id=__ID__');   to add new tab
 	// $this->tabs = array('entity:-tabname:Title:@mymodule:/mymodule/mypage.php?id=__ID__');   to remove a tab
-	complete_head_from_modules($conf,$langs,$object,$head,$h,'eventday');
+	complete_head_from_modules($conf,$langs,$object,$head,$h,'event');
 
 	return $head;
 }
@@ -183,12 +172,6 @@ function getNbReminders($id,$fk_contact)
     return $max;
 }
 
-/**
- * Prepare array with list of tabs
- *
- * @param   Object	$object		Object related to tabs
- * @return  array				Array of tabs to show
- */
 function event_admin_prepare_head()
 {
     global $langs, $conf;
@@ -210,7 +193,7 @@ function event_admin_prepare_head()
 
 	$head[$h][0] = dol_buildpath("/event/admin/registration_extrafields.php", 1);
     $head[$h][1] = $langs->trans("EventSetupExtrafields");
-    $head[$h][2] = 'attributes';
+    $head[$h][2] = 'EventSetupExtrafields';
     $h++;
 
 	$head[$h][0] = dol_buildpath("/event/admin/admin_level.php", 1);
@@ -222,18 +205,11 @@ function event_admin_prepare_head()
     $head[$h][1] = $langs->trans("About");
     $head[$h][2] = 'about';
     $h++;
-
-    complete_head_from_modules($conf, $langs, $object, $head, $h, 'admin_event');
+    complete_head_from_modules($conf, $langs, $object, $head, $h, 'settings');
 
     return $head;
 }
 
-/**
- * Prepare array with list of tabs
- *
- * @param   Object	$object		Object related to tabs
- * @return  array				Array of tabs to show
- */
 function event_admin_text_prepare_head()
 {
     global $langs, $conf;
@@ -253,7 +229,7 @@ function event_admin_text_prepare_head()
     $head[$h][2] = 'EventSetupPageManageCSS';
     $h++;
 
-    complete_head_from_modules($conf, $langs, $object, $head, $h, 'admintext_event');
+    complete_head_from_modules($conf, $langs, $object, $head, $h, 'settings');
 
     return $head;
 }

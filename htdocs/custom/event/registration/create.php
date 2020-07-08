@@ -85,7 +85,7 @@ $hookmanager->initHooks(array('event_registration'));
 $parameters=array('socid'=>$socid);
 $reshook=$hookmanager->executeHooks('doActions',$parameters,$object,$action);    // Note that $action and $object may have been modified by some hooks
 
-if ( $action == 'addd' && $user->rights->event->registration->creer )
+if ( $action == 'addd' ) //&& r->rights->registration->write
 {
 
 $userId = $user->id;
@@ -943,7 +943,7 @@ if($action != 'addd') {
 /*
  * Event list
  */
-if ( $action == "")// && $user->rights->event->registration->creer 
+if ( $action == "" && $user->rights->event->write )
 {
 	// On veut s'inscrire soit pour un évènement soit pout une journée
 		$errors='';

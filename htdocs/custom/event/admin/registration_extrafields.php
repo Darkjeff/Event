@@ -32,7 +32,7 @@ require_once("../lib/event.lib.php");
 require_once(DOL_DOCUMENT_ROOT."/core/lib/member.lib.php");
 require_once(DOL_DOCUMENT_ROOT."/core/class/extrafields.class.php");
 
-// Load traductions files required by page
+// Load traductions files requiredby by page
 $langs->load("event@event");
 $langs->load("admin");
 
@@ -55,6 +55,7 @@ if (!$user->admin) accessforbidden();
 /*
  * Actions
  */
+
 require(DOL_DOCUMENT_ROOT."/core/actions_extrafields.inc.php");
 
 /*
@@ -63,14 +64,17 @@ require(DOL_DOCUMENT_ROOT."/core/actions_extrafields.inc.php");
 
 // $textobject=$langs->transnoentitiesnoconv("Registrations");
 
-llxHeader('',$langs->trans("EventsSetup"),$help_url);
+llxHeader('',$langs->trans("EventSetupExtrafieldsTitle"),$help_url);
 
-$linkback='<a href="'.DOL_URL_ROOT.'/admin/modules.php?restore_lastsearch_values=1">'.$langs->trans("BackToModuleList").'</a>';
-print load_fiche_titre($langs->trans("EventsSetup"), $linkback, 'title_setup');
+// $linkback='<a href="'.DOL_URL_ROOT.'/admin/modules.php">'.$langs->trans("BackToModuleList").'</a>';
+print_fiche_titre($langs->trans("EventSetupExtrafieldsTitle"),$linkback,'setup');
 
 $head = event_admin_prepare_head();
+dol_fiche_head($head, 'EventSetupExtrafields', $langs->trans("Module1680Name"), 0, 'event@event');
 
-dol_fiche_head($head, 'attributes', $langs->trans("Events"), 0, 'event@event');
+
+print load_fiche_titre($langs->trans("DefineHereComplementaryAttributes",$textobject));
+print '<br>';
 
 dol_htmloutput_errors($mesg);
 
@@ -147,6 +151,7 @@ if ($action == 'edit' && ! empty($attrname))
 	require DOL_DOCUMENT_ROOT.'/core/tpl/admin_extrafields_edit.tpl.php';
 }
 
-// End of page
-llxFooter();
 $db->close();
+
+llxFooter();
+?>

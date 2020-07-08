@@ -58,7 +58,7 @@ class modEvent extends DolibarrModules
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
 		$this->description = "Manage events and registration";
 		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = '1.8.7';
+		$this->version = '1.8.6';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		// Where to store the module in setup page (0=common,1=interface,2=others,3=very specific)
@@ -86,10 +86,10 @@ class modEvent extends DolibarrModules
 		//							'workflow' => array('order' => array('WORKFLOW_ORDER_AUTOCREATE_INVOICE')) // Set here all workflow context managed by module
 		//                        );
 		$this->module_parts = array(
-			'models' => 1,
-			'triggers' => 1,
-			'css' => '/event/css/event.css.php',
-			'hooks' => array('searchform', 'paypal')
+		'models' => 1,
+		'triggers' => 1,
+		'css' => '/event/css/event.css.php',
+		'hooks' => array('searchform', 'paypal')
 		);
 
 		// Data directories to create when module is enabled.
@@ -103,19 +103,19 @@ class modEvent extends DolibarrModules
 		$this->config_page_url = array("admin_event.php@event");
 
 		// Dependencies
-		$this->depends = array('modSociete','modProduct','modStock', 'modPaypal');		// List of modules id that must be enabled if this module is enabled
+		$this->depends = array('modFormStyler','modSociete','modComptabilite','modProduct','modStock', 'modPaypal');		// List of modules id that must be enabled if this module is enabled
 		$this->requiredby = array();	// List of modules id to disable if this one is disabled
-		$this->phpmin = array(5,5);					// Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(7,0);	// Minimum version of Dolibarr required by module
+		$this->phpmin = array(5,3);					// Minimum version of PHP required by module
+		$this->need_dolibarr_version = array(3,5);	// Minimum version of Dolibarr required by module
 		$this->langfiles = array("event@event");
 
 		// Constants
 		// List of particular constants to add when module is enabled (key, 'chaine', value, desc, visible, 'current' or 'allentities', deleteonunactive)
 		$this->const=array(
-			1=>array('EVENT_ADDON',"chaine","mod_event_simple",'Nom du gestionnaire de numerotation',0,'current',1),
-			2=>array('EVENTDAY_ADDON',"chaine","mod_eventday_simple",'Nom du gestionnaire de numerotation',0,'current',1),
-			3=>array('EVENT_REGISTRATION_ADDON',"chaine","mod_event_registration_simple",'Nom du gestionnaire de numerotation',0,'current',1),
-			4=>array('EVENT_REGISTRATION_ADDON_PDF',"chaine","registration",'Modèle PDF pour les inscriptions',0,'current',1),
+		1=>array('EVENT_ADDON',"chaine","mod_event_simple",'Nom du gestionnaire de numerotation',0,'current',1),
+		2=>array('EVENTDAY_ADDON',"chaine","mod_eventday_simple",'Nom du gestionnaire de numerotation',0,'current',1),
+		3=>array('EVENT_REGISTRATION_ADDON',"chaine","mod_event_registration_simple",'Nom du gestionnaire de numerotation',0,'current',1),
+		4=>array('EVENT_REGISTRATION_ADDON_PDF',"chaine","registration",'Modèle PDF pour les inscriptions',0,'current',1),
 		);
 
 		// Array to add new pages in new tabs
@@ -246,7 +246,7 @@ class modEvent extends DolibarrModules
 
 		$this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
 								'type'=>'top',			                // This is a Top menu entry
-								'titre'=>'Events',
+								'titre'=>'Event',
 								'mainmenu'=>'event',
 								'leftmenu'=>'event',
 								'url'=>'/event/index.php',
@@ -260,7 +260,7 @@ class modEvent extends DolibarrModules
 
 		$this->menu[$r]=array(	'fk_menu'=>'r=0',
 								'type'=>'left',
-								'titre'=>'Events',
+								'titre'=>'Event - v.' . $this->version,
 								'mainmenu'=>'event',
 								'url'=>'/event/index.php',
 								'langs'=>'event@event',
@@ -275,11 +275,11 @@ class modEvent extends DolibarrModules
 								'type'=>'left',
 								'titre'=>'NewEvent',
 								'mainmenu'=>'event',
-								'url'=>'/event/card.php?action=create',
+								'url'=>'/event/fiche.php?action=create',
 								'langs'=>'event@event',
 								'position'=>102,
 								'enabled'=>1,
-								//'perms'=>'$user->rights->event->registration->write',
+								'perms'=>'$user->rights->event->write',
 								'target'=>'',
 								'user'=>0);
 		$r++;

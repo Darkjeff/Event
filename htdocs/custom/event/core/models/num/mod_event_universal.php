@@ -46,7 +46,7 @@ class mod_business_universal extends ModeleNumRefBusiness
     {
     	global $conf,$langs;
 
-		$langs->load("event@event");
+		$langs->load("business@business");
 		$langs->load("admin");
 
 		$form = new Form($db);
