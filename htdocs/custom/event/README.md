@@ -14,7 +14,7 @@ Module pré-requis à activer
 - Tâches planifiés
 
 Pour connaitre les différentes fonctionnalité de la version 1.8.6:
-https://groups.google.com/forum/#!forum/module-event
+https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
 
 INSTALLATION:
 
