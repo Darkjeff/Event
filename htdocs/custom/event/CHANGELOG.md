@@ -132,7 +132,7 @@ ADMIN
  - New : can add time on day levels to be able to manage resources 
  - Rename Eventday class into Day : to be able to link timing level with actioncomm
 
-### ChangeLog for 1.2.0 compared to 1.1.0 version ***** 
+### ChangeLog for 1.2.0 compared to 1.1.0 version
  - Dolibarr 3.6 compatibility 
  - New : add checkbox to validate all days when validate a event 
  - New : add options on days to link product as option
