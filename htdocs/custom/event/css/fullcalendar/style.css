@@ -114,3 +114,7 @@
 	font-size: 12px;
     margin: 4px auto;
 }
+
+#ID_EVENT_GRP_CALENDAR_COLOR_BG, #ID_EVENT_SNS_GRP_CALENDAR_COLOR_BG, #ID_EVENT_CALENDAR_COLOR_TXT {
+	display: none;
+}

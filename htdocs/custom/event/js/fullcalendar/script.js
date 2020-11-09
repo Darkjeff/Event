@@ -6,22 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var data = $("div#data_events_calendar").text();
     var data = JSON.parse( data.toString() );
     // console.log(data);
+	
+	//colors
+    var color_grp = $("div#ID_EVENT_GRP_CALENDAR_COLOR_BG").text();
+    var color_sgr = $("div#ID_EVENT_SNS_GRP_CALENDAR_COLOR_BG").text();
+    var color_txt = $("div#ID_EVENT_CALENDAR_COLOR_TXT").text();
+	
     
     var _events = [];
     var count = 0;
 	
-    var _colors = ["#257e4a", "#3788d8", "#2C3E50", "#ff0066", "#333300", "#003300", "#003366", "#3366cc", "#666699", "#3399ff", "#ff00ff", "#660066"];
-    var count_color = 0;
-	var set_color = [];
-	
     $.each($(data),function(key,value){
-		
-		// define color
-		if ( set_color[value.id] === undefined ) {
-			count_color = (count_color < 11)? count_color: 0;
-			set_color[value.id] = _colors[count_color];
-			count_color++;
-		}
 		
 		if (value.igroupes.length == 0) {
 			
@@ -41,13 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
 					  time_end: value.time_end,
 					  total_ht: value.total_ht,
 					  total_ttc: value.total_ttc,
-					  color: set_color[value.id],   // background event
+					  color: color_sgr,   // background event
 					  event_registration_0: value.event_registration_0,
 					  event_registration_1: value.event_registration_1,
 					  event_registration_8: value.event_registration_8,
 					  event_registration_4: value.event_registration_4,
 					  event_registration_5: value.event_registration_5,
-					  // textColor: 'white',
+					  textColor: color_txt,
 					  // constraint: 'businessHours',
 					  // overlap: false,
 					  // rendering: 'background',
@@ -77,13 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
 					  time_end: (valueGroup.heuref).slice(11, 19),
 					  total_ht: value.total_ht,
 					  total_ttc: value.total_ttc,
-					  color: set_color[value.id],   // background event
+					  color: color_grp,   // background event
 					  event_registration_0: value.event_registration_0,
 					  event_registration_1: value.event_registration_1,
 					  event_registration_8: value.event_registration_8,
 					  event_registration_4: value.event_registration_4,
 					  event_registration_5: value.event_registration_5,
-					  // textColor: 'white',
+					  textColor: color_txt,
 					  // constraint: 'businessHours',
 					  // overlap: false,
 					  // rendering: 'background',
@@ -97,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 		
     });
-	// console.log(set_color);
     // console.log(_events);
 	
 	

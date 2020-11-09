@@ -112,6 +112,8 @@ if (!($conf->global->EVENT_SWITCH_BOUTIQUE))
 $extralabels=$extrafields->fetch_name_optionals_label('user');
 $res=$user->fetch_optionals($user->id,$extralabels);
 $admin_user->fetch(1);
+$iuser_id = $user->id;
+
 /*### Action ###*/
 if ($action == 'participate') {
 	}
@@ -222,7 +224,7 @@ if($_SESSION["dol_login"])
 	$qty = $_POST['qty'];
 	
 
-	if ($buy == 'buy' && $id_product && $qty > 0){ //
+	if ($buy == 'buy' && $id_product && $qty > 0 && 1==0 ){ //
 	//Selection du client
 	
 	
@@ -359,12 +361,14 @@ if($_SESSION["dol_login"])
 
 
 					print '<b>'.$product->label.'</b>'.' : '.floor($product->price_ttc).' € '.$langs->trans('TTC').' <br /> ';
-					print '<form action="" method="post" name="buy-'.$result->fk_product.'">';
+					print '<form action="#" method="post" name="buy-'.$result->fk_product.'" class="x_reserver_cours">';
 					print '<input type="hidden" name="buy" id="buy" value="buy">';
 					print '<input type="hidden" name="id_product" id="id_product" value='.$result->fk_product.'>';
+					print '<input type="hidden" name="price_ttc" id="x_price_ttc" value="'. floor($product->price_ttc) .'">';
+					print '<input type="hidden" name="x_label" id="x_label" value="'. $result->fk_product .'_'. preg_replace("/[^a-zA-Z0-9]+/", "_", $product->label) .'">';
 					print '<input type="number" style="width: 50px; transform: scale(1.4); margin-right: 5px;" name="qty" id="qty" value="1" min="1" max="99" size="2">';
 					print '<input type="submit" class="button" value="acheter" val="acheter"  id="product-'.$result->fk_product.'" name="product"';
-					if ($conf->global->EVENT_BOUTIQUE_CGU || $conf->globa->EVENT_BOUTIQUE_CGV) print 'disabled';
+					//if ($conf->global->EVENT_BOUTIQUE_CGU || $conf->globa->EVENT_BOUTIQUE_CGV) print 'disabled';
 					print '>';
 					print '</form>';
 					$i++;
@@ -372,46 +376,54 @@ if($_SESSION["dol_login"])
 	?>
 	<script>
 	$(document).ready(function() {
+    
+		$('form.x_reserver_cours').on("submit", function() {
+        
+        	var x_price_ttc = $(this).find('#x_price_ttc').val();
+            var x_label = $(this).find('#x_label').val();
+            var qty = $(this).find('#qty').val();
+			var user_id = parseInt(<?php echo $iuser_id; ?>);
+			var key = "FA" + Date.now();
+			
+			var tag = key +"_"+ qty +"_"+ x_price_ttc +"_"+ (qty * x_price_ttc) +"_"+ user_id +"_"+ x_label;
+        	
+        	var unchecked = 0;
+        	$('div#x_reglement > input[type=checkbox]').each(function () {
+            	if (!this.checked){
+                	unchecked = 1;
+                }
+            });
+        
+        	if(user_id <= 0){
+            	alert('Vous devez ré-connecter'); return false;
+            }else if(qty<1){
+            	alert('Vous devez ajouter la quantité'); return false;
+            }else if(unchecked){
+            	alert('Vous devez accepter les deux conditions ci-dessous'); return false;
+            }else{
+            	$(this).attr('action', 'http://lecouturier.jeffinfo.org/public/payment/newpayment.php?amount='+ (qty * x_price_ttc) +'&tag='+ tag +'&securekey=8A6q2s4NVuB4AcEQ555EUe6lipyuoF3O&user_id='+ user_id);
+            }
+        	
+        	// delete that
+        	//return false;
+        });
 
-
-
-		$(':checkbox').change(function() {
-			var ok = 1;
-
-			$('input[type=checkbox]').each(function () {
-				if (this.checked){
-				}
-				else{
-					ok = 0;
-				}
-
-			});
-			if (ok == 0){
-			$('input[name=product]').prop('disabled', true);
-		}
-			else {
-				$('input[name=product]').prop('disabled', false);
-			}
-
-		});
-
-});
+	});
 	</script>
 	<?php
-
-	if ($conf->global->EVENT_BOUTIQUE_CGV){
-		print '<div class="reglement">';
-		print '<input type="checkbox" id="cgv" >';
-		print $langs->trans('EVENT_AGREE').'<a href="'.$conf->global->EVENT_BOUTIQUE_CGV.'" target="_blank">'.$langs->trans('EVENT_CGV_LINK').'</a>';
-		print '<br />'; //Next Règlement
+	
+    print '<div class="reglement" id="x_reglement">'; // start div Règlement
+    
+    	if ($conf->global->EVENT_BOUTIQUE_CGV){
+			print '<input type="checkbox" id="cgv" >';
+        	print $langs->trans('EVENT_AGREE').'<a href="'.$conf->global->EVENT_BOUTIQUE_CGV.'" target="_blank">'.$langs->trans('EVENT_CGV_LINK').'</a>';
+        	print '<br />'; //Next Règlement
+        }
+    	if ($conf->global->EVENT_BOUTIQUE_CGU){
+        	print '<input type="checkbox" id="reglement">';
+        	print $langs->trans('EVENT_AGREE').' <a href="'.$conf->global->EVENT_BOUTIQUE_CGU.'" target="_blank">'.$langs->trans('EVENT_CGU_LINK').'</a>';
 		}
-	if ($conf->global->EVENT_BOUTIQUE_CGU){
-		print '<div class="reglement">';
-		print '<input type="checkbox" id="reglement">';
-		print $langs->trans('EVENT_AGREE').' <a href="'.$conf->global->EVENT_BOUTIQUE_CGU.'" target="_blank">'.$langs->trans('EVENT_CGU_LINK').'</a>';
-		print '</div>'; // Règlement
-		}
-	print '</div>'; // DAY
+	print '</div>'; //End div Règlement
 
 
 	print '<div class="row">';

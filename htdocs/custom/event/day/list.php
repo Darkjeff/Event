@@ -181,12 +181,17 @@ print '<link rel="stylesheet" type="text/css" href="/custom/event/css/fullcalend
 print '<link rel="stylesheet" type="text/css" href="/custom/event/css/fullcalendar/list.css">';
 print '<link rel="stylesheet" type="text/css" href="/custom/event/css/fullcalendar/style.css">';
 // <!-- jQuery Modal -->
-print '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />';
+print '<link rel="stylesheet" href="/custom/event/css/fullcalendar/jquery.modal.min.css" />';
 
 // echo"<pre>"; print_r($object->line); die;
 print "<div id='data_events_calendar' style='display: none'>". json_encode($object->line) ."</div>";
 print "<br /> <br />";
+
 print "<div id='events_calendar'></div>";
+
+print "<div id='ID_EVENT_GRP_CALENDAR_COLOR_BG'>".(!empty($conf->global->EVENT_GRP_CALENDAR_COLOR_BG)? $conf->global->EVENT_GRP_CALENDAR_COLOR_BG: '#2c3e50')."</div>";
+print "<div id='ID_EVENT_SNS_GRP_CALENDAR_COLOR_BG'>".(!empty($conf->global->EVENT_SNS_GRP_CALENDAR_COLOR_BG)? $conf->global->EVENT_SNS_GRP_CALENDAR_COLOR_BG: '#333300')."</div>";
+print "<div id='ID_EVENT_CALENDAR_COLOR_TXT'>".(!empty($conf->global->EVENT_CALENDAR_COLOR_TXT)? $conf->global->EVENT_CALENDAR_COLOR_TXT: '#ffffff')."</div>";
 
 // <!-- Modal HTML embedded directly into document -->
 print '<div id="create_event_bydate" class="modal">';
@@ -241,7 +246,7 @@ print '<script src="/custom/event/js/fullcalendar/script.js"></script>';
 print '<script src="/custom/event/js/fullcalendar/popper.js"></script>';
 print '<script src="/custom/event/js/fullcalendar/tooltip.js"></script>';
 // <!-- jQuery Modal -->
-print '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>';
+print '<script src="/custom/event/js/fullcalendar/jquery.modal.min.js"></script>';
 
 
 // -----------------------------------------------------------------------------------------------------

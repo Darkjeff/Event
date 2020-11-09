@@ -206,6 +206,47 @@ if ($action == 'setvar')
 	$res= dolibarr_set_const($db,'EVENTDEFAULTMAIL',$EventDefaultMail,'',0,'',$conf->entity);
 	if (!res > 0) $error++;
 
+
+
+	// Start changing color events developer.baalla@gmail.com
+	
+	$EVENT_GRP_CALENDAR_COLOR_BG = GETPOST('EVENT_GRP_CALENDAR_COLOR_BG','alpha');
+	$EVENT_SNS_GRP_CALENDAR_COLOR_BG = GETPOST('EVENT_SNS_GRP_CALENDAR_COLOR_BG','alpha');
+	$EVENT_CALENDAR_COLOR_TXT = GETPOST('EVENT_CALENDAR_COLOR_TXT','alpha');
+	
+	function initialColor($color, $kind, $db){
+		
+		// Show constants
+		$sql = "SELECT * FROM ".MAIN_DB_PREFIX."const";
+		$sql.= " WHERE name = '". $kind ."'";
+		$result = $db->query($sql);
+		$obj = $db->fetch_object($result);
+		
+		if ( empty($obj) ) {
+			$sql = "INSERT INTO ".MAIN_DB_PREFIX."const";
+			$sql.= " (name, value, type)";
+			$sql.= " VALUES ('". $kind ."', '". $color ."', 'chaine')";
+			$res = $db->query($sql);
+			if (! $res > 0) $error++;
+		} 
+		else {
+			$sql = "UPDATE ".MAIN_DB_PREFIX."const";
+			$sql.= " SET value = '". $color ."'";
+			$sql.= " WHERE rowid = ". $obj->rowid;
+			$res = $db->query($sql);
+			if (! $res > 0) $error++;
+		}
+		
+		return $color;
+	}
+	
+	$conf->global->EVENT_GRP_CALENDAR_COLOR_BG = initialColor($EVENT_GRP_CALENDAR_COLOR_BG, 'EVENT_GRP_CALENDAR_COLOR_BG', $db);
+	$conf->global->EVENT_SNS_GRP_CALENDAR_COLOR_BG = initialColor($EVENT_SNS_GRP_CALENDAR_COLOR_BG, 'EVENT_SNS_GRP_CALENDAR_COLOR_BG', $db);
+	$conf->global->EVENT_CALENDAR_COLOR_TXT = initialColor($EVENT_CALENDAR_COLOR_TXT, 'EVENT_CALENDAR_COLOR_TXT', $db);
+	
+	// /.End changing color events developer.baalla@gmail.com
+	
+	
 	// Test error
 	if (! $error) {
 		$mesg = "<div class=\"ok\">".$langs->trans("SetupSaved")."</div>";
@@ -866,6 +907,18 @@ print '<br/>';
 print '<input type="radio" id="eventday_ActiveClone_cancel" name="eventday_ActiveCloneFunc" '.$checkedNo.' value="-1"/> <label for="eventday_ActiveCloneFunc">'.$langs->trans('No').'</label>';
 print '</td>';
 print '</tr>';
+
+
+// Start gestion des couleurs developer.baalla@gmail.com
+print '<tr>';
+print '<td>'. $langs->trans('Gestion des couleurs - Calendrier') .'</td>';
+print '<td>';
+print '<div> <input type="color" id="EVENT_GRP_CALENDAR_COLOR_BG" name="EVENT_GRP_CALENDAR_COLOR_BG" value="'. (!empty($conf->global->EVENT_GRP_CALENDAR_COLOR_BG)? $conf->global->EVENT_GRP_CALENDAR_COLOR_BG: '') .'"> <label for="EVENT_GRP_CALENDAR_COLOR_BG">les journées avec les groupes</label> </div>';
+print '<div> <input type="color" id="EVENT_SNS_GRP_CALENDAR_COLOR_BG" name="EVENT_SNS_GRP_CALENDAR_COLOR_BG" value="'. (!empty($conf->global->EVENT_SNS_GRP_CALENDAR_COLOR_BG)? $conf->global->EVENT_SNS_GRP_CALENDAR_COLOR_BG: '') .'"> <label for="EVENT_SNS_GRP_CALENDAR_COLOR_BG">les journées sans groupe</label> </div>';
+print '<div> <input type="color" id="EVENT_CALENDAR_COLOR_TXT" name="EVENT_CALENDAR_COLOR_TXT" value="'. (!empty($conf->global->EVENT_CALENDAR_COLOR_TXT)? $conf->global->EVENT_CALENDAR_COLOR_TXT: '') .'"> <label for="EVENT_CALENDAR_COLOR_TXT">le texte</label> </div>';
+print '</td>';
+print '</tr>';
+// End gestion des couleurs developer.baalla@gmail.com
 
 print '</table>';
 

@@ -308,7 +308,7 @@ if(!is_array($fk_level)) {
 					$sujet= make_substitutions($sujet,$substit);
 					$message= make_substitutions($conf->global->EVENT_CANCELED_MESSAGE, $substit);
 					$reg->setConfirmed('1');
-					$result = $reg->SendByEmail($day->ref, $sendto,$sendtoid,$sujet,$message,($conf->global->EVENT_SEND_PDF=='-1'?'':'1'), '', '');				
+					// $result = $reg->SendByEmail($day->ref, $sendto,$sendtoid,$sujet,$message,($conf->global->EVENT_SEND_PDF=='-1'?'':'1'), '', '');				
 									
 					////////////////////////////////////					
 
@@ -376,7 +376,7 @@ if(!is_array($fk_level)) {
 
 		// $extrafields->setOptionalsFromPost($extralabels, $object);
 
-		//Code 42 Test si déjà inscrit
+		//Test si déjà inscrit
 		$sql = "SELECT r.fk_user_registered, r.rowid FROM ".MAIN_DB_PREFIX."event_registration as r LEFT JOIN ".MAIN_DB_PREFIX."socpeople as p ON r.fk_user_registered = p.rowid WHERE r.fk_eventday = ".$object->fk_eventday." AND r.fk_levelday = ".$object->fk_levelday." AND r.fk_user_registered = ".$object->fk_user_registered;
 		$resql = $db->query($sql);
 		if ($resql)
@@ -549,7 +549,7 @@ elseif ( $action == 'add' ) //&& $user->rights->event->write
 
 	$object->message = GETPOST('message');
 
-	//Code 42 Test si déjà inscrit
+	//Test si déjà inscrit
 	$sql = "SELECT r.fk_user_registered, p.rowid FROM ".MAIN_DB_PREFIX."event_registration as r LEFT JOIN ".MAIN_DB_PREFIX."socpeople as p ON r.fk_user_registered = p.rowid WHERE r.fk_eventday = ".$dayid." AND r.fk_user_registered = ".$object->fk_user_registered;
 	$resql = $db->query($sql);
 	if ($resql)
