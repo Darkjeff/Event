@@ -2,7 +2,7 @@
 
 ## 1.8.7
 
-***** Licence *****
+** Licence **
 Bugs / comments
 Un bug, un problème d'affichage ou une idée d'amélioration ? Rendez-vous sur le forum de Dolibarr https://www.dolibarr.fr/forum/t/module-event-organisez-vos-evenements-simplement/29688
 Module Event
