@@ -97,7 +97,7 @@ print $langs->trans("");
 print '<h2>Bugs / comments</h2>';
 print $langs->trans("EventAboutMessage");
 
-$buffer = file_get_contents(dol_buildpath('./custom/event/CHANGELOG.md', 0));
+$buffer = file_get_contents(dol_buildpath('./custom/event/ChangeLog.md', 0));
 echo Markdown($buffer);
 
 llxFooter();
