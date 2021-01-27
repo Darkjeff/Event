@@ -173,6 +173,20 @@ $(':checkbox').change(function() {
           });
 
 	}
+	//permet de rendre à nouveau actif si l'utilisateur décoche une case cochée p.ex. par erreur
+	if (!$(this).is(':checked') && $(this).prop("disabled", true))
+	{
+        $(".label-cours").find("input[type=checkbox]:not(:checked)").each(function(){
+
+                  $(this).prop("disabled", false);
+                  $(this).removeClass("disabled");
+                  $(this).parent().prop("disabled", false);
+                  $(this).parent().removeClass("disabled");
+                  $(this).parent().parent().prop("disabled", false);
+                  $(this).parent().parent().removeClass("disabled");
+
+          });
+     }
 
 
     $(".totalvalue").text(cout_total);
